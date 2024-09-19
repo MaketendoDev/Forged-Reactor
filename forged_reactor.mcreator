@@ -1,0 +1,266 @@
+{
+  "mod_elements": [
+    {
+      "name": "Mk1IronArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_iron_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/mk_1_iron_armor_boots.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_1_iron_armor_chestplate.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_1_iron_armor_helmet.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_1_iron_armor_leggings.json",
+          "src/main/java/net/maketendo/forgedreactor/item/Mk1IronArmorItem.java"
+        ]
+      },
+      "path": "~/Armor/Mk. 1"
+    },
+    {
+      "name": "IronArmorTab",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_armor_tab",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Mk1Overlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/client/screens/Mk1OverlayOverlay.java"
+        ]
+      },
+      "path": "~/Armor/Mk. 1"
+    },
+    {
+      "name": "Mk1OverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Mk1OverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 1"
+    },
+    {
+      "name": "Mk2IronArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_2_iron_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/item/Mk2IronArmorItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/mk_2_iron_armor_boots.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_2_iron_armor_leggings.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_2_iron_armor_helmet.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_2_iron_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor/Mk. 2"
+    },
+    {
+      "name": "Mk3IronArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_3_iron_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/mk_3_iron_armor_boots.json",
+          "src/main/java/net/maketendo/forgedreactor/item/Mk3IronArmorItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/mk_3_iron_armor_leggings.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_3_iron_armor_helmet.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_3_iron_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor/Mk. 3"
+    },
+    {
+      "name": "JarvisAI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jarvis_ai",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/JarvisAIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Attack1",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/network/Attack1Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Attack1OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_1_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Attack1OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ArmorWeight",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_weight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/potion/ArmorWeightMobEffect.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "JarvisAIName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "jarvis"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {
+    "ITEMS:ironman:enablejarvis": [
+      "CUSTOM:Mk2IronArmor.helmet",
+      "CUSTOM:Mk3IronArmor.helmet"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
+      "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
+      "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
+      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Flight Iron Armor Chestplate",
+      "item.forged_reactor.mk_3_iron_armor_helmet": "Iron Armor Helmet",
+      "key.categories.ironarmor": "Iron Armor",
+      "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Flight Iron Armor Boots",
+      "key.forged_reactor.attack_1": "Attack 1",
+      "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Flight Iron Armor Helmet",
+      "item.forged_reactor.mk_1_iron_armor_helmet": "Prototype Iron Armor Helmet",
+      "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
+      "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
+      "effect.forged_reactor.armor_weight": "Armor Weight",
+      "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
+      "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots",
+      "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Flight Iron Armor Leggings"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Armor",
+        "children": [
+          {
+            "name": "Mk. 1",
+            "children": [
+              {
+                "name": "Functionality",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Mk. 2",
+            "children": []
+          },
+          {
+            "name": "Mk. 3",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Keybinds",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "forged_reactor",
+    "modName": "Forged Reactor Mod",
+    "version": "1.0.0",
+    "author": "Maketendo, Westankrang",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "playeranimator"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.maketendo.forgedreactor"
+  },
+  "mcreatorVersion": 202400232117
+}

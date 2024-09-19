@@ -1,0 +1,24 @@
+minecraft {
+  runs {
+   client {    
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+       }
+        server {
+         property 'mixin.env.remapRefMap', 'true'
+         property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+       }
+      }
+     }
+
+repositories {
+ maven {
+     url = 'https://maven.kosmx.dev/'
+ }
+}
+
+ dependencies {
+   implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20")
+ }
+
+

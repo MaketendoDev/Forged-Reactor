@@ -1,0 +1,11 @@
+{
+  "_fv": 66,
+  "_type": "tab",
+  "definition": {
+    "name": "Iron Armor",
+    "icon": {
+      "value": "Items.IRON_HELMET"
+    },
+    "showSearch": true
+  }
+}

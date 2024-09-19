@@ -1,0 +1,20 @@
+{
+  "_fv": 66,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGH",
+    "components": [],
+    "baseTexture": "mk1_blur2.png",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "Mk1OverlayDisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
