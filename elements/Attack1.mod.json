@@ -4,6 +4,9 @@
   "definition": {
     "triggerKey": "B",
     "keyBindingName": "Attack 1",
-    "keyBindingCategoryKey": "ironarmor"
+    "keyBindingCategoryKey": "ironarmor",
+    "onKeyPressed": {
+      "name": "Attack1OnKeyPressed"
+    }
   }
 }

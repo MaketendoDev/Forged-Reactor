@@ -159,6 +159,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -175,6 +191,41 @@
           "src/main/java/net/maketendo/forgedreactor/potion/ArmorWeightMobEffect.java"
         ]
       }
+    },
+    {
+      "name": "JumpBoost",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jump_boost",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/JumpBoostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 1/Functionality/Moves"
     }
   ],
   "variable_elements": [
@@ -190,6 +241,11 @@
     "ITEMS:ironman:enablejarvis": [
       "CUSTOM:Mk2IronArmor.helmet",
       "CUSTOM:Mk3IronArmor.helmet"
+    ],
+    "BLOCKS:minecraft:air": [
+      "Blocks.AIR",
+      "Blocks.VOID_AIR",
+      "Blocks.CAVE_AIR"
     ]
   },
   "tab_element_order": {},
@@ -224,7 +280,12 @@
             "children": [
               {
                 "name": "Functionality",
-                "children": []
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
               }
             ]
           },
