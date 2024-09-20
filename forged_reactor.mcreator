@@ -190,7 +190,8 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/potion/ArmorWeightMobEffect.java"
         ]
-      }
+      },
+      "path": "~/Effects/Armor Weight"
     },
     {
       "name": "JumpBoost",
@@ -250,7 +251,28 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/Attack2OnKeyPressedProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Keybinds"
     },
@@ -328,7 +350,8 @@
             "type": "number"
           }
         ]
-      }
+      },
+      "path": "~/Effects/Armor Weight"
     },
     {
       "name": "Mk1ArmorTickProcedure",
@@ -348,6 +371,60 @@
         ]
       },
       "path": "~/Armor/Mk. 1/Functionality"
+    },
+    {
+      "name": "ArmorWeightEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_weight_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ArmorWeightEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/Armor Weight"
+    },
+    {
+      "name": "Flamethrower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flamethrower",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/FlamethrowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 1/Functionality/Moves"
     }
   ],
   "variable_elements": [
@@ -427,6 +504,15 @@
       {
         "name": "Keybinds",
         "children": []
+      },
+      {
+        "name": "Effects",
+        "children": [
+          {
+            "name": "Armor Weight",
+            "children": []
+          }
+        ]
       }
     ]
   },

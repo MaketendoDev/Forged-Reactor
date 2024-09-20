@@ -37,7 +37,7 @@ public class Mk1ArmorTickProcedureProcedure {
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == ForgedReactorModItems.MK_1_IRON_ARMOR_CHESTPLATE.get()
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == ForgedReactorModItems.MK_1_IRON_ARMOR_HELMET.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(ForgedReactorModMobEffects.ARMOR_WEIGHT.get(), 10, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(ForgedReactorModMobEffects.ARMOR_WEIGHT.get(), 10, 2, false, false));
 		}
 	}
 }
