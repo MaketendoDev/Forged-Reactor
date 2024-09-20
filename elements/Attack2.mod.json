@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "N",
+    "keyBindingName": "Attack 2",
+    "keyBindingCategoryKey": "ironarmor",
+    "onKeyPressed": {
+      "name": "Attack2OnKeyPressed"
+    }
+  }
+}

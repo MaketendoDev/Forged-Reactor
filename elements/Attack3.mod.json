@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "M",
+    "keyBindingName": "Attack 3",
+    "keyBindingCategoryKey": "ironarmor",
+    "onKeyPressed": {
+      "name": "Attack3OnKeyPressed"
+    }
+  }
+}

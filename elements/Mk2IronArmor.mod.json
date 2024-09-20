@@ -16,10 +16,10 @@
       }
     ],
     "armorTextureFile": "armor",
-    "helmetName": "Prototype Flight Iron Armor Helmet",
-    "bodyName": "Prototype Flight Iron Armor Chestplate",
-    "leggingsName": "Prototype Flight Iron Armor Leggings",
-    "bootsName": "Prototype Flight Iron Armor Boots",
+    "helmetName": "Prototype Accurate Flight Iron Armor Helmet",
+    "bodyName": "Prototype Accurate Flight Iron Armor Chestplate",
+    "leggingsName": "Prototype Accurate Flight Iron Armor Leggings",
+    "bootsName": "Prototype Accurate Flight Iron Armor Boots",
     "helmetSpecialInformation": {
       "fixedValue": [
         "§8Mark II (2)"

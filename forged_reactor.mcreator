@@ -226,6 +226,128 @@
         ]
       },
       "path": "~/Armor/Mk. 1/Functionality/Moves"
+    },
+    {
+      "name": "Attack2",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/network/Attack2Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Attack2OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_2_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Attack2OnKeyPressedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Attack3",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/network/Attack3Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Attack3OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_3_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Attack3OnKeyPressedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Attack4",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/network/Attack4Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Attack4OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_4_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Attack4OnKeyPressedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ArmorWeightActiveTickCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_weight_active_tick_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ArmorWeightActiveTickConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mk1ArmorTickProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_armor_tick_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Mk1ArmorTickProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 1/Functionality"
     }
   ],
   "variable_elements": [
@@ -254,19 +376,22 @@
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Flight Iron Armor Chestplate",
+      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "item.forged_reactor.mk_3_iron_armor_helmet": "Iron Armor Helmet",
       "key.categories.ironarmor": "Iron Armor",
-      "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Flight Iron Armor Boots",
+      "key.forged_reactor.attack_3": "Attack 3",
+      "key.forged_reactor.attack_2": "Attack 2",
+      "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
-      "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Flight Iron Armor Helmet",
+      "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
+      "key.forged_reactor.attack_4": "Attack 4",
       "item.forged_reactor.mk_1_iron_armor_helmet": "Prototype Iron Armor Helmet",
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots",
-      "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Flight Iron Armor Leggings"
+      "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Accurate Flight Iron Armor Leggings"
     }
   },
   "foldersRoot": {

@@ -3,14 +3,17 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Armor Weight",
-    "icon": "icon",
+    "icon": "armor_weight",
     "color": {
-      "value": -1,
+      "value": -13421773,
       "falpha": 0.0
     },
     "isInstant": false,
     "mobEffectCategory": "HARMFUL",
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "ArmorWeightActiveTickCondition"
+    }
   }
 }

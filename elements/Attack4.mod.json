@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "NUMPADCOMMA",
+    "keyBindingName": "Attack 4",
+    "keyBindingCategoryKey": "ironarmor",
+    "onKeyPressed": {
+      "name": "Attack4OnKeyPressed"
+    }
+  }
+}
