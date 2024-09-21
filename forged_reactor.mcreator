@@ -255,22 +255,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -405,7 +389,49 @@
           {
             "name": "entity",
             "type": "entity"
-          },
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 1/Functionality/Moves"
+    },
+    {
+      "name": "SetupAnimations",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_animations",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/SetupAnimationsProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "RefinedFlame",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refined_flame",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/client/particle/RefinedFlameParticle.java",
+          "src/main/resources/assets/forged_reactor/particles/refined_flame.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "FireblastWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireblast_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/FireblastWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
           {
             "name": "x",
             "type": "number"
@@ -424,7 +450,70 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 1/Functionality/Moves"
+      "path": "~/Projectiles/Flamethrower"
+    },
+    {
+      "name": "FireblastProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireblast_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/FireblastProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Flamethrower"
+    },
+    {
+      "name": "FireblastProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireblast_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/FireblastProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Flamethrower"
+    },
+    {
+      "name": "Fireblast",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireblast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/entity/FireblastEntity.java"
+        ]
+      },
+      "path": "~/Projectiles/Flamethrower"
     }
   ],
   "variable_elements": [
@@ -498,6 +587,10 @@
           {
             "name": "Mk. 3",
             "children": []
+          },
+          {
+            "name": "Armor Crafting",
+            "children": []
           }
         ]
       },
@@ -510,6 +603,19 @@
         "children": [
           {
             "name": "Armor Weight",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Projectiles",
+        "children": [
+          {
+            "name": "Flamethrower",
             "children": []
           }
         ]

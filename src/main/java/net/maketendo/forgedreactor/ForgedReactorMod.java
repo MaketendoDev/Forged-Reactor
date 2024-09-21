@@ -18,8 +18,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.maketendo.forgedreactor.init.ForgedReactorModTabs;
+import net.maketendo.forgedreactor.init.ForgedReactorModParticleTypes;
 import net.maketendo.forgedreactor.init.ForgedReactorModMobEffects;
 import net.maketendo.forgedreactor.init.ForgedReactorModItems;
+import net.maketendo.forgedreactor.init.ForgedReactorModEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -42,10 +44,13 @@ public class ForgedReactorMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		ForgedReactorModItems.REGISTRY.register(bus);
+		ForgedReactorModEntities.REGISTRY.register(bus);
 
 		ForgedReactorModTabs.REGISTRY.register(bus);
 
 		ForgedReactorModMobEffects.REGISTRY.register(bus);
+
+		ForgedReactorModParticleTypes.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

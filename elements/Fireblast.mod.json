@@ -1,0 +1,28 @@
+{
+  "_fv": 66,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "entity.firework.large_blast"
+    },
+    "igniteFire": true,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "onHitsBlock": {
+      "name": "FireblastProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "FireblastProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "FireblastWhileProjectileFlyingTick"
+    }
+  }
+}
