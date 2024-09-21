@@ -77,6 +77,7 @@ public class ForgedReactorModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.JarvisAIName = original.JarvisAIName;
+			clone.LinkedTARDISID = original.LinkedTARDISID;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -119,6 +120,7 @@ public class ForgedReactorModVariables {
 
 	public static class PlayerVariables {
 		public String JarvisAIName = "jarvis";
+		public String LinkedTARDISID = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -128,12 +130,14 @@ public class ForgedReactorModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putString("JarvisAIName", JarvisAIName);
+			nbt.putString("LinkedTARDISID", LinkedTARDISID);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
 			JarvisAIName = nbt.getString("JarvisAIName");
+			LinkedTARDISID = nbt.getString("LinkedTARDISID");
 		}
 	}
 
@@ -168,6 +172,7 @@ public class ForgedReactorModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.JarvisAIName = message.data.JarvisAIName;
+					variables.LinkedTARDISID = message.data.LinkedTARDISID;
 				}
 			});
 			context.setPacketHandled(true);

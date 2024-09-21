@@ -522,6 +522,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "jarvis"
+    },
+    {
+      "name": "LinkedTARDISID",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],

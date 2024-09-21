@@ -1,10 +1,13 @@
 package net.maketendo.forgedreactor.procedures;
 
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.ServerChatEvent;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -12,7 +15,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.maketendo.forgedreactor.network.ForgedReactorModVariables;
 import net.maketendo.forgedreactor.init.ForgedReactorModItems;
@@ -80,6 +86,80 @@ public class JarvisAIProcedure {
 													Component.literal(("<" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + "> "
 															+ text.replace((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + " Say", ""))),
 													false);
+									} else {
+										if (ModList.get().isLoaded("ait")) {
+											if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + " Link to ")) {
+												if (entity instanceof Player _player && !_player.level().isClientSide())
+													_player.displayClientMessage(Component.literal(("<"
+															+ (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + "> Linked to.. "
+															+ text.replace((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + " Link to ", "")
+															+ "sir.")), false);
+												{
+													String _setval = text.replace((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + " Link to ",
+															"");
+													entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+														capability.LinkedTARDISID = _setval;
+														capability.syncPlayerVariables(entity);
+													});
+												}
+											} else {
+												if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + " link to ")) {
+													if (entity instanceof Player _player && !_player.level().isClientSide())
+														_player.displayClientMessage(Component.literal(("<"
+																+ (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + "> Linked to.. "
+																+ text.replace((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + " Link to ", "")
+																+ "sir.")), false);
+													{
+														String _setval = text
+																.replace((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + " link to ", "");
+														entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+															capability.LinkedTARDISID = _setval;
+															capability.syncPlayerVariables(entity);
+														});
+													}
+												} else {
+													if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName)
+															&& text.endsWith("summon my tardis")) {
+														if (entity instanceof Player _player && !_player.level().isClientSide())
+															_player.displayClientMessage(
+																	Component.literal(("<" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName
+																			+ "> Summoning your TARDIS sir.")),
+																	false);
+														if (world instanceof ServerLevel _level)
+															_level.getServer().getCommands().performPrefixedCommand(
+																	new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																	("ait summon " + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).LinkedTARDISID));
+													} else {
+														if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName)
+																&& text.endsWith("lock my tardis")) {
+															if (entity instanceof Player _player && !_player.level().isClientSide())
+																_player.displayClientMessage(
+																		Component.literal(("<" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName
+																				+ "> Locked your TARDIS sir.")),
+																		false);
+															if (world instanceof ServerLevel _level)
+																_level.getServer().getCommands().performPrefixedCommand(
+																		new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), ("ait lock "
+																				+ (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).LinkedTARDISID + " true"));
+														} else {
+															if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName)
+																	&& text.endsWith("unlock my tardis")) {
+																if (entity instanceof Player _player && !_player.level().isClientSide())
+																	_player.displayClientMessage(Component
+																			.literal(("<" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName
+																					+ "> Unlocked your TARDIS sir.")),
+																			false);
+																if (world instanceof ServerLevel _level)
+																	_level.getServer().getCommands().performPrefixedCommand(
+																			new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																			("ait lock " + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).LinkedTARDISID
+																					+ " false"));
+															}
+														}
+													}
+												}
+											}
+										}
 									}
 								}
 							}
