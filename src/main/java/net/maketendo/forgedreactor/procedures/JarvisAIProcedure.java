@@ -181,6 +181,34 @@ public class JarvisAIProcedure {
 																					("ait remove " + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																							.orElse(new ForgedReactorModVariables.PlayerVariables())).LinkedTARDISID));
 																	}
+																	if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName)
+																			&& text.endsWith("activate siege mode")) {
+																		if (entity instanceof Player _player && !_player.level().isClientSide())
+																			_player.displayClientMessage(Component.literal(
+																					("<" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName
+																							+ "> Siege mode active sir.")),
+																					false);
+																		if (world instanceof ServerLevel _level)
+																			_level.getServer().getCommands().performPrefixedCommand(
+																					new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																					("ait siege"
+																							+ (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).LinkedTARDISID
+																							+ " true"));
+																	} else {
+																		if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName)
+																				&& text.endsWith("deactivate siege mode")) {
+																			if (entity instanceof Player _player && !_player.level().isClientSide())
+																				_player.displayClientMessage(Component.literal(
+																						("<" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName
+																								+ "> Siege mode deactivated sir.")),
+																						false);
+																			if (world instanceof ServerLevel _level)
+																				_level.getServer().getCommands().performPrefixedCommand(
+																						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																						("ait siege" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																								.orElse(new ForgedReactorModVariables.PlayerVariables())).LinkedTARDISID + " false"));
+																		}
+																	}
 																}
 															}
 														}
