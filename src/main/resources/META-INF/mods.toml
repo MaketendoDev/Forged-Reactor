@@ -22,7 +22,7 @@ authors="Maketendo, Westankrang"
 
 
 [[dependencies.forged_reactor]]
-    modId="playeranimator"
+    modId="kleidersplayerrenderer"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

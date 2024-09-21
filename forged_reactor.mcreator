@@ -395,19 +395,6 @@
       "path": "~/Armor/Mk. 1/Functionality/Moves"
     },
     {
-      "name": "SetupAnimations",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "setup_animations",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/procedures/SetupAnimationsProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
       "name": "RefinedFlame",
       "type": "particle",
       "compiles": true,
@@ -514,6 +501,24 @@
         ]
       },
       "path": "~/Projectiles/Flamethrower"
+    },
+    {
+      "name": "RemoveHeadWhenWorn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_head_when_worn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RemoveHeadWhenWornProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -640,7 +645,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "playeranimator"
+      "kleidersplayerrenderer"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
