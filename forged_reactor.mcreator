@@ -519,6 +519,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "RemoveArmsWhenWorn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_arms_when_worn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RemoveArmsWhenWornProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [

@@ -12,15 +12,15 @@ public class FireblastProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"fill ~2 ~2 ~2 ~-2 ~-2 ~-2 fire replace air");
+					"fill ~4 ~4 ~4 ~-4 ~-4 ~-4 fire replace air");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"fill ~2 ~2 ~2 ~-2 ~-2 ~-2 fire replace cave_air");
+					"fill ~4 ~4 ~4 ~-4 ~-4 ~-4 fire replace cave_air");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"fill ~2 ~2 ~2 ~-2 ~-2 ~-2 fire replace grass");
+					"fill ~4 ~4 ~4 ~-4 ~-4 ~-4 fire replace grass");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"fill ~2 ~2 ~2 ~-2 ~-2 ~-2 fire replace vine");
+					"fill ~4 ~4 ~4 ~-4 ~-4 ~-4 fire replace vine");
 	}
 }
