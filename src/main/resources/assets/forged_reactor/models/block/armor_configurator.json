@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/crying_obsidian",
+    "up": "forged_reactor:block/respawn_anchor_top_off",
+    "north": "forged_reactor:block/respawn_anchor_side4",
+    "east": "forged_reactor:block/respawn_anchor_side4",
+    "south": "forged_reactor:block/respawn_anchor_side4",
+    "west": "forged_reactor:block/respawn_anchor_side4",
+    "particle": "minecraft:block/crying_obsidian"
+  },
+  "render_type": "solid"
+}

@@ -23,6 +23,7 @@ import net.maketendo.forgedreactor.init.ForgedReactorModParticleTypes;
 import net.maketendo.forgedreactor.init.ForgedReactorModMobEffects;
 import net.maketendo.forgedreactor.init.ForgedReactorModItems;
 import net.maketendo.forgedreactor.init.ForgedReactorModEntities;
+import net.maketendo.forgedreactor.init.ForgedReactorModBlocks;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -44,6 +45,7 @@ public class ForgedReactorMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		ForgedReactorModSounds.REGISTRY.register(bus);
+		ForgedReactorModBlocks.REGISTRY.register(bus);
 
 		ForgedReactorModItems.REGISTRY.register(bus);
 		ForgedReactorModEntities.REGISTRY.register(bus);

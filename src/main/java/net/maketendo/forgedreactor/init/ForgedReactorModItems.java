@@ -8,7 +8,9 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 
 import net.maketendo.forgedreactor.item.Mk3IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk2IronArmorItem;
@@ -32,6 +34,11 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MK_3_IRON_ARMOR_BOOTS = REGISTRY.register("mk_3_iron_armor_boots", () -> new Mk3IronArmorItem.Boots());
 	public static final RegistryObject<Item> FLIGHT_TEST_ARMOR_CHESTPLATE = REGISTRY.register("flight_test_armor_chestplate", () -> new FlightTestArmorItem.Chestplate());
 	public static final RegistryObject<Item> FLIGHT_TEST_ARMOR_BOOTS = REGISTRY.register("flight_test_armor_boots", () -> new FlightTestArmorItem.Boots());
+	public static final RegistryObject<Item> ARMOR_CONFIGURATOR = block(ForgedReactorModBlocks.ARMOR_CONFIGURATOR);
+
 	// Start of user code block custom items
 	// End of user code block custom items
+	private static RegistryObject<Item> block(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
 }
