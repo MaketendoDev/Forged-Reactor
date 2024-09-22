@@ -64,10 +64,84 @@
           "x": 20,
           "y": 115
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_entity_name",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEntityName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_RIGHT",
+          "x": 336,
+          "y": 2
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_entity_name1",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEntityName"
+          },
+          "color": {
+            "value": -6867656,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "GetIFEntityHostile"
+          },
+          "anchorPoint": "TOP_RIGHT",
+          "x": 336,
+          "y": 2
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_entity_health",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEntityHealth"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_RIGHT",
+          "x": 336,
+          "y": 15
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_speed_return",
+          "text": {
+            "fixedValue": "",
+            "name": "SpeedReturn"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 20,
+          "y": 127
+        }
       }
     ],
     "baseTexture": "",
     "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "Mk2OverlayDisplayOverlayInGame"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

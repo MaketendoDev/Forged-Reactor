@@ -610,6 +610,118 @@
         ]
       },
       "path": "~/Armor/Mk. 2/HUD Renderer"
+    },
+    {
+      "name": "Mk2OverlayDisplayOverlayInGame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_2_overlay_display_overlay_in_game",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Mk2OverlayDisplayOverlayInGameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2"
+    },
+    {
+      "name": "GetEntityName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_entity_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/GetEntityNameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2/HUD Renderer/EntityData"
+    },
+    {
+      "name": "GetEntityHealth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_entity_health",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/GetEntityHealthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2/HUD Renderer/EntityData"
+    },
+    {
+      "name": "GetIFEntityHostile",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_if_entity_hostile",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/GetIFEntityHostileProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2/HUD Renderer/EntityData"
+    },
+    {
+      "name": "SpeedReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_return",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/SpeedReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2/HUD Renderer"
     }
   ],
   "variable_elements": [
@@ -636,6 +748,57 @@
       "Blocks.AIR",
       "Blocks.VOID_AIR",
       "Blocks.CAVE_AIR"
+    ],
+    "ENTITIES:minecraft:hostile": [
+      "EntityAreaEffectCloud",
+      "EntityCaveSpider",
+      "EntityCreeper",
+      "EntityDragon",
+      "EntityDragonFireball",
+      "EntityDrowned",
+      "EntityElderGuardian",
+      "EntityEnderman",
+      "EntityEndermite",
+      "EntityEvoker",
+      "EntityEvokerFangs",
+      "EntityFireball",
+      "EntityGhast",
+      "EntityGiantZombie",
+      "EntityGuardian",
+      "EntityHoglin",
+      "EntityHusk",
+      "EntityIllusionIllager",
+      "EntityLlama",
+      "EntityLlamaSpit",
+      "EntityMagmaCube",
+      "EntityMinecartTNT",
+      "EntityPhantom",
+      "EntityPiglin",
+      "EntityPiglinBrute",
+      "EntityPillager",
+      "EntityPolarBear",
+      "EntityPufferfish",
+      "EntityRavager",
+      "EntitySilverfish",
+      "EntitySkeleton",
+      "EntitySpectralArrow",
+      "EntityStray",
+      "EntityTNTPrimed",
+      "EntityTrident",
+      "EntityVex",
+      "EntityVindicator",
+      "EntityWarden",
+      "EntityWitch",
+      "EntityWither",
+      "EntityWitherSkeleton",
+      "EntityWitherSkull",
+      "EntityZoglin",
+      "EntityZombie",
+      "EntityZombieHorse",
+      "EntityZombieVillager",
+      "EntityPigZombie",
+      "EntityShulker",
+      "EntitySmallFireball"
     ]
   },
   "tab_element_order": {},
@@ -687,7 +850,12 @@
             "children": [
               {
                 "name": "HUD Renderer",
-                "children": []
+                "children": [
+                  {
+                    "name": "EntityData",
+                    "children": []
+                  }
+                ]
               }
             ]
           },
@@ -733,8 +901,9 @@
     "modid": "forged_reactor",
     "modName": "Forged Reactor Mod",
     "version": "1.0.0",
+    "description": "Adds Iron Man in Minecraft",
     "author": "Maketendo, Westankrang",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://discord.gg/PG45nNWssF",
     "license": "Not specified",
     "serverSideOnly": false,
     "requiredMods": [],
@@ -744,7 +913,6 @@
       "kleidersplayerrenderer"
     ],
     "currentGenerator": "forge-1.20.1",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.maketendo.forgedreactor"
   },
   "mcreatorVersion": 202400232117

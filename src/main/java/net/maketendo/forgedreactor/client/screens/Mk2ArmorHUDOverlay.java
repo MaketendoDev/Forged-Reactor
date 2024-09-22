@@ -18,8 +18,13 @@ import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.Minecraft;
 
 import net.maketendo.forgedreactor.procedures.YLevelReturnProcedure;
+import net.maketendo.forgedreactor.procedures.SpeedReturnProcedure;
 import net.maketendo.forgedreactor.procedures.RedYLevelDisplayProcedure;
 import net.maketendo.forgedreactor.procedures.PlayerHUDRendererProcedure;
+import net.maketendo.forgedreactor.procedures.Mk2OverlayDisplayOverlayInGameProcedure;
+import net.maketendo.forgedreactor.procedures.GetIFEntityHostileProcedure;
+import net.maketendo.forgedreactor.procedures.GetEntityNameProcedure;
+import net.maketendo.forgedreactor.procedures.GetEntityHealthProcedure;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
@@ -47,7 +52,7 @@ public class Mk2ArmorHUDOverlay {
 		RenderSystem.setShader(GameRenderer::getPositionTexShader);
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
-		if (true) {
+		if (Mk2OverlayDisplayOverlayInGameProcedure.execute(entity)) {
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/ylevel_hud_display.png"), 2, h / 2 + -132, 0, 0, 23, 256, 23, 256);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
@@ -57,6 +62,19 @@ public class Mk2ArmorHUDOverlay {
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						YLevelReturnProcedure.execute(entity), 20, h / 2 + -5, -6750208, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					GetEntityNameProcedure.execute(world, entity), w - 91, 2, -1, false);
+			if (GetIFEntityHostileProcedure.execute(world, entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						GetEntityNameProcedure.execute(world, entity), w - 91, 2, -6867656, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					GetEntityHealthProcedure.execute(world, entity), w - 91, 15, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					SpeedReturnProcedure.execute(entity), 20, h / 2 + 7, -1, false);
 			if (PlayerHUDRendererProcedure.execute(entity) instanceof LivingEntity livingEntity) {
 				InventoryScreen.renderEntityInInventoryFollowsAngle(event.getGuiGraphics(), w - 32, h - 5, 40, 0f, 0, livingEntity);
 			}
