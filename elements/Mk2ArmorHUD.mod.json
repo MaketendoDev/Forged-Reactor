@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "overlay",
   "definition": {
-    "priority": "NORMAL",
+    "priority": "HIGH",
     "components": [
       {
         "type": "image",
@@ -20,12 +20,12 @@
           "entityModel": {
             "name": "PlayerHUDRenderer"
           },
-          "scale": 40,
+          "scale": 55,
           "rotationX": 0,
           "followMouseMovement": false,
-          "anchorPoint": "BOTTOM_RIGHT",
-          "x": 385,
-          "y": 215
+          "anchorPoint": "CENTER_RIGHT",
+          "x": 360,
+          "y": 156
         }
       },
       {
@@ -78,8 +78,8 @@
             "falpha": 0.0
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 336,
-          "y": 2
+          "x": 331,
+          "y": 12
         }
       },
       {
@@ -98,8 +98,8 @@
             "name": "GetIFEntityHostile"
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 336,
-          "y": 2
+          "x": 331,
+          "y": 12
         }
       },
       {
@@ -115,8 +115,8 @@
             "falpha": 0.0
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 336,
-          "y": 15
+          "x": 331,
+          "y": 24
         }
       },
       {
@@ -131,13 +131,53 @@
             "value": -1,
             "falpha": 0.0
           },
-          "anchorPoint": "CENTER_LEFT",
-          "x": 20,
-          "y": 127
+          "anchorPoint": "TOP_CENTER",
+          "x": 186,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "top_hud_bar.png",
+          "use1Xscale": false,
+          "anchorPoint": "TOP_CENTER",
+          "x": -305,
+          "y": 3
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "repulsors_icon_hud.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 32,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "missile_icon_hud.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 367,
+          "y": 190
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "test.png",
+          "use1Xscale": false,
+          "anchorPoint": "CENTER",
+          "x": 324,
+          "y": 8
         }
       }
     ],
-    "baseTexture": "",
+    "baseTexture": "ironman_hud_vision.png",
     "overlayTarget": "Ingame",
     "displayCondition": {
       "name": "Mk2OverlayDisplayOverlayInGame"
