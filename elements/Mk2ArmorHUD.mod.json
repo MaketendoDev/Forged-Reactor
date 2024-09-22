@@ -1,0 +1,79 @@
+{
+  "_fv": 66,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "ylevel_hud_display.png",
+          "use1Xscale": false,
+          "anchorPoint": "CENTER_LEFT",
+          "x": 2,
+          "y": -12
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "PlayerHUDRenderer"
+          },
+          "scale": 40,
+          "rotationX": 0,
+          "followMouseMovement": false,
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 385,
+          "y": 215
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "",
+            "name": "YLevelReturn"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 20,
+          "y": 115
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_y_level_return",
+          "text": {
+            "fixedValue": "",
+            "name": "YLevelReturn"
+          },
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "RedYLevelDisplay"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 20,
+          "y": 115
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

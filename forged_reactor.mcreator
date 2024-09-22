@@ -537,6 +537,79 @@
           }
         ]
       }
+    },
+    {
+      "name": "Mk2ArmorHUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_2_armor_hud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/client/screens/Mk2ArmorHUDOverlay.java"
+        ]
+      },
+      "path": "~/Armor/Mk. 2"
+    },
+    {
+      "name": "PlayerHUDRenderer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_hud_renderer",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/PlayerHUDRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2/HUD Renderer"
+    },
+    {
+      "name": "YLevelReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "y_level_return",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/YLevelReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2/HUD Renderer"
+    },
+    {
+      "name": "RedYLevelDisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_y_level_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RedYLevelDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2/HUD Renderer"
     }
   ],
   "variable_elements": [
@@ -611,7 +684,12 @@
           },
           {
             "name": "Mk. 2",
-            "children": []
+            "children": [
+              {
+                "name": "HUD Renderer",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Mk. 3",
