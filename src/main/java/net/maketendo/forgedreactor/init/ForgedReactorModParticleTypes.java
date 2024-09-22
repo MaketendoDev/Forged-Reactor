@@ -16,4 +16,5 @@ import net.maketendo.forgedreactor.ForgedReactorMod;
 public class ForgedReactorModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, ForgedReactorMod.MODID);
 	public static final RegistryObject<SimpleParticleType> REFINED_FLAME = REGISTRY.register("refined_flame", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> ELECTRICITY_SPARK = REGISTRY.register("electricity_spark", () -> new SimpleParticleType(true));
 }

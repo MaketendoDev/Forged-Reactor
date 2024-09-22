@@ -12,11 +12,13 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.maketendo.forgedreactor.client.model.Modelmk3_armor;
 import net.maketendo.forgedreactor.client.model.Modelmk2_armor;
 import net.maketendo.forgedreactor.client.model.Modelmk1_armor;
+import net.maketendo.forgedreactor.client.model.Modelflight_test_armor_thin;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class ForgedReactorModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modelflight_test_armor_thin.LAYER_LOCATION, Modelflight_test_armor_thin::createBodyLayer);
 		event.registerLayerDefinition(Modelmk3_armor.LAYER_LOCATION, Modelmk3_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk2_armor.LAYER_LOCATION, Modelmk2_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk1_armor.LAYER_LOCATION, Modelmk1_armor::createBodyLayer);

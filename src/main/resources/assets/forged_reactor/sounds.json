@@ -1,0 +1,19 @@
+{
+  "flighttest_armor_spark": {
+    "subtitle": "subtitles.flighttest_armor_spark",
+    "sounds": [
+      {
+        "name": "forged_reactor:spark_2",
+        "stream": false
+      },
+      {
+        "name": "forged_reactor:spark_3",
+        "stream": false
+      },
+      {
+        "name": "forged_reactor:spark_4",
+        "stream": false
+      }
+    ]
+  }
+}

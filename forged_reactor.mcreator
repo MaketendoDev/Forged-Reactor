@@ -722,6 +722,89 @@
         ]
       },
       "path": "~/Armor/Mk. 2/HUD Renderer"
+    },
+    {
+      "name": "FlightTestArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flight_test_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/item/FlightTestArmorItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/flight_test_armor_chestplate.json",
+          "src/main/resources/assets/forged_reactor/models/item/flight_test_armor_boots.json"
+        ]
+      },
+      "path": "~/Armor/Flight Test"
+    },
+    {
+      "name": "FlightTestArmorTickProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flight_test_armor_tick_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/FlightTestArmorTickProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Armor/Flight Test"
+    },
+    {
+      "name": "ElectricitySpark",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electricity_spark",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/client/particle/ElectricitySparkParticle.java",
+          "src/main/resources/assets/forged_reactor/particles/electricity_spark.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "RandomSparkTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_spark_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RandomSparkTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Flight Test"
     }
   ],
   "variable_elements": [
@@ -738,7 +821,18 @@
       "value": "\"\""
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "flighttest_armor_spark",
+      "files": [
+        "spark_2",
+        "spark_3",
+        "spark_4"
+      ],
+      "category": "neutral",
+      "subtitle": "Sparks"
+    }
+  ],
   "tag_elements": {
     "ITEMS:ironman:enablejarvis": [
       "CUSTOM:Mk2IronArmor.helmet",
@@ -815,14 +909,18 @@
       "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
       "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
+      "subtitles.ironman.flighttestarmor.spark_1": "Sparks",
       "key.forged_reactor.attack_4": "Attack 4",
       "item.forged_reactor.mk_1_iron_armor_helmet": "Prototype Iron Armor Helmet",
+      "item.forged_reactor.flight_test_armor_chestplate": "Flight Test Prototype Chestplate",
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots",
-      "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Accurate Flight Iron Armor Leggings"
+      "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Accurate Flight Iron Armor Leggings",
+      "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
+      "subtitles.flighttest_armor_spark": "Sparks"
     }
   },
   "foldersRoot": {
@@ -865,6 +963,10 @@
           },
           {
             "name": "Armor Crafting",
+            "children": []
+          },
+          {
+            "name": "Flight Test",
             "children": []
           }
         ]

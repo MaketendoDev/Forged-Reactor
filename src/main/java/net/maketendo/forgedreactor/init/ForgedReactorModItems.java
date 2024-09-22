@@ -13,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.maketendo.forgedreactor.item.Mk3IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk2IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk1IronArmorItem;
+import net.maketendo.forgedreactor.item.FlightTestArmorItem;
 import net.maketendo.forgedreactor.ForgedReactorMod;
 
 public class ForgedReactorModItems {
@@ -29,6 +30,8 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MK_3_IRON_ARMOR_CHESTPLATE = REGISTRY.register("mk_3_iron_armor_chestplate", () -> new Mk3IronArmorItem.Chestplate());
 	public static final RegistryObject<Item> MK_3_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_3_iron_armor_leggings", () -> new Mk3IronArmorItem.Leggings());
 	public static final RegistryObject<Item> MK_3_IRON_ARMOR_BOOTS = REGISTRY.register("mk_3_iron_armor_boots", () -> new Mk3IronArmorItem.Boots());
+	public static final RegistryObject<Item> FLIGHT_TEST_ARMOR_CHESTPLATE = REGISTRY.register("flight_test_armor_chestplate", () -> new FlightTestArmorItem.Chestplate());
+	public static final RegistryObject<Item> FLIGHT_TEST_ARMOR_BOOTS = REGISTRY.register("flight_test_armor_boots", () -> new FlightTestArmorItem.Boots());
 	// Start of user code block custom items
 	// End of user code block custom items
 }
