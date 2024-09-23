@@ -1,0 +1,121 @@
+{
+  "_fv": 66,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "minecraft:broken_elytra",
+    "enableBody": true,
+    "textureBody": "minecraft:clock_43",
+    "enableLeggings": true,
+    "textureLeggings": "minecraft:empty_slot_shovel",
+    "enableBoots": true,
+    "textureBoots": "minecraft:compass_00",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:IronArmorTab"
+      }
+    ],
+    "armorTextureFile": "armor",
+    "helmetName": "Iron Armor Helmet",
+    "bodyName": "Iron Armor Chestplate",
+    "leggingsName": "Iron Armor Leggings",
+    "bootsName": "Iron Armor Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "§8Mark IV (4)"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "§8Mark IV (4)"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "§8Mark IV (4)"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "§8Mark IV (4)"
+      ]
+    },
+    "helmetModelName": "Modelmk4_iron_armor",
+    "helmetModelPart": "Head",
+    "helmetModelTexture": "mk4_armor.png",
+    "bodyModelName": "Modelmk4_iron_armor",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "LeftArm",
+    "armsModelPartR": "RightArm",
+    "bodyModelTexture": "mk4_armor.png",
+    "leggingsModelName": "Modelmk4_iron_armor",
+    "leggingsModelPartL": "LeftArm",
+    "leggingsModelPartR": "RightLeg",
+    "leggingsModelTexture": "mk4_armor.png",
+    "bootsModelName": "Modelmk4_iron_armor",
+    "bootsModelPartL": "LeftLeg",
+    "bootsModelPartR": "RightLeg",
+    "bootsModelTexture": "mk4_armor.png",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": true
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": true
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": true
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": true
+    },
+    "maxDamage": 15,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 2,
+    "enchantability": 9,
+    "toughness": 0.7999999999999999,
+    "knockbackResistance": 0.1,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "Blocks.IRON_ORE"
+      },
+      {
+        "value": "Blocks.DEEPSLATE_IRON_ORE"
+      },
+      {
+        "value": "Items.RAW_IRON"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ]
+  }
+}

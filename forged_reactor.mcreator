@@ -571,7 +571,7 @@
           "src/main/java/net/maketendo/forgedreactor/client/screens/Mk2ArmorHUDOverlay.java"
         ]
       },
-      "path": "~/Armor/Mk. 2"
+      "path": "~/Iron Armor HUD"
     },
     {
       "name": "PlayerHUDRenderer",
@@ -591,7 +591,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2/HUD Renderer"
+      "path": "~/Iron Armor HUD/HUD Renderer"
     },
     {
       "name": "YLevelReturn",
@@ -611,7 +611,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2/HUD Renderer"
+      "path": "~/Iron Armor HUD/HUD Renderer"
     },
     {
       "name": "RedYLevelDisplay",
@@ -631,7 +631,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2/HUD Renderer"
+      "path": "~/Iron Armor HUD/HUD Renderer"
     },
     {
       "name": "Mk2OverlayDisplayOverlayInGame",
@@ -651,7 +651,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2"
+      "path": "~/Iron Armor HUD"
     },
     {
       "name": "GetEntityName",
@@ -675,7 +675,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2/HUD Renderer/EntityData"
+      "path": "~/Iron Armor HUD/HUD Renderer/EntityData"
     },
     {
       "name": "GetEntityHealth",
@@ -699,7 +699,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2/HUD Renderer/EntityData"
+      "path": "~/Iron Armor HUD/HUD Renderer/EntityData"
     },
     {
       "name": "GetIFEntityHostile",
@@ -723,7 +723,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2/HUD Renderer/EntityData"
+      "path": "~/Iron Armor HUD/HUD Renderer/EntityData"
     },
     {
       "name": "SpeedReturn",
@@ -743,7 +743,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2/HUD Renderer"
+      "path": "~/Iron Armor HUD/HUD Renderer"
     },
     {
       "name": "FlightTestArmor",
@@ -774,6 +774,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -945,7 +961,7 @@
           }
         ]
       },
-      "path": "~/Armor/Mk. 2/HUD Renderer/EntityData"
+      "path": "~/Iron Armor HUD/HUD Renderer/EntityData"
     },
     {
       "name": "Mk1IronArmorHelmetOpen",
@@ -995,6 +1011,23 @@
         ]
       },
       "path": "~/Armor/Mk. 1/Functionality/Moves"
+    },
+    {
+      "name": "Mk4IronArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_4_iron_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/item/Mk4IronArmorItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/mk_4_iron_armor_boots.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_4_iron_armor_helmet.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_4_iron_armor_leggings.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_4_iron_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor/Mk. 4"
     }
   ],
   "variable_elements": [
@@ -1093,14 +1126,18 @@
   "language_map": {
     "en_us": {
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
+      "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
+      "item.forged_reactor.mk_4_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
       "subtitles.ironman.flighttestarmor.spark_1": "Sparks",
       "item.forged_reactor.mk_1_iron_armor_helmet": "Prototype Iron Armor Helmet",
       "item.forged_reactor.flight_test_armor_chestplate": "Flight Test Prototype Chestplate",
+      "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
       "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Accurate Flight Iron Armor Leggings",
       "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
+      "item.forged_reactor.mk_4_iron_armor_helmet": "Iron Armor Helmet",
       "subtitles.flighttest_armor_spark": "Sparks",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
@@ -1141,17 +1178,7 @@
           },
           {
             "name": "Mk. 2",
-            "children": [
-              {
-                "name": "HUD Renderer",
-                "children": [
-                  {
-                    "name": "EntityData",
-                    "children": []
-                  }
-                ]
-              }
-            ]
+            "children": []
           },
           {
             "name": "Mk. 3",
@@ -1163,6 +1190,10 @@
           },
           {
             "name": "Flight Test",
+            "children": []
+          },
+          {
+            "name": "Mk. 4",
             "children": []
           }
         ]
@@ -1199,6 +1230,20 @@
           {
             "name": "Ait Compact",
             "children": []
+          }
+        ]
+      },
+      {
+        "name": "Iron Armor HUD",
+        "children": [
+          {
+            "name": "HUD Renderer",
+            "children": [
+              {
+                "name": "EntityData",
+                "children": []
+              }
+            ]
           }
         ]
       }
