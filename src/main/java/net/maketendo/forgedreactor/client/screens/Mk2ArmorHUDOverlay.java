@@ -24,6 +24,7 @@ import net.maketendo.forgedreactor.procedures.PlayerHUDRendererProcedure;
 import net.maketendo.forgedreactor.procedures.Mk2OverlayDisplayOverlayInGameProcedure;
 import net.maketendo.forgedreactor.procedures.GetIFEntityHostileProcedure;
 import net.maketendo.forgedreactor.procedures.GetEntityNameProcedure;
+import net.maketendo.forgedreactor.procedures.GetEntityMaxHealthProcedure;
 import net.maketendo.forgedreactor.procedures.GetEntityHealthProcedure;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -56,13 +57,13 @@ public class Mk2ArmorHUDOverlay {
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/ironman_hud_vision.png"), 0, 0, 0, 0, w, h, w, h);
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/ylevel_hud_display.png"), 2, h / 2 + -132, 0, 0, 23, 256, 23, 256);
 
-			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/top_hud_bar.png"), w / 2 + -518, 3, 0, 0, 1056, 3, 1056, 3);
+			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/top_hud_bar.png"), w / 2 + -525, 3, 0, 0, 2056, 3, 2056, 3);
 
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/repulsors_icon_hud.png"), 32, h - 49, 0, 0, 43, 43, 43, 43);
 
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/missile_icon_hud.png"), w - 60, h - 50, 0, 0, 43, 43, 43, 43);
 
-			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/test.png"), w / 2 + 111, h / 2 + -112, 0, 0, 100, 100, 100, 100);
+			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/ironman_hud_info_box.png"), w - 103, 8, 0, 0, 101, 51, 101, 51);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
@@ -73,19 +74,30 @@ public class Mk2ArmorHUDOverlay {
 						YLevelReturnProcedure.execute(entity), 20, h / 2 + -5, -6750208, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					GetEntityNameProcedure.execute(world, entity), w - 96, 12, -1, false);
+					GetEntityNameProcedure.execute(world, entity), w - 98, 12, -1, false);
 			if (GetIFEntityHostileProcedure.execute(world, entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						GetEntityNameProcedure.execute(world, entity), w - 96, 12, -6867656, false);
+						GetEntityNameProcedure.execute(world, entity), w - 98, 12, -6750208, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					GetEntityHealthProcedure.execute(world, entity), w - 96, 24, -1, false);
+					GetEntityHealthProcedure.execute(world, entity), w - 98, 24, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					SpeedReturnProcedure.execute(entity), w / 2 + -27, 12, -1, false);
+					SpeedReturnProcedure.execute(entity), w - 405, 7, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					GetEntityMaxHealthProcedure.execute(world, entity), w - 98, 37, -1, false);
+			if (GetIFEntityHostileProcedure.execute(world, entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						GetEntityMaxHealthProcedure.execute(world, entity), w - 98, 37, -6750208, false);
+			if (GetIFEntityHostileProcedure.execute(world, entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+						GetEntityHealthProcedure.execute(world, entity), w - 98, 24, -6750208, false);
 			if (PlayerHUDRendererProcedure.execute(entity) instanceof LivingEntity livingEntity) {
-				InventoryScreen.renderEntityInInventoryFollowsAngle(event.getGuiGraphics(), w - 57, h / 2 + 56, 55, 0f, 0, livingEntity);
+				InventoryScreen.renderEntityInInventoryFollowsAngle(event.getGuiGraphics(), w - 55, h / 2 + 55, 55, 0f, 0, livingEntity);
 			}
 		}
 		RenderSystem.depthMask(true);

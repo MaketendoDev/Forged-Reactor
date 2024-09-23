@@ -33,5 +33,6 @@ public class ForgedReactorModTabs {
 				tabData.accept(ForgedReactorModItems.MK_3_IRON_ARMOR_BOOTS.get());
 				tabData.accept(ForgedReactorModItems.FLIGHT_TEST_ARMOR_CHESTPLATE.get());
 				tabData.accept(ForgedReactorModItems.FLIGHT_TEST_ARMOR_BOOTS.get());
+				tabData.accept(ForgedReactorModItems.MK_1_IRON_ARMOR_HELMET_OPEN_HELMET.get());
 			}).withSearchBar().build());
 }

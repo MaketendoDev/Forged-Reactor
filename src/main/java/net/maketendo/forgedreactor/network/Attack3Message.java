@@ -52,7 +52,7 @@ public class Attack3Message {
 			return;
 		if (type == 0) {
 
-			Attack3OnKeyPressedProcedure.execute();
+			Attack3OnKeyPressedProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

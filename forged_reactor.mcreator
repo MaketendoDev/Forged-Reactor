@@ -284,7 +284,28 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/Attack3OnKeyPressedProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Keybinds"
     },
@@ -901,6 +922,79 @@
         ]
       },
       "path": "~/Jarvis"
+    },
+    {
+      "name": "GetEntityMaxHealth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_entity_max_health",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/GetEntityMaxHealthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 2/HUD Renderer/EntityData"
+    },
+    {
+      "name": "Mk1IronArmorHelmetOpen",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_iron_armor_helmet_open",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/mk_1_iron_armor_helmet_open_helmet.json",
+          "src/main/java/net/maketendo/forgedreactor/item/Mk1IronArmorHelmetOpenItem.java"
+        ]
+      },
+      "path": "~/Armor/Mk. 1"
+    },
+    {
+      "name": "OpenCloseHelmet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_close_helmet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/OpenCloseHelmetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 1/Functionality/Moves"
     }
   ],
   "variable_elements": [
@@ -930,6 +1024,10 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:ironman:enableironhud": [
+      "CUSTOM:Mk2IronArmor.helmet",
+      "CUSTOM:Mk3IronArmor.helmet"
+    ],
     "ITEMS:ironman:enablejarvis": [
       "CUSTOM:Mk2IronArmor.helmet",
       "CUSTOM:Mk3IronArmor.helmet"
@@ -1017,7 +1115,8 @@
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
-      "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots"
+      "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots",
+      "item.forged_reactor.mk_1_iron_armor_helmet_open_helmet": "Prototype Iron Armor Helmet"
     }
   },
   "foldersRoot": {

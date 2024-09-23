@@ -24,8 +24,8 @@
           "rotationX": 0,
           "followMouseMovement": false,
           "anchorPoint": "CENTER_RIGHT",
-          "x": 360,
-          "y": 156
+          "x": 362,
+          "y": 155
         }
       },
       {
@@ -78,7 +78,7 @@
             "falpha": 0.0
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 331,
+          "x": 329,
           "y": 12
         }
       },
@@ -91,14 +91,14 @@
             "name": "GetEntityName"
           },
           "color": {
-            "value": -6867656,
+            "value": -6750208,
             "falpha": 0.0
           },
           "displayCondition": {
             "name": "GetIFEntityHostile"
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 331,
+          "x": 329,
           "y": 12
         }
       },
@@ -115,7 +115,7 @@
             "falpha": 0.0
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 331,
+          "x": 329,
           "y": 24
         }
       },
@@ -131,9 +131,9 @@
             "value": -1,
             "falpha": 0.0
           },
-          "anchorPoint": "TOP_CENTER",
-          "x": 186,
-          "y": 12
+          "anchorPoint": "TOP_RIGHT",
+          "x": 22,
+          "y": 7
         }
       },
       {
@@ -142,7 +142,7 @@
           "image": "top_hud_bar.png",
           "use1Xscale": false,
           "anchorPoint": "TOP_CENTER",
-          "x": -305,
+          "x": -312,
           "y": 3
         }
       },
@@ -169,11 +169,68 @@
       {
         "type": "image",
         "data": {
-          "image": "test.png",
+          "image": "ironman_hud_info_box.png",
           "use1Xscale": false,
-          "anchorPoint": "CENTER",
+          "anchorPoint": "TOP_RIGHT",
           "x": 324,
           "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_entity_max_health",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEntityMaxHealth"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_RIGHT",
+          "x": 329,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_entity_max_health1",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEntityMaxHealth"
+          },
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "GetIFEntityHostile"
+          },
+          "anchorPoint": "TOP_RIGHT",
+          "x": 329,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_entity_health1",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEntityHealth"
+          },
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "GetIFEntityHostile"
+          },
+          "anchorPoint": "TOP_RIGHT",
+          "x": 329,
+          "y": 24
         }
       }
     ],

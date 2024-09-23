@@ -9,7 +9,7 @@ import net.minecraft.world.entity.Entity;
 
 import java.util.Comparator;
 
-public class GetEntityNameProcedure {
+public class GetEntityMaxHealthProcedure {
 	public static String execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return "";
@@ -120,37 +120,42 @@ public class GetEntityNameProcedure {
 			}
 		}
 		if (entity_found) {
-			return "Name: "
-					+ ((Entity) world
-							.getEntitiesOfClass(LivingEntity.class,
-									AABB.ofSize(
-											new Vec3(
+			return "Max Health: "
+					+ (new java.text.DecimalFormat(
+							"##.##").format(
+									((Entity) world
+											.getEntitiesOfClass(LivingEntity.class,
+													AABB.ofSize(new Vec3(
+															(entity.level()
+																	.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,
+																			entity))
+																	.getBlockPos().getX()),
+															(entity.level()
+																	.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,
+																			entity))
+																	.getBlockPos().getY()),
+															(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER,
+																	ClipContext.Fluid.NONE, entity)).getBlockPos().getZ())),
+															1, 1, 1),
+													e -> true)
+											.stream().sorted(new Object() {
+												Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+													return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+												}
+											}.compareDistOf(
 													(entity.level()
 															.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,
 																	entity))
 															.getBlockPos().getX()),
 													(entity.level()
-															.clip(new ClipContext(
-																	entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
+															.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,
+																	entity))
 															.getBlockPos().getY()),
 													(entity.level().clip(
 															new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
-															.getBlockPos().getZ())),
-											1, 1, 1),
-									e -> true)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-								}
-							}.compareDistOf(
-									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
-											.getBlockPos().getX()),
-									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
-											.getBlockPos().getY()),
-									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
-											.getBlockPos().getZ())))
-							.findFirst().orElse(null)).getDisplayName().getString();
+															.getBlockPos().getZ())))
+											.findFirst().orElse(null)) instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1));
 		}
-		return "Name";
+		return "Max Health";
 	}
 }
