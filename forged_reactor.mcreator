@@ -1024,7 +1024,7 @@
     }
   ],
   "tag_elements": {
-    "ITEMS:ironman:enableironhud": [
+    "ITEMS:ironman:enablemk2ironhud": [
       "CUSTOM:Mk2IronArmor.helmet",
       "CUSTOM:Mk3IronArmor.helmet"
     ],
