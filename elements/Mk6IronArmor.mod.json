@@ -10,7 +10,11 @@
     "textureLeggings": "mk5_leggings",
     "enableBoots": true,
     "textureBoots": "mk5_boots",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:IronArmorTab"
+      }
+    ],
     "armorTextureFile": "armor",
     "helmetName": "Iron Armor Helmet",
     "bodyName": "Iron Armor Chestplate",
@@ -18,40 +22,40 @@
     "bootsName": "Iron Armor Boots",
     "helmetSpecialInformation": {
       "fixedValue": [
-        "§8Mark V (5)"
+        "§8Mark VI (6)"
       ]
     },
     "bodySpecialInformation": {
       "fixedValue": [
-        "§8Mark V (5)"
+        "§8Mark VI (6)"
       ]
     },
     "leggingsSpecialInformation": {
       "fixedValue": [
-        "§8Mark V (5)"
+        "§8Mark VI (6)"
       ]
     },
     "bootsSpecialInformation": {
       "fixedValue": [
-        "§8Mark V (5)"
+        "§8Mark VI (6)"
       ]
     },
-    "helmetModelName": "Modelmk5_armor",
+    "helmetModelName": "Modelmk6_armor",
     "helmetModelPart": "Head",
-    "helmetModelTexture": "mk5_armor.png",
-    "bodyModelName": "Modelmk5_armor",
+    "helmetModelTexture": "mk6_armor.png",
+    "bodyModelName": "Modelmk6_armor",
     "bodyModelPart": "Body",
     "armsModelPartL": "LeftArm",
     "armsModelPartR": "RightArm",
-    "bodyModelTexture": "mk5_armor.png",
-    "leggingsModelName": "Modelmk5_armor",
+    "bodyModelTexture": "mk6_armor.png",
+    "leggingsModelName": "Modelmk6_armor",
     "leggingsModelPartL": "LeftLeg",
     "leggingsModelPartR": "RightLeg",
-    "leggingsModelTexture": "mk5_armor.png",
-    "bootsModelName": "Modelmk5_armor",
+    "leggingsModelTexture": "mk6_armor.png",
+    "bootsModelName": "Modelmk6_armor",
     "bootsModelPartL": "LeftLeg",
     "bootsModelPartR": "RightLeg",
-    "bootsModelTexture": "mk5_armor.png",
+    "bootsModelTexture": "mk6_armor.png",
     "helmetItemRenderType": 0,
     "helmetItemCustomModelName": "Normal",
     "bodyItemRenderType": 0,

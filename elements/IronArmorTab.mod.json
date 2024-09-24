@@ -4,7 +4,7 @@
   "definition": {
     "name": "Iron Armor",
     "icon": {
-      "value": "Items.IRON_HELMET"
+      "value": "CUSTOM:Mk3IronArmor.helmet"
     },
     "showSearch": true
   }

@@ -1100,6 +1100,60 @@
         ]
       },
       "path": "~/Armor/Mk. 5"
+    },
+    {
+      "name": "Mk6IronArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_6_iron_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/mk_6_iron_armor_leggings.json",
+          "src/main/java/net/maketendo/forgedreactor/item/Mk6IronArmorItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/mk_6_iron_armor_chestplate.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_6_iron_armor_boots.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_6_iron_armor_helmet.json"
+        ]
+      },
+      "path": "~/Armor/Mk. 6"
+    },
+    {
+      "name": "UpgradeTemplateItemInInventoryTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_template_item_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/UpgradeTemplateItemInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Items"
+    },
+    {
+      "name": "UpgradeTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_template",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/item/UpgradeTemplateItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/upgrade_template.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Items"
     }
   ],
   "variable_elements": [
@@ -1129,18 +1183,17 @@
     }
   ],
   "tag_elements": {
-    "ITEMS:minecraft:removeheadifhelmetisworn": [
-      "CUSTOM:Mk2IronArmor.helmet",
-      "CUSTOM:Mk3IronArmor.helmet",
-      "CUSTOM:Mk4IronArmor.helmet"
-    ],
     "ITEMS:ironman:enablemk2ironhud": [
       "CUSTOM:Mk2IronArmor.helmet",
-      "CUSTOM:Mk3IronArmor.helmet"
+      "CUSTOM:Mk3IronArmor.helmet",
+      "CUSTOM:Mk4IronArmor.helmet",
+      "CUSTOM:Mk5IronArmor.helmet"
     ],
     "ITEMS:ironman:enablejarvis": [
       "CUSTOM:Mk2IronArmor.helmet",
-      "CUSTOM:Mk3IronArmor.helmet"
+      "CUSTOM:Mk3IronArmor.helmet",
+      "CUSTOM:Mk4IronArmor.helmet",
+      "CUSTOM:Mk5IronArmor.helmet"
     ],
     "BLOCKS:minecraft:air": [
       "Blocks.AIR",
@@ -1151,7 +1204,14 @@
       "CUSTOM:Mk1IronArmor.body",
       "CUSTOM:Mk2IronArmor.body",
       "CUSTOM:Mk3IronArmor.body",
-      "CUSTOM:Mk4IronArmor.body"
+      "CUSTOM:Mk4IronArmor.body",
+      "CUSTOM:Mk5IronArmor.body"
+    ],
+    "ITEMS:ironman:removeheadifhelmetisworn": [
+      "CUSTOM:Mk2IronArmor.helmet",
+      "CUSTOM:Mk3IronArmor.helmet",
+      "CUSTOM:Mk4IronArmor.helmet",
+      "CUSTOM:Mk5IronArmor.helmet"
     ],
     "ENTITIES:minecraft:hostile": [
       "EntityAreaEffectCloud",
@@ -1209,10 +1269,12 @@
   "language_map": {
     "en_us": {
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
+      "item.forged_reactor.upgrade_template": "Upgrade Template",
       "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_4_iron_armor_chestplate": "Iron Armor Chestplate",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
+      "item.forged_reactor.mk_6_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
       "subtitles.ironman.flighttestarmor.spark_1": "Sparks",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
@@ -1229,8 +1291,10 @@
       "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "item.forged_reactor.mk_3_iron_armor_helmet": "Iron Armor Helmet",
+      "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
       "key.categories.ironarmor": "Iron Armor",
       "key.forged_reactor.attack_3": "Attack 3",
+      "item.forged_reactor.mk_6_iron_armor_chestplate": "Iron Armor Chestplate",
       "key.forged_reactor.attack_2": "Attack 2",
       "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
@@ -1238,6 +1302,7 @@
       "key.forged_reactor.attack_4": "Attack 4",
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
       "effect.forged_reactor.armor_weight": "Armor Weight",
+      "item.forged_reactor.mk_6_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_helmet_open_helmet": "Prototype Iron Armor Helmet",
@@ -1282,6 +1347,10 @@
           },
           {
             "name": "Flight Test",
+            "children": []
+          },
+          {
+            "name": "Mk. 6",
             "children": []
           }
         ]
@@ -1340,7 +1409,12 @@
           },
           {
             "name": "Armor Crafting",
-            "children": []
+            "children": [
+              {
+                "name": "Items",
+                "children": []
+              }
+            ]
           }
         ]
       }

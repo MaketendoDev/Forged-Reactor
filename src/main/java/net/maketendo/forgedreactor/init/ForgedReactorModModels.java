@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.maketendo.forgedreactor.client.model.Modelmk6_armor;
 import net.maketendo.forgedreactor.client.model.Modelmk5_armor;
 import net.maketendo.forgedreactor.client.model.Modelmk4_armor;
 import net.maketendo.forgedreactor.client.model.Modelmk3_armor;
@@ -27,6 +28,7 @@ public class ForgedReactorModModels {
 		event.registerLayerDefinition(Modelmk2_armor.LAYER_LOCATION, Modelmk2_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk5_armor.LAYER_LOCATION, Modelmk5_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk1_armor.LAYER_LOCATION, Modelmk1_armor::createBodyLayer);
+		event.registerLayerDefinition(Modelmk6_armor.LAYER_LOCATION, Modelmk6_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk4_armor.LAYER_LOCATION, Modelmk4_armor::createBodyLayer);
 	}
 }
