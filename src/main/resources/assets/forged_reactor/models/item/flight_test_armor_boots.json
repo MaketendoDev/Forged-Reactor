@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:item/bundle_filled"
+    "layer0": "forged_reactor:item/flight_test_prototype_boots"
   }
 }

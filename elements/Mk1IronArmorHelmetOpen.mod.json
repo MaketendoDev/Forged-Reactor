@@ -10,11 +10,7 @@
     "textureLeggings": "mk1_leggings",
     "enableBoots": false,
     "textureBoots": "mk1_boots",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:IronArmorTab"
-      }
-    ],
+    "creativeTabs": [],
     "armorTextureFile": "armor",
     "helmetName": "Prototype Iron Armor Helmet",
     "bodyName": "Prototype Iron Armor Chestplate",
@@ -41,7 +37,7 @@
         "§8Mark I (1)"
       ]
     },
-    "helmetModelName": "Modelopen_mk1_helmet",
+    "helmetModelName": "Modelmk1_helmet_open",
     "helmetModelPart": "Head",
     "helmetModelTexture": "mk1_iron_helmet_open.png",
     "bodyModelName": "Modelmk1_armor",

@@ -3,13 +3,13 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "minecraft:broken_elytra",
+    "textureHelmet": "mk2_helmet",
     "enableBody": true,
-    "textureBody": "minecraft:clock_43",
+    "textureBody": "mk2_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "minecraft:empty_slot_shovel",
+    "textureLeggings": "mk2_leggings",
     "enableBoots": true,
-    "textureBoots": "minecraft:compass_00",
+    "textureBoots": "mk2_boots",
     "creativeTabs": [
       {
         "value": "CUSTOM:IronArmorTab"

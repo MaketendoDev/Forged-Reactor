@@ -22,7 +22,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.maketendo.forgedreactor.client.model.Modelopen_mk1_helmet;
+import net.maketendo.forgedreactor.client.model.Modelmk1_helmet_open;
 
 import java.util.function.Consumer;
 import java.util.Map;
@@ -85,7 +85,7 @@ public abstract class Mk1IronArmorHelmetOpenItem extends ArmorItem {
 				@Override
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("head", new Modelopen_mk1_helmet(Minecraft.getInstance().getEntityModels().bakeLayer(Modelopen_mk1_helmet.LAYER_LOCATION)).Head, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
+							Map.of("head", new Modelmk1_helmet_open(Minecraft.getInstance().getEntityModels().bakeLayer(Modelmk1_helmet_open.LAYER_LOCATION)).Head, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()))));

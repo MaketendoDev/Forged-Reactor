@@ -15,24 +15,24 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.10.4
+// Made with Blockbench 4.11.0
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelopen_mk1_helmet<T extends Entity> extends EntityModel<T> {
+public class Modelmk1_helmet_open<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("forged_reactor", "modelopen_mk_1_helmet"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("forged_reactor", "modelmk_1_helmet_open"), "main");
 	public final ModelPart Head;
 
-	public Modelopen_mk1_helmet(ModelPart root) {
+	public Modelmk1_helmet_open(ModelPart root) {
 		this.Head = root.getChild("Head");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(22, 54).addBox(-4.0F, -8.0F, -1.0F, 8.0F, 8.0F, 5.0F, new CubeDeformation(0.4F)), PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition MainHatLayer_r1 = Head.addOrReplaceChild("MainHatLayer_r1", CubeListBuilder.create().texOffs(37, 5).addBox(-4.0F, -4.0F, -1.5F, 8.0F, 8.0F, 3.0F, new CubeDeformation(0.4F)),
+		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(22, 54).addBox(-4.0F, -8.0F, -1.0F, 8.0F, 8.0F, 5.0F, new CubeDeformation(0.6F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition MainHatLayer_r1 = Head.addOrReplaceChild("MainHatLayer_r1", CubeListBuilder.create().texOffs(37, 5).addBox(-4.0F, -3.594F, -1.5F, 8.0F, 8.0F, 3.0F, new CubeDeformation(0.6F)),
 				PartPose.offsetAndRotation(0.0F, -13.1069F, -0.4974F, -2.9234F, 0.0F, 0.0F));
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}

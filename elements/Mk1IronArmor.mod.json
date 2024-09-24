@@ -5,7 +5,7 @@
     "enableHelmet": true,
     "textureHelmet": "mk1_helmet",
     "enableBody": true,
-    "textureBody": "mk2_chestplate",
+    "textureBody": "mk1_chestplate",
     "enableLeggings": true,
     "textureLeggings": "mk1_leggings",
     "enableBoots": true,

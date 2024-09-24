@@ -5,11 +5,11 @@
     "enableHelmet": false,
     "textureHelmet": "",
     "enableBody": true,
-    "textureBody": "minecraft:bundle",
+    "textureBody": "flight_test_prototype_chestplate",
     "enableLeggings": false,
     "textureLeggings": "",
     "enableBoots": true,
-    "textureBoots": "minecraft:bundle_filled",
+    "textureBoots": "flight_test_prototype_boots",
     "creativeTabs": [
       {
         "value": "CUSTOM:IronArmorTab"

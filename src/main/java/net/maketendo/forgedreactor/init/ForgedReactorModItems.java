@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.maketendo.forgedreactor.item.Mk5SuitcaseItem;
+import net.maketendo.forgedreactor.item.Mk5IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk4IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk3IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk2IronArmorItem;
@@ -42,6 +44,11 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MK_4_IRON_ARMOR_CHESTPLATE = REGISTRY.register("mk_4_iron_armor_chestplate", () -> new Mk4IronArmorItem.Chestplate());
 	public static final RegistryObject<Item> MK_4_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_4_iron_armor_leggings", () -> new Mk4IronArmorItem.Leggings());
 	public static final RegistryObject<Item> MK_4_IRON_ARMOR_BOOTS = REGISTRY.register("mk_4_iron_armor_boots", () -> new Mk4IronArmorItem.Boots());
+	public static final RegistryObject<Item> MK_5_IRON_ARMOR_HELMET = REGISTRY.register("mk_5_iron_armor_helmet", () -> new Mk5IronArmorItem.Helmet());
+	public static final RegistryObject<Item> MK_5_IRON_ARMOR_CHESTPLATE = REGISTRY.register("mk_5_iron_armor_chestplate", () -> new Mk5IronArmorItem.Chestplate());
+	public static final RegistryObject<Item> MK_5_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_5_iron_armor_leggings", () -> new Mk5IronArmorItem.Leggings());
+	public static final RegistryObject<Item> MK_5_IRON_ARMOR_BOOTS = REGISTRY.register("mk_5_iron_armor_boots", () -> new Mk5IronArmorItem.Boots());
+	public static final RegistryObject<Item> MK_5_SUITCASE = REGISTRY.register("mk_5_suitcase", () -> new Mk5SuitcaseItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

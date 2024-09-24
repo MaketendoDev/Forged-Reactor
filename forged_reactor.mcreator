@@ -131,7 +131,7 @@
           }
         ]
       },
-      "path": "~/Jarvis"
+      "path": "~/Functions/Jarvis"
     },
     {
       "name": "Attack1",
@@ -540,7 +540,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Functions"
     },
     {
       "name": "RemoveArmsWhenWorn",
@@ -558,7 +559,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Functions"
     },
     {
       "name": "Mk2ArmorHUD",
@@ -859,7 +861,7 @@
           "src/main/resources/assets/forged_reactor/models/block/armor_configurator.json"
         ]
       },
-      "path": "~/Armor/Armor Crafting"
+      "path": "~/Functions/Armor Crafting"
     },
     {
       "name": "MainAITFunctionality",
@@ -898,7 +900,7 @@
           }
         ]
       },
-      "path": "~/Jarvis/Ait Compact"
+      "path": "~/Functions/Jarvis/Ait Compact"
     },
     {
       "name": "IfPlayerWearingJarvisSupportedArmor",
@@ -937,7 +939,7 @@
           }
         ]
       },
-      "path": "~/Jarvis"
+      "path": "~/Functions/Jarvis"
     },
     {
       "name": "GetEntityMaxHealth",
@@ -1028,6 +1030,76 @@
         ]
       },
       "path": "~/Armor/Mk. 4"
+    },
+    {
+      "name": "Mk5IronArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_5_iron_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/mk_5_iron_armor_helmet.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_5_iron_armor_chestplate.json",
+          "src/main/java/net/maketendo/forgedreactor/item/Mk5IronArmorItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/mk_5_iron_armor_boots.json",
+          "src/main/resources/assets/forged_reactor/models/item/mk_5_iron_armor_leggings.json"
+        ]
+      },
+      "path": "~/Armor/Mk. 5"
+    },
+    {
+      "name": "Mk5Suitcase",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_5_suitcase",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/item/Mk5SuitcaseItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/mk_5_suitcase.json"
+        ]
+      },
+      "path": "~/Armor/Mk. 5"
+    },
+    {
+      "name": "Mk5SuitcaseRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_5_suitcase_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Mk5SuitcaseRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 5"
     }
   ],
   "variable_elements": [
@@ -1057,6 +1129,11 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:minecraft:removeheadifhelmetisworn": [
+      "CUSTOM:Mk2IronArmor.helmet",
+      "CUSTOM:Mk3IronArmor.helmet",
+      "CUSTOM:Mk4IronArmor.helmet"
+    ],
     "ITEMS:ironman:enablemk2ironhud": [
       "CUSTOM:Mk2IronArmor.helmet",
       "CUSTOM:Mk3IronArmor.helmet"
@@ -1069,6 +1146,12 @@
       "Blocks.AIR",
       "Blocks.VOID_AIR",
       "Blocks.CAVE_AIR"
+    ],
+    "ITEMS:ironman:removearmsifchestplateisworn": [
+      "CUSTOM:Mk1IronArmor.body",
+      "CUSTOM:Mk2IronArmor.body",
+      "CUSTOM:Mk3IronArmor.body",
+      "CUSTOM:Mk4IronArmor.body"
     ],
     "ENTITIES:minecraft:hostile": [
       "EntityAreaEffectCloud",
@@ -1126,11 +1209,13 @@
   "language_map": {
     "en_us": {
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
+      "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
-      "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
       "item.forged_reactor.mk_4_iron_armor_chestplate": "Iron Armor Chestplate",
+      "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
       "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
       "subtitles.ironman.flighttestarmor.spark_1": "Sparks",
+      "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_1_iron_armor_helmet": "Prototype Iron Armor Helmet",
       "item.forged_reactor.flight_test_armor_chestplate": "Flight Test Prototype Chestplate",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
@@ -1139,6 +1224,7 @@
       "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
       "item.forged_reactor.mk_4_iron_armor_helmet": "Iron Armor Helmet",
       "subtitles.flighttest_armor_spark": "Sparks",
+      "item.forged_reactor.mk_5_iron_armor_chestplate": "Iron Armor Chestplate",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
@@ -1148,12 +1234,14 @@
       "key.forged_reactor.attack_2": "Attack 2",
       "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
+      "item.forged_reactor.mk_5_iron_armor_leggings": "Iron Armor Leggings",
       "key.forged_reactor.attack_4": "Attack 4",
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots",
-      "item.forged_reactor.mk_1_iron_armor_helmet_open_helmet": "Prototype Iron Armor Helmet"
+      "item.forged_reactor.mk_1_iron_armor_helmet_open_helmet": "Prototype Iron Armor Helmet",
+      "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase"
     }
   },
   "foldersRoot": {
@@ -1185,15 +1273,15 @@
             "children": []
           },
           {
-            "name": "Armor Crafting",
+            "name": "Mk. 4",
+            "children": []
+          },
+          {
+            "name": "Mk. 5",
             "children": []
           },
           {
             "name": "Flight Test",
-            "children": []
-          },
-          {
-            "name": "Mk. 4",
             "children": []
           }
         ]
@@ -1225,15 +1313,6 @@
         ]
       },
       {
-        "name": "Jarvis",
-        "children": [
-          {
-            "name": "Ait Compact",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Iron Armor HUD",
         "children": [
           {
@@ -1244,6 +1323,24 @@
                 "children": []
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Functions",
+        "children": [
+          {
+            "name": "Jarvis",
+            "children": [
+              {
+                "name": "Ait Compact",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Armor Crafting",
+            "children": []
           }
         ]
       }

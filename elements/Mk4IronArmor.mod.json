@@ -3,13 +3,13 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "minecraft:broken_elytra",
+    "textureHelmet": "mk4_helmet",
     "enableBody": true,
-    "textureBody": "minecraft:clock_43",
+    "textureBody": "mk4_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "minecraft:empty_slot_shovel",
+    "textureLeggings": "mk4_leggings",
     "enableBoots": true,
-    "textureBoots": "minecraft:compass_00",
+    "textureBoots": "mk4_boots",
     "creativeTabs": [
       {
         "value": "CUSTOM:IronArmorTab"
@@ -40,19 +40,19 @@
         "§8Mark IV (4)"
       ]
     },
-    "helmetModelName": "Modelmk4_iron_armor",
+    "helmetModelName": "Modelmk4_armor",
     "helmetModelPart": "Head",
     "helmetModelTexture": "mk4_armor.png",
-    "bodyModelName": "Modelmk4_iron_armor",
+    "bodyModelName": "Modelmk4_armor",
     "bodyModelPart": "Body",
     "armsModelPartL": "LeftArm",
     "armsModelPartR": "RightArm",
     "bodyModelTexture": "mk4_armor.png",
-    "leggingsModelName": "Modelmk4_iron_armor",
-    "leggingsModelPartL": "LeftArm",
+    "leggingsModelName": "Modelmk4_armor",
+    "leggingsModelPartL": "LeftLeg",
     "leggingsModelPartR": "RightLeg",
     "leggingsModelTexture": "mk4_armor.png",
-    "bootsModelName": "Modelmk4_iron_armor",
+    "bootsModelName": "Modelmk4_armor",
     "bootsModelPartL": "LeftLeg",
     "bootsModelPartR": "RightLeg",
     "bootsModelTexture": "mk4_armor.png",
