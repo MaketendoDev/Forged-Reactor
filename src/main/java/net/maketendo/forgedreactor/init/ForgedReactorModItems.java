@@ -13,6 +13,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.maketendo.forgedreactor.item.UpgradeTemplateItem;
+import net.maketendo.forgedreactor.item.Mk9IronArmorItem;
+import net.maketendo.forgedreactor.item.Mk8IronArmorItem;
+import net.maketendo.forgedreactor.item.Mk7IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk6IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk5SuitcaseItem;
 import net.maketendo.forgedreactor.item.Mk5IronArmorItem;
@@ -56,6 +59,18 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MK_6_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_6_iron_armor_leggings", () -> new Mk6IronArmorItem.Leggings());
 	public static final RegistryObject<Item> MK_6_IRON_ARMOR_BOOTS = REGISTRY.register("mk_6_iron_armor_boots", () -> new Mk6IronArmorItem.Boots());
 	public static final RegistryObject<Item> UPGRADE_TEMPLATE = REGISTRY.register("upgrade_template", () -> new UpgradeTemplateItem());
+	public static final RegistryObject<Item> MK_7_IRON_ARMOR_HELMET = REGISTRY.register("mk_7_iron_armor_helmet", () -> new Mk7IronArmorItem.Helmet());
+	public static final RegistryObject<Item> MK_7_IRON_ARMOR_CHESTPLATE = REGISTRY.register("mk_7_iron_armor_chestplate", () -> new Mk7IronArmorItem.Chestplate());
+	public static final RegistryObject<Item> MK_7_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_7_iron_armor_leggings", () -> new Mk7IronArmorItem.Leggings());
+	public static final RegistryObject<Item> MK_7_IRON_ARMOR_BOOTS = REGISTRY.register("mk_7_iron_armor_boots", () -> new Mk7IronArmorItem.Boots());
+	public static final RegistryObject<Item> MK_8_IRON_ARMOR_HELMET = REGISTRY.register("mk_8_iron_armor_helmet", () -> new Mk8IronArmorItem.Helmet());
+	public static final RegistryObject<Item> MK_8_IRON_ARMOR_CHESTPLATE = REGISTRY.register("mk_8_iron_armor_chestplate", () -> new Mk8IronArmorItem.Chestplate());
+	public static final RegistryObject<Item> MK_8_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_8_iron_armor_leggings", () -> new Mk8IronArmorItem.Leggings());
+	public static final RegistryObject<Item> MK_8_IRON_ARMOR_BOOTS = REGISTRY.register("mk_8_iron_armor_boots", () -> new Mk8IronArmorItem.Boots());
+	public static final RegistryObject<Item> MK_9_IRON_ARMOR_HELMET = REGISTRY.register("mk_9_iron_armor_helmet", () -> new Mk9IronArmorItem.Helmet());
+	public static final RegistryObject<Item> MK_9_IRON_ARMOR_CHESTPLATE = REGISTRY.register("mk_9_iron_armor_chestplate", () -> new Mk9IronArmorItem.Chestplate());
+	public static final RegistryObject<Item> MK_9_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_9_iron_armor_leggings", () -> new Mk9IronArmorItem.Leggings());
+	public static final RegistryObject<Item> MK_9_IRON_ARMOR_BOOTS = REGISTRY.register("mk_9_iron_armor_boots", () -> new Mk9IronArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

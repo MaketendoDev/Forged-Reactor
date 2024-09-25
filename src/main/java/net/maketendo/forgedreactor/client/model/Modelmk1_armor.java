@@ -15,7 +15,7 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.10.4
+// Made with Blockbench 4.11.0
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class Modelmk1_armor<T extends Entity> extends EntityModel<T> {
@@ -41,7 +41,7 @@ public class Modelmk1_armor<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.35F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.4F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 		PartDefinition Body = partdefinition.addOrReplaceChild("Body",
 				CubeListBuilder.create().texOffs(0, 49).addBox(-4.0F, 4.8F, 2.4F, 8.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(9, 56).addBox(-4.0F, 2.8F, 2.4F, 8.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(0, 56)
 						.addBox(-4.0F, 4.8F, 3.4F, 3.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(16, 32).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.35F)).texOffs(46, 16)

@@ -22,40 +22,40 @@
     "bootsName": "Iron Armor Boots",
     "helmetSpecialInformation": {
       "fixedValue": [
-        "§8Mark VI (6)"
+        "§8Mark VIII (8)"
       ]
     },
     "bodySpecialInformation": {
       "fixedValue": [
-        "§8Mark VI (6)"
+        "§8Mark VIII (8)"
       ]
     },
     "leggingsSpecialInformation": {
       "fixedValue": [
-        "§8Mark VI (6)"
+        "§8Mark VIII (8)"
       ]
     },
     "bootsSpecialInformation": {
       "fixedValue": [
-        "§8Mark VI (6)"
+        "§8Mark VIII (8)"
       ]
     },
-    "helmetModelName": "Modelmk6_armor",
+    "helmetModelName": "Modelmk8_armor",
     "helmetModelPart": "Head",
-    "helmetModelTexture": "mk6_armor.png",
-    "bodyModelName": "Modelmk6_armor",
+    "helmetModelTexture": "mk8_armor.png",
+    "bodyModelName": "Modelmk8_armor",
     "bodyModelPart": "Body",
     "armsModelPartL": "LeftArm",
     "armsModelPartR": "RightArm",
-    "bodyModelTexture": "mk6_armor.png",
-    "leggingsModelName": "Modelmk6_armor",
+    "bodyModelTexture": "mk8_armor.png",
+    "leggingsModelName": "Modelmk8_armor",
     "leggingsModelPartL": "LeftLeg",
     "leggingsModelPartR": "RightLeg",
-    "leggingsModelTexture": "mk6_armor.png",
-    "bootsModelName": "Modelmk6_armor",
+    "leggingsModelTexture": "mk8_armor.png",
+    "bootsModelName": "Modelmk8_armor",
     "bootsModelPartL": "LeftLeg",
     "bootsModelPartR": "RightLeg",
-    "bootsModelTexture": "mk6_armor.png",
+    "bootsModelTexture": "mk8_armor.png",
     "helmetItemRenderType": 0,
     "helmetItemCustomModelName": "Normal",
     "bodyItemRenderType": 0,

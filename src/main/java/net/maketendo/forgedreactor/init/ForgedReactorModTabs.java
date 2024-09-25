@@ -42,5 +42,17 @@ public class ForgedReactorModTabs {
 				tabData.accept(ForgedReactorModItems.MK_6_IRON_ARMOR_LEGGINGS.get());
 				tabData.accept(ForgedReactorModItems.MK_6_IRON_ARMOR_BOOTS.get());
 				tabData.accept(ForgedReactorModItems.UPGRADE_TEMPLATE.get());
+				tabData.accept(ForgedReactorModItems.MK_7_IRON_ARMOR_HELMET.get());
+				tabData.accept(ForgedReactorModItems.MK_7_IRON_ARMOR_CHESTPLATE.get());
+				tabData.accept(ForgedReactorModItems.MK_7_IRON_ARMOR_LEGGINGS.get());
+				tabData.accept(ForgedReactorModItems.MK_7_IRON_ARMOR_BOOTS.get());
+				tabData.accept(ForgedReactorModItems.MK_8_IRON_ARMOR_HELMET.get());
+				tabData.accept(ForgedReactorModItems.MK_8_IRON_ARMOR_CHESTPLATE.get());
+				tabData.accept(ForgedReactorModItems.MK_8_IRON_ARMOR_LEGGINGS.get());
+				tabData.accept(ForgedReactorModItems.MK_8_IRON_ARMOR_BOOTS.get());
+				tabData.accept(ForgedReactorModItems.MK_9_IRON_ARMOR_HELMET.get());
+				tabData.accept(ForgedReactorModItems.MK_9_IRON_ARMOR_CHESTPLATE.get());
+				tabData.accept(ForgedReactorModItems.MK_9_IRON_ARMOR_LEGGINGS.get());
+				tabData.accept(ForgedReactorModItems.MK_9_IRON_ARMOR_BOOTS.get());
 			}).withSearchBar().build());
 }
