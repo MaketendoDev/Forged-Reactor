@@ -34,7 +34,7 @@ public class OpenCloseHelmetProcedure {
 						_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Blocks.AIR));
 					}
 				}
-				ForgedReactorMod.queueServerWork(10, () -> {
+				ForgedReactorMod.queueServerWork(5, () -> {
 					{
 						Entity _entity = entity;
 						if (_entity instanceof Player _player) {
@@ -63,7 +63,7 @@ public class OpenCloseHelmetProcedure {
 						_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Blocks.AIR));
 					}
 				}
-				ForgedReactorMod.queueServerWork(10, () -> {
+				ForgedReactorMod.queueServerWork(5, () -> {
 					{
 						Entity _entity = entity;
 						if (_entity instanceof Player _player) {

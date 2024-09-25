@@ -9,6 +9,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.Screen;
 
 import net.maketendo.forgedreactor.init.ForgedReactorModItems;
 
@@ -17,7 +18,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 @Mod.EventBusSubscriber
-public class UpgradeTemplateItemInInventoryTickProcedure {
+public class UpgradeInfoProcedure {
 	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
 	public static void onItemTooltip(ItemTooltipEvent event) {
@@ -32,7 +33,14 @@ public class UpgradeTemplateItemInInventoryTickProcedure {
 		if (tooltip == null)
 			return;
 		if (itemstack.getItem() == ForgedReactorModItems.UPGRADE_TEMPLATE.get()) {
-			tooltip.add(Component.literal("Mk. 4"));
+			if (!Screen.hasShiftDown()) {
+				tooltip.add(Component.literal("Press Shift for more information"));
+			}
+			if (Screen.hasShiftDown()) {
+				tooltip.add(Component.literal("The Upgrade Template Item is your"));
+				tooltip.add(Component.literal("gateway to upgrade your very own"));
+				tooltip.add(Component.literal("Iron Armor to it's full potential!"));
+			}
 		}
 	}
 }

@@ -1119,29 +1119,6 @@
       "path": "~/Armor/Mk. 6"
     },
     {
-      "name": "UpgradeTemplateItemInInventoryTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "upgrade_template_item_in_inventory_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/procedures/UpgradeTemplateItemInInventoryTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "tooltip",
-            "type": "tooltip"
-          }
-        ]
-      },
-      "path": "~/Functions/Armor Crafting/Items"
-    },
-    {
       "name": "UpgradeTemplate",
       "type": "item",
       "compiles": true,
@@ -1205,6 +1182,274 @@
         ]
       },
       "path": "~/Armor/Mk. 8"
+    },
+    {
+      "name": "Mk7SuitPod",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_7_suit_pod",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/client/renderer/Mk7SuitPodRenderer.java",
+          "src/main/java/net/maketendo/forgedreactor/entity/Mk7SuitPodEntity.java",
+          "src/main/resources/assets/forged_reactor/models/item/mk_7_suit_pod_spawn_egg.json"
+        ]
+      },
+      "path": "~/Armor/Mk. 7/Summoning Mk. 7"
+    },
+    {
+      "name": "TravelMk7toPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "travel_mk_7to_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/TravelMk7toPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 7/Summoning Mk. 7"
+    },
+    {
+      "name": "UpgradeInfo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_info",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/UpgradeInfoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Items"
+    },
+    {
+      "name": "Mk2BootsUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_2_boots_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_2_boots_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 2"
+    },
+    {
+      "name": "Mk2ChestplateUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_2_chestplate_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_2_chestplate_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 2"
+    },
+    {
+      "name": "Mk2LeggingsUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_2_leggings_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_2_leggings_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 2"
+    },
+    {
+      "name": "Mk2HelmetUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_2_helmet_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_2_helmet_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 2"
+    },
+    {
+      "name": "Mk3BootsUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_3_boots_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_3_boots_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 3"
+    },
+    {
+      "name": "Mk3LeggingsUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_3_leggings_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_3_leggings_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 3"
+    },
+    {
+      "name": "Mk3ChestplateUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_3_chestplate_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_3_chestplate_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 3"
+    },
+    {
+      "name": "Mk3HelmetUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_3_helmet_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_3_helmet_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 3"
+    },
+    {
+      "name": "Mk4BootsUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_4_boots_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_4_boots_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 4"
+    },
+    {
+      "name": "Mk4LeggingsUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_4_leggings_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_4_leggings_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 4"
+    },
+    {
+      "name": "Mk4ChestplateUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_4_chestplate_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_4_chestplate_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 4"
+    },
+    {
+      "name": "Mk4HelmetUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_4_helmet_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_4_helmet_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 4"
+    },
+    {
+      "name": "UpgradeTemplateRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_template_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/upgrade_template_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Items"
+    },
+    {
+      "name": "FlightTestBootsRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flight_test_boots_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/flight_test_boots_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Flight Test"
+    },
+    {
+      "name": "FlightTestChestplateRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flight_test_chestplate_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/flight_test_chestplate_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Flight Test"
     }
   ],
   "variable_elements": [
@@ -1248,7 +1493,11 @@
       "CUSTOM:Mk2IronArmor.helmet",
       "CUSTOM:Mk3IronArmor.helmet",
       "CUSTOM:Mk4IronArmor.helmet",
-      "CUSTOM:Mk5IronArmor.helmet"
+      "CUSTOM:Mk5IronArmor.helmet",
+      "CUSTOM:Mk6IronArmor.helmet",
+      "CUSTOM:Mk7IronArmor.helmet",
+      "CUSTOM:Mk8IronArmor.helmet",
+      "CUSTOM:Mk9IronArmor.helmet"
     ],
     "BLOCKS:minecraft:air": [
       "Blocks.AIR",
@@ -1328,14 +1577,29 @@
       "EntitySmallFireball"
     ]
   },
-  "tab_element_order": {},
+  "tab_element_order": {
+    "CUSTOM:IronArmorTab": [
+      "Mk1IronArmor",
+      "FlightTestArmor",
+      "Mk2IronArmor",
+      "Mk3IronArmor",
+      "Mk4IronArmor",
+      "Mk5Suitcase",
+      "Mk6IronArmor",
+      "Mk7IronArmor",
+      "Mk8IronArmor",
+      "Mk9IronArmor",
+      "UpgradeTemplate"
+    ]
+  },
   "language_map": {
     "en_us": {
-      "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_9_iron_armor_leggings": "Iron Armor Leggings",
+      "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
       "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
+      "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
@@ -1344,11 +1608,11 @@
       "subtitles.flighttest_armor_spark": "Sparks",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_8_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
+      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "key.categories.ironarmor": "Iron Armor",
-      "key.forged_reactor.attack_3": "Attack 3",
       "item.forged_reactor.mk_7_iron_armor_boots": "Iron Armor Boots",
+      "key.forged_reactor.attack_3": "Attack 3",
       "key.forged_reactor.attack_2": "Attack 2",
       "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
@@ -1360,6 +1624,7 @@
       "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
       "item.forged_reactor.upgrade_template": "Upgrade Template",
+      "item.forged_reactor.mk_7_suit_pod_spawn_egg": "Mk. 7 Suit Pod Spawn Egg",
       "item.forged_reactor.mk_4_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_6_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
@@ -1430,7 +1695,12 @@
           },
           {
             "name": "Mk. 7",
-            "children": []
+            "children": [
+              {
+                "name": "Summoning Mk. 7",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Mk. 8",
@@ -1499,6 +1769,22 @@
             "children": [
               {
                 "name": "Items",
+                "children": []
+              },
+              {
+                "name": "Mk. 2",
+                "children": []
+              },
+              {
+                "name": "Mk. 3",
+                "children": []
+              },
+              {
+                "name": "Mk. 4",
+                "children": []
+              },
+              {
+                "name": "Flight Test",
                 "children": []
               }
             ]

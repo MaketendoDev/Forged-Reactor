@@ -7,6 +7,7 @@ package net.maketendo.forgedreactor.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
@@ -71,6 +72,7 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MK_9_IRON_ARMOR_CHESTPLATE = REGISTRY.register("mk_9_iron_armor_chestplate", () -> new Mk9IronArmorItem.Chestplate());
 	public static final RegistryObject<Item> MK_9_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_9_iron_armor_leggings", () -> new Mk9IronArmorItem.Leggings());
 	public static final RegistryObject<Item> MK_9_IRON_ARMOR_BOOTS = REGISTRY.register("mk_9_iron_armor_boots", () -> new Mk9IronArmorItem.Boots());
+	public static final RegistryObject<Item> MK_7_SUIT_POD_SPAWN_EGG = REGISTRY.register("mk_7_suit_pod_spawn_egg", () -> new ForgeSpawnEggItem(ForgedReactorModEntities.MK_7_SUIT_POD, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

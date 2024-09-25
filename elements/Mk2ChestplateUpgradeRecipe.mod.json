@@ -1,0 +1,28 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:FlightTestArmor.body"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.IRON_INGOT"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:UpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:Mk2IronArmor.body"
+    },
+    "name": "mk_2_chestplate_upgrade_recipe",
+    "namespace": "mod"
+  }
+}

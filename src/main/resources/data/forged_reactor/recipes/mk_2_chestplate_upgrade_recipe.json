@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "forged_reactor:upgrade_template"
+  },
+  "base": {
+    "item": "forged_reactor:flight_test_armor_chestplate"
+  },
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": {
+    "item": "forged_reactor:mk_2_iron_armor_chestplate"
+  }
+}
