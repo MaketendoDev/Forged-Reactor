@@ -29,8 +29,10 @@ public class IfPlayerWearingJarvisSupportedArmorProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, String text) {
 		if (entity == null || text == null)
 			return;
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enablejarvis")))) {
-			JarvisAIProcedure.execute(world, x, y, z, entity, text);
+		if (!world.isClientSide()) {
+			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enablejarvis")))) {
+				JarvisAIProcedure.execute(world, x, y, z, entity, text);
+			}
 		}
 	}
 }

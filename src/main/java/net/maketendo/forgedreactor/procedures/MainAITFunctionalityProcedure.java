@@ -81,11 +81,10 @@ public class MainAITFunctionalityProcedure {
 											new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 											("ait lock " + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).LinkedTARDISID + " true"));
 							} else {
-								if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName) && text.endsWith("boomboom protocal")) {
+								if (text.startsWith((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName) && text.endsWith("blow her up")) {
 									if (entity instanceof Player _player && !_player.level().isClientSide())
 										_player.displayClientMessage(
-												Component.literal(
-														("<" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + "> Loading Protocal sir.")),
+												Component.literal(("<" + (entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).JarvisAIName + "> Alright sir.")),
 												false);
 									if (world instanceof ServerLevel _level)
 										_level.getServer().getCommands().performPrefixedCommand(
