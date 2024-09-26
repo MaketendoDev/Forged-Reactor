@@ -10,12 +10,14 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import net.maketendo.forgedreactor.block.ArmorIntakeBlockBlock;
 import net.maketendo.forgedreactor.block.ArmorConfiguratorBlock;
 import net.maketendo.forgedreactor.ForgedReactorMod;
 
 public class ForgedReactorModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, ForgedReactorMod.MODID);
 	public static final RegistryObject<Block> ARMOR_CONFIGURATOR = REGISTRY.register("armor_configurator", () -> new ArmorConfiguratorBlock());
+	public static final RegistryObject<Block> ARMOR_INTAKE_BLOCK = REGISTRY.register("armor_intake_block", () -> new ArmorIntakeBlockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

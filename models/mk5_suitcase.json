@@ -1,11 +1,15 @@
 {
-	"credit": "Made with Blockbench",
-	"texture_size": [32, 32],
-	"textures": {
+  "loader": "forge:separate_transforms",
+  "gui_light": "front",
+  "texture_size": [32, 32],
+  "base": {
+    "textures": {
 		"0": "block/mk5_suitcase",
 		"particle": "block/mk5_suitcase"
-	},
-	"elements": [
+    }
+  },
+ "perspectives": {
+  "elements": [
 		{
 			"from": [2, 0, 6],
 			"to": [14, 8, 10],
@@ -46,29 +50,24 @@
 			}
 		}
 	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [69, 90, 0],
-			"translation": [0, -2, -1.25]
-		},
-		"thirdperson_lefthand": {
-			"rotation": [69, 90, 0],
-			"translation": [0, -2, -1.25]
-		},
-		"firstperson_righthand": {
-			"rotation": [0, 87, 0],
-			"translation": [0.5, 1.5, 1.25]
-		},
-		"firstperson_lefthand": {
-			"rotation": [0, 87, 0],
-			"translation": [4.75, 1, -1.25]
-		},
-		"ground": {
-			"translation": [0, 5, 0]
-		},
-		"gui": {
-			"rotation": [16, 24, 0],
-			"translation": [0, 3, 0]
-		}
-	}
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "forged_reactor:item/mk5_suitcase_item"
+      },
+      "gui_light": "front"
+    },
+    "ground": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "forged_reactor:item/mk5_suitcase_item"
+      }
+    },
+    "fixed": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "forged_reactor:item/mk5_suitcase_item"
+      }
+    }
+  }
 }

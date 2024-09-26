@@ -59,6 +59,7 @@ public class ForgedReactorModTabs {
 				tabData.accept(ForgedReactorModItems.MK_9_IRON_ARMOR_LEGGINGS.get());
 				tabData.accept(ForgedReactorModItems.MK_9_IRON_ARMOR_BOOTS.get());
 				tabData.accept(ForgedReactorModItems.UPGRADE_TEMPLATE.get());
+				tabData.accept(ForgedReactorModBlocks.ARMOR_INTAKE_BLOCK.get().asItem());
 			}).withSearchBar().build());
 
 	@SubscribeEvent

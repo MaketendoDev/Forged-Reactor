@@ -21,9 +21,11 @@ import net.maketendo.forgedreactor.init.ForgedReactorModTabs;
 import net.maketendo.forgedreactor.init.ForgedReactorModSounds;
 import net.maketendo.forgedreactor.init.ForgedReactorModParticleTypes;
 import net.maketendo.forgedreactor.init.ForgedReactorModMobEffects;
+import net.maketendo.forgedreactor.init.ForgedReactorModMenus;
 import net.maketendo.forgedreactor.init.ForgedReactorModItems;
 import net.maketendo.forgedreactor.init.ForgedReactorModEntities;
 import net.maketendo.forgedreactor.init.ForgedReactorModBlocks;
+import net.maketendo.forgedreactor.init.ForgedReactorModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -46,7 +48,7 @@ public class ForgedReactorMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		ForgedReactorModSounds.REGISTRY.register(bus);
 		ForgedReactorModBlocks.REGISTRY.register(bus);
-
+		ForgedReactorModBlockEntities.REGISTRY.register(bus);
 		ForgedReactorModItems.REGISTRY.register(bus);
 		ForgedReactorModEntities.REGISTRY.register(bus);
 
@@ -56,6 +58,7 @@ public class ForgedReactorMod {
 
 		ForgedReactorModParticleTypes.REGISTRY.register(bus);
 
+		ForgedReactorModMenus.REGISTRY.register(bus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

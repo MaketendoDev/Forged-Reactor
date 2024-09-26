@@ -17,7 +17,7 @@ import java.util.List;
 
 public class Mk5SuitcaseItem extends Item {
 	public Mk5SuitcaseItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
 	}
 
 	@Override
