@@ -573,7 +573,7 @@
           "src/main/java/net/maketendo/forgedreactor/client/screens/Mk2ArmorHUDOverlay.java"
         ]
       },
-      "path": "~/Iron Armor HUD"
+      "path": "~/Functions/Iron Armor HUD"
     },
     {
       "name": "PlayerHUDRenderer",
@@ -593,7 +593,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD/HUD Renderer"
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer"
     },
     {
       "name": "YLevelReturn",
@@ -613,7 +613,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD/HUD Renderer"
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer"
     },
     {
       "name": "RedYLevelDisplay",
@@ -633,7 +633,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD/HUD Renderer"
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer"
     },
     {
       "name": "Mk2OverlayDisplayOverlayInGame",
@@ -653,7 +653,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD"
+      "path": "~/Functions/Iron Armor HUD"
     },
     {
       "name": "GetEntityName",
@@ -677,7 +677,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD/HUD Renderer/EntityData"
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer/EntityData"
     },
     {
       "name": "GetEntityHealth",
@@ -701,7 +701,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD/HUD Renderer/EntityData"
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer/EntityData"
     },
     {
       "name": "GetIFEntityHostile",
@@ -725,7 +725,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD/HUD Renderer/EntityData"
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer/EntityData"
     },
     {
       "name": "SpeedReturn",
@@ -745,7 +745,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD/HUD Renderer"
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer"
     },
     {
       "name": "FlightTestArmor",
@@ -963,7 +963,7 @@
           }
         ]
       },
-      "path": "~/Iron Armor HUD/HUD Renderer/EntityData"
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer/EntityData"
     },
     {
       "name": "Mk1IronArmorHelmetOpen",
@@ -1608,11 +1608,11 @@
       "subtitles.flighttest_armor_spark": "Sparks",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_8_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
+      "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
       "key.categories.ironarmor": "Iron Armor",
-      "item.forged_reactor.mk_7_iron_armor_boots": "Iron Armor Boots",
       "key.forged_reactor.attack_3": "Attack 3",
+      "item.forged_reactor.mk_7_iron_armor_boots": "Iron Armor Boots",
       "key.forged_reactor.attack_2": "Attack 2",
       "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
@@ -1739,20 +1739,6 @@
         ]
       },
       {
-        "name": "Iron Armor HUD",
-        "children": [
-          {
-            "name": "HUD Renderer",
-            "children": [
-              {
-                "name": "EntityData",
-                "children": []
-              }
-            ]
-          }
-        ]
-      },
-      {
         "name": "Functions",
         "children": [
           {
@@ -1786,6 +1772,44 @@
               {
                 "name": "Flight Test",
                 "children": []
+              },
+              {
+                "name": "Mk. 5",
+                "children": []
+              },
+              {
+                "name": "Mk. 6",
+                "children": []
+              },
+              {
+                "name": "Mk. 7",
+                "children": []
+              },
+              {
+                "name": "Mk. 8",
+                "children": []
+              },
+              {
+                "name": "Mk. 9",
+                "children": []
+              },
+              {
+                "name": "Mk. 10",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Iron Armor HUD",
+            "children": [
+              {
+                "name": "HUD Renderer",
+                "children": [
+                  {
+                    "name": "EntityData",
+                    "children": []
+                  }
+                ]
               }
             ]
           }
@@ -1797,7 +1821,7 @@
     "modid": "forged_reactor",
     "modName": "Forged Reactor Mod",
     "version": "1.0.0",
-    "description": "Adds Iron Man in Minecraft",
+    "description": "Adds Iron Man in Minecraft!",
     "author": "Maketendo, Westankrang",
     "websiteURL": "https://discord.gg/PG45nNWssF",
     "license": "Not specified",
@@ -1809,6 +1833,7 @@
       "kleidersplayerrenderer"
     ],
     "currentGenerator": "forge-1.20.1",
+    "credits": "Nexus - (Suit Consultant)",
     "modElementsPackage": "net.maketendo.forgedreactor"
   },
   "mcreatorVersion": 202400232117

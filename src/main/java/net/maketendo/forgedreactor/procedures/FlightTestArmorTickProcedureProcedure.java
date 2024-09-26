@@ -45,7 +45,7 @@ public class FlightTestArmorTickProcedureProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 2, false, false));
 			if (entity.isShiftKeyDown()) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 2, false, false));
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"particle forged_reactor:refined_flame ~ ~-.5 ~ 0 0.5 0 0 1");
@@ -58,9 +58,11 @@ public class FlightTestArmorTickProcedureProcedure {
 				}
 			}
 		}
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == ForgedReactorModItems.FLIGHT_TEST_ARMOR_CHESTPLATE.get()) {
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == ForgedReactorModItems.FLIGHT_TEST_ARMOR_CHESTPLATE.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 10, 2, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 10, 1, false, false));
 		}
 	}
 }
