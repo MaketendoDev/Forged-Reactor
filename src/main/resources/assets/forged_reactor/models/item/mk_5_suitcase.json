@@ -1,5 +1,5 @@
 {
-  "parent": "forged_reactor:custom/mk5_suitcase",
+  "parent": "forged_reactor:custom/mk5_suitcase_base",
   "textures": {
     "0": "forged_reactor:block/mk5_suitcase",
     "particle": "forged_reactor:item/mk5_suitcase_item"

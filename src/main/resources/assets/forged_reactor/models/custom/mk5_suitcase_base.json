@@ -1,0 +1,31 @@
+{
+  "loader": "forge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "forged_reactor:custom/mk5_suitcase",
+    "textures": {
+      "0": "forged_reactor:item/mk5_suitcase"
+    }
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "forged_reactor:item/mk5_suitcase_item"
+      },
+      "gui_light": "front"
+    },
+    "ground": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "forged_reactor:item/mk5_suitcase_item"
+      }
+    },
+    "fixed": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "forged_reactor:item/mk5_suitcase_item"
+      }
+    }
+  }
+}

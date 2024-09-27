@@ -6,6 +6,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.Minecraft;
 
 public class Mk2OverlayDisplayOverlayInGameProcedure {
 	public static boolean execute(Entity entity) {
@@ -13,7 +14,9 @@ public class Mk2OverlayDisplayOverlayInGameProcedure {
 			return false;
 		double e = 0;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enablemk2ironhud")))) {
-			return true;
+			if (Minecraft.getInstance().options.getCameraType().isFirstPerson()) {
+				return true;
+			}
 		}
 		return false;
 	}

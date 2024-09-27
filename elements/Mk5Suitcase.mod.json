@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 1,
     "texture": "mk5_suitcase_item",
-    "customModelName": "mk5_suitcase:default",
+    "customModelName": "mk5_suitcase_base:default",
     "customProperties": {},
     "states": [],
     "name": "Iron Armor Suitcase",

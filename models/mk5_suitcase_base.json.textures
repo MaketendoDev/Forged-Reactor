@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "mk5_suitcase"
+      },
+      "name": "default"
+    }
+  }
+}
