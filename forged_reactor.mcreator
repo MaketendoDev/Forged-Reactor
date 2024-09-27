@@ -1665,6 +1665,7 @@
       "gui.forged_reactor.armor_intake_gui.label_armor_intake": "Armor Intake",
       "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_3_iron_armor_helmet": "Iron Armor Helmet",
+      "gui.forged_reactor.mk_2_armor_hud.label_entity_data": "Entity Data:",
       "item.forged_reactor.mk_6_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_5_iron_armor_leggings": "Iron Armor Leggings",
       "gui.forged_reactor.mk_2_armor_hud.label_proc_speed_return": "speed",
@@ -1835,6 +1836,10 @@
                 "children": [
                   {
                     "name": "EntityData",
+                    "children": []
+                  },
+                  {
+                    "name": "Compass",
                     "children": []
                   }
                 ]
