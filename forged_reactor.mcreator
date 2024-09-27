@@ -1474,6 +1474,24 @@
         ]
       },
       "path": "~/Functions/Armor Dequiper"
+    },
+    {
+      "name": "AirYMixin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_y_mixin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/AirYMixinProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
