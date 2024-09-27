@@ -24,8 +24,8 @@
           "rotationX": 0,
           "followMouseMovement": false,
           "anchorPoint": "CENTER_RIGHT",
-          "x": 362,
-          "y": 155
+          "x": 371,
+          "y": 153
         }
       },
       {
@@ -124,14 +124,14 @@
         "data": {
           "name": "label_proc_speed_return",
           "text": {
-            "fixedValue": "",
+            "fixedValue": "speed",
             "name": "SpeedReturn"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "anchorPoint": "TOP_RIGHT",
+          "anchorPoint": "TOP_LEFT",
           "x": 22,
           "y": 7
         }
@@ -142,7 +142,7 @@
           "image": "top_hud_bar.png",
           "use1Xscale": false,
           "anchorPoint": "TOP_CENTER",
-          "x": -312,
+          "x": -337,
           "y": 3
         }
       },

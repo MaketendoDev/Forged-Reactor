@@ -57,7 +57,7 @@ public class Mk2ArmorHUDOverlay {
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/ironman_hud_vision.png"), 0, 0, 0, 0, w, h, w, h);
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/ylevel_hud_display.png"), 2, h / 2 + -132, 0, 0, 23, 256, 23, 256);
 
-			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/top_hud_bar.png"), w / 2 + -525, 3, 0, 0, 2056, 3, 2056, 3);
+			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/top_hud_bar.png"), w / 2 + -550, 3, 0, 0, 2056, 3, 2056, 3);
 
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/repulsors_icon_hud.png"), 32, h - 49, 0, 0, 43, 43, 43, 43);
 
@@ -84,7 +84,7 @@ public class Mk2ArmorHUDOverlay {
 					GetEntityHealthProcedure.execute(world, entity), w - 98, 24, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					SpeedReturnProcedure.execute(entity), w - 405, 7, -1, false);
+					SpeedReturnProcedure.execute(entity), 22, 7, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					GetEntityMaxHealthProcedure.execute(world, entity), w - 98, 37, -1, false);
@@ -97,7 +97,7 @@ public class Mk2ArmorHUDOverlay {
 
 						GetEntityHealthProcedure.execute(world, entity), w - 98, 24, -6750208, false);
 			if (PlayerHUDRendererProcedure.execute(entity) instanceof LivingEntity livingEntity) {
-				InventoryScreen.renderEntityInInventoryFollowsAngle(event.getGuiGraphics(), w - 55, h / 2 + 55, 55, 0f, 0, livingEntity);
+				InventoryScreen.renderEntityInInventoryFollowsAngle(event.getGuiGraphics(), w - 46, h / 2 + 53, 55, 0f, 0, livingEntity);
 			}
 		}
 		RenderSystem.depthMask(true);

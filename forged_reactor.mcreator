@@ -903,45 +903,6 @@
       "path": "~/Functions/Jarvis/Ait Compact"
     },
     {
-      "name": "IfPlayerWearingJarvisSupportedArmor",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "if_player_wearing_jarvis_supported_armor",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/procedures/IfPlayerWearingJarvisSupportedArmorProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "text",
-            "type": "string"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Functions/Jarvis"
-    },
-    {
       "name": "GetEntityMaxHealth",
       "type": "procedure",
       "compiles": true,
@@ -1706,6 +1667,7 @@
       "item.forged_reactor.mk_3_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_6_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_5_iron_armor_leggings": "Iron Armor Leggings",
+      "gui.forged_reactor.mk_2_armor_hud.label_proc_speed_return": "speed",
       "item.forged_reactor.mk_9_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_6_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_8_iron_armor_chestplate": "Iron Armor Chestplate",
@@ -1903,7 +1865,7 @@
       "kleidersplayerrenderer"
     ],
     "currentGenerator": "forge-1.20.1",
-    "credits": "Nexus - (Suit Consultant)",
+    "credits": "Nexus - (Suit Consultant), Duzo - (Code Assistant)",
     "modElementsPackage": "net.maketendo.forgedreactor"
   },
   "mcreatorVersion": 202400232117

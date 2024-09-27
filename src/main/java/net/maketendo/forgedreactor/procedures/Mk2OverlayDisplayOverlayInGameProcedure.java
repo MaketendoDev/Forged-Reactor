@@ -11,6 +11,7 @@ public class Mk2OverlayDisplayOverlayInGameProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
+		double e = 0;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enablemk2ironhud")))) {
 			return true;
 		}
