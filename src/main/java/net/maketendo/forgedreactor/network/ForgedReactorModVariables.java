@@ -78,6 +78,7 @@ public class ForgedReactorModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.JarvisAIName = original.JarvisAIName;
 			clone.LinkedTARDISID = original.LinkedTARDISID;
+			clone.shootingflames = original.shootingflames;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -121,6 +122,7 @@ public class ForgedReactorModVariables {
 	public static class PlayerVariables {
 		public String JarvisAIName = "jarvis";
 		public String LinkedTARDISID = "\"\"";
+		public boolean shootingflames = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -131,6 +133,7 @@ public class ForgedReactorModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putString("JarvisAIName", JarvisAIName);
 			nbt.putString("LinkedTARDISID", LinkedTARDISID);
+			nbt.putBoolean("shootingflames", shootingflames);
 			return nbt;
 		}
 
@@ -138,6 +141,7 @@ public class ForgedReactorModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			JarvisAIName = nbt.getString("JarvisAIName");
 			LinkedTARDISID = nbt.getString("LinkedTARDISID");
+			shootingflames = nbt.getBoolean("shootingflames");
 		}
 	}
 
@@ -173,6 +177,7 @@ public class ForgedReactorModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.JarvisAIName = message.data.JarvisAIName;
 					variables.LinkedTARDISID = message.data.LinkedTARDISID;
+					variables.shootingflames = message.data.shootingflames;
 				}
 			});
 			context.setPacketHandled(true);

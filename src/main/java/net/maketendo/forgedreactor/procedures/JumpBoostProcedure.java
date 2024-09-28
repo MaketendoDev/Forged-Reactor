@@ -25,7 +25,7 @@ public class JumpBoostProcedure {
 				}
 			}
 			entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 10), (entity.getLookAngle().y * 10), (entity.getLookAngle().z * 10)));
-			while (true) {
+			while (jumpboostcooldown == true) {
 				if (!((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.AIR)) {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.FLAME, x, (y + 1), z, 30, 3, 3, 3, 2);
