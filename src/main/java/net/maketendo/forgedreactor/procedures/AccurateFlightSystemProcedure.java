@@ -68,6 +68,10 @@ public class AccurateFlightSystemProcedure {
 					return false;
 				}
 			}.checkGamemode(entity)) {
+				if (entity instanceof Player _player) {
+					_player.getAbilities().mayfly = true;
+					_player.onUpdateAbilities();
+				}
 				if (entity instanceof Player player && player.getAbilities().flying) {
 					if (Screen.hasShiftDown()) {
 						entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 2), (entity.getLookAngle().y * 2), (entity.getLookAngle().z * 2)));
@@ -76,6 +80,11 @@ public class AccurateFlightSystemProcedure {
 					}
 					entity.fallDistance = 0;
 				}
+			}
+		} else {
+			if (entity instanceof Player _player) {
+				_player.getAbilities().mayfly = false;
+				_player.onUpdateAbilities();
 			}
 		}
 	}
