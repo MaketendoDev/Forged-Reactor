@@ -20,6 +20,7 @@ import net.maketendo.forgedreactor.client.model.Modelmk2_armor;
 import net.maketendo.forgedreactor.client.model.Modelmk1_helmet_open;
 import net.maketendo.forgedreactor.client.model.Modelmk1_armor;
 import net.maketendo.forgedreactor.client.model.Modelflight_test_armor_thin;
+import net.maketendo.forgedreactor.client.model.Modelboots_flame;
 import net.maketendo.forgedreactor.client.model.ModelKCRPlayerModelBaseJava;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -32,6 +33,7 @@ public class ForgedReactorModModels {
 		event.registerLayerDefinition(Modelmk5_armor.LAYER_LOCATION, Modelmk5_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk1_armor.LAYER_LOCATION, Modelmk1_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk6_armor.LAYER_LOCATION, Modelmk6_armor::createBodyLayer);
+		event.registerLayerDefinition(Modelboots_flame.LAYER_LOCATION, Modelboots_flame::createBodyLayer);
 		event.registerLayerDefinition(Modelmk7_armor.LAYER_LOCATION, Modelmk7_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelflight_test_armor_thin.LAYER_LOCATION, Modelflight_test_armor_thin::createBodyLayer);
 		event.registerLayerDefinition(Modelmk1_helmet_open.LAYER_LOCATION, Modelmk1_helmet_open::createBodyLayer);

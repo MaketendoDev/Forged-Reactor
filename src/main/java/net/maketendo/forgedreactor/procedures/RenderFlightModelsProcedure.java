@@ -21,7 +21,7 @@ import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.Minecraft;
 
-import net.maketendo.forgedreactor.client.model.ModelKCRPlayerModelBaseJava;
+import net.maketendo.forgedreactor.client.model.Modelboots_flame;
 
 import javax.annotation.Nullable;
 
@@ -64,7 +64,7 @@ public class RenderFlightModelsProcedure {
 					if (ResourceLocation.tryParse("forged_reactor:textures/entities/texture.png") != null) {
 						_texture = new ResourceLocation("forged_reactor:textures/entities/texture.png");
 					}
-					ModelKCRPlayerModelBaseJava newModel = new ModelKCRPlayerModelBaseJava(context.bakeLayer(ModelKCRPlayerModelBaseJava.LAYER_LOCATION));
+					Modelboots_flame newModel = new Modelboots_flame(context.bakeLayer(Modelboots_flame.LAYER_LOCATION));
 					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
 					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
 					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
