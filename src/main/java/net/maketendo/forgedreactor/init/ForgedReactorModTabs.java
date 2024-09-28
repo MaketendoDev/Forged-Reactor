@@ -23,6 +23,8 @@ public class ForgedReactorModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ForgedReactorMod.MODID);
 	public static final RegistryObject<CreativeModeTab> IRON_ARMOR_TAB = REGISTRY.register("iron_armor_tab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.forged_reactor.iron_armor_tab")).icon(() -> new ItemStack(ForgedReactorModItems.MK_3_IRON_ARMOR_HELMET.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(ForgedReactorModItems.UPGRADE_TEMPLATE.get());
+				tabData.accept(ForgedReactorModBlocks.ARMOR_INTAKE_BLOCK.get().asItem());
 				tabData.accept(ForgedReactorModItems.MK_1_IRON_ARMOR_HELMET.get());
 				tabData.accept(ForgedReactorModItems.MK_1_IRON_ARMOR_CHESTPLATE.get());
 				tabData.accept(ForgedReactorModItems.MK_1_IRON_ARMOR_LEGGINGS.get());
@@ -33,7 +35,6 @@ public class ForgedReactorModTabs {
 				tabData.accept(ForgedReactorModItems.MK_2_IRON_ARMOR_CHESTPLATE.get());
 				tabData.accept(ForgedReactorModItems.MK_2_IRON_ARMOR_LEGGINGS.get());
 				tabData.accept(ForgedReactorModItems.MK_2_IRON_ARMOR_BOOTS.get());
-				tabData.accept(ForgedReactorModItems.UPGRADE_TEMPLATE.get());
 				tabData.accept(ForgedReactorModItems.MK_3_IRON_ARMOR_HELMET.get());
 				tabData.accept(ForgedReactorModItems.MK_3_IRON_ARMOR_CHESTPLATE.get());
 				tabData.accept(ForgedReactorModItems.MK_3_IRON_ARMOR_LEGGINGS.get());
@@ -51,7 +52,6 @@ public class ForgedReactorModTabs {
 				tabData.accept(ForgedReactorModItems.MK_7_IRON_ARMOR_CHESTPLATE.get());
 				tabData.accept(ForgedReactorModItems.MK_7_IRON_ARMOR_LEGGINGS.get());
 				tabData.accept(ForgedReactorModItems.MK_7_IRON_ARMOR_BOOTS.get());
-				tabData.accept(ForgedReactorModBlocks.ARMOR_INTAKE_BLOCK.get().asItem());
 				tabData.accept(ForgedReactorModItems.MK_8_IRON_ARMOR_HELMET.get());
 				tabData.accept(ForgedReactorModItems.MK_8_IRON_ARMOR_CHESTPLATE.get());
 				tabData.accept(ForgedReactorModItems.MK_8_IRON_ARMOR_LEGGINGS.get());

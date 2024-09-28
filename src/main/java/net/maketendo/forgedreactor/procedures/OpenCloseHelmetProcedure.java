@@ -52,8 +52,7 @@ public class OpenCloseHelmetProcedure {
 						}
 					}
 				});
-			}
-			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == ForgedReactorModItems.MK_1_IRON_ARMOR_HELMET_OPEN_HELMET.get()) {
+			} else if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == ForgedReactorModItems.MK_1_IRON_ARMOR_HELMET_OPEN_HELMET.get()) {
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {

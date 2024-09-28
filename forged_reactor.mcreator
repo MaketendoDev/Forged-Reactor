@@ -1500,6 +1500,43 @@
           }
         ]
       }
+    },
+    {
+      "name": "RenderFlightModels",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_flight_models",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RenderFlightModelsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Animation"
+    },
+    {
+      "name": "AccurateFlightSystem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accurate_flight_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/AccurateFlightSystemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1584,6 +1621,16 @@
       "CUSTOM:Mk8IronArmor.helmet",
       "CUSTOM:Mk9IronArmor.helmet"
     ],
+    "ITEMS:ironman:enableflight": [
+      "CUSTOM:Mk2IronArmor.boots",
+      "CUSTOM:Mk3IronArmor.boots",
+      "CUSTOM:Mk4IronArmor.boots",
+      "CUSTOM:Mk5IronArmor.boots",
+      "CUSTOM:Mk6IronArmor.boots",
+      "CUSTOM:Mk7IronArmor.boots",
+      "CUSTOM:Mk8IronArmor.boots",
+      "CUSTOM:Mk9IronArmor.boots"
+    ],
     "ENTITIES:minecraft:hostile": [
       "EntityAreaEffectCloud",
       "EntityCaveSpider",
@@ -1638,16 +1685,16 @@
   },
   "tab_element_order": {
     "CUSTOM:IronArmorTab": [
+      "UpgradeTemplate",
+      "ArmorIntakeBlock",
       "Mk1IronArmor",
       "FlightTestArmor",
       "Mk2IronArmor",
-      "UpgradeTemplate",
       "Mk3IronArmor",
       "Mk4IronArmor",
       "Mk5Suitcase",
       "Mk6IronArmor",
       "Mk7IronArmor",
-      "ArmorIntakeBlock",
       "Mk8IronArmor",
       "Mk9IronArmor"
     ]
@@ -1668,11 +1715,11 @@
       "subtitles.flighttest_armor_spark": "Sparks",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_8_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
+      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "key.categories.ironarmor": "Iron Armor",
-      "key.forged_reactor.attack_3": "Attack 3",
       "item.forged_reactor.mk_7_iron_armor_boots": "Iron Armor Boots",
+      "key.forged_reactor.attack_3": "Attack 3",
       "key.forged_reactor.attack_2": "Attack 2",
       "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
@@ -1860,6 +1907,10 @@
               {
                 "name": "Mk. 10",
                 "children": []
+              },
+              {
+                "name": "Mk. 1",
+                "children": []
               }
             ]
           },
@@ -1871,10 +1922,6 @@
                 "children": [
                   {
                     "name": "EntityData",
-                    "children": []
-                  },
-                  {
-                    "name": "Compass",
                     "children": []
                   }
                 ]

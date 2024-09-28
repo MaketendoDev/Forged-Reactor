@@ -71,8 +71,6 @@ public class Mk2ArmorHUDOverlay {
 
 			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/ylevel_hud_display.png"), 2, h / 2 + -356, 0, 0, 23, 256, 23, 256);
 
-			event.getGuiGraphics().blit(new ResourceLocation("forged_reactor:textures/screens/iron_hud_crosshair.png"), w / 2 + -8, h / 2 + -8, 0, 0, 16, 16, 16, 16);
-
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					GetEntityNameProcedure.execute(world, entity), w - 100, 31, -1, false);
@@ -85,7 +83,7 @@ public class Mk2ArmorHUDOverlay {
 					GetEntityHealthProcedure.execute(world, entity), w - 100, 42, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					SpeedReturnProcedure.execute(entity), 27, 127, -1, false);
+					SpeedReturnProcedure.execute(entity), 27, h / 2 + 7, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					GetEntityMaxHealthProcedure.execute(world, entity), w - 100, 53, -1, false);
