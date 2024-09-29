@@ -160,22 +160,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -208,22 +192,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1582,11 +1550,8 @@
       "CUSTOM:Mk8IronArmor.helmet",
       "CUSTOM:Mk9IronArmor.helmet"
     ],
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:ArmorWithdrawer"
-    ],
-    "ITEMS:ironman:enablemk1hud": [
-      "CUSTOM:Mk1IronArmor.helmet"
+    "ITEMS:ironman:enableflighttestexoskeletonchestplate": [
+      "CUSTOM:FlightTestArmor.body"
     ],
     "ITEMS:ironman:enablejarvis": [
       "CUSTOM:Mk2IronArmor.helmet",
@@ -1597,11 +1562,6 @@
       "CUSTOM:Mk7IronArmor.helmet",
       "CUSTOM:Mk8IronArmor.helmet",
       "CUSTOM:Mk9IronArmor.helmet"
-    ],
-    "BLOCKS:minecraft:air": [
-      "Blocks.AIR",
-      "Blocks.VOID_AIR",
-      "Blocks.CAVE_AIR"
     ],
     "ITEMS:ironman:removearmsifchestplateisworn": [
       "CUSTOM:Mk1IronArmor.body",
@@ -1614,16 +1574,6 @@
       "CUSTOM:Mk8IronArmor.body",
       "CUSTOM:Mk9IronArmor.body"
     ],
-    "ITEMS:ironman:removeheadifhelmetisworn": [
-      "CUSTOM:Mk2IronArmor.helmet",
-      "CUSTOM:Mk3IronArmor.helmet",
-      "CUSTOM:Mk4IronArmor.helmet",
-      "CUSTOM:Mk5IronArmor.helmet",
-      "CUSTOM:Mk6IronArmor.helmet",
-      "CUSTOM:Mk7IronArmor.helmet",
-      "CUSTOM:Mk8IronArmor.helmet",
-      "CUSTOM:Mk9IronArmor.helmet"
-    ],
     "ITEMS:ironman:enableflight": [
       "CUSTOM:Mk2IronArmor.boots",
       "CUSTOM:Mk3IronArmor.boots",
@@ -1633,6 +1583,36 @@
       "CUSTOM:Mk7IronArmor.boots",
       "CUSTOM:Mk8IronArmor.boots",
       "CUSTOM:Mk9IronArmor.boots"
+    ],
+    "ITEMS:ironman:enableflighttestexoskeletonboots": [
+      "CUSTOM:FlightTestArmor.boots"
+    ],
+    "ITEMS:ironman:enablemk1flightboost": [
+      "CUSTOM:Mk1IronArmor.boots"
+    ],
+    "ITEMS:ironman:enableflighttestflight": [
+      "CUSTOM:FlightTestArmor.boots"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:ArmorWithdrawer"
+    ],
+    "ITEMS:ironman:enablemk1hud": [
+      "CUSTOM:Mk1IronArmor.helmet"
+    ],
+    "BLOCKS:minecraft:air": [
+      "Blocks.AIR",
+      "Blocks.VOID_AIR",
+      "Blocks.CAVE_AIR"
+    ],
+    "ITEMS:ironman:removeheadifhelmetisworn": [
+      "CUSTOM:Mk2IronArmor.helmet",
+      "CUSTOM:Mk3IronArmor.helmet",
+      "CUSTOM:Mk4IronArmor.helmet",
+      "CUSTOM:Mk5IronArmor.helmet",
+      "CUSTOM:Mk6IronArmor.helmet",
+      "CUSTOM:Mk7IronArmor.helmet",
+      "CUSTOM:Mk8IronArmor.helmet",
+      "CUSTOM:Mk9IronArmor.helmet"
     ],
     "ENTITIES:minecraft:hostile": [
       "EntityAreaEffectCloud",
@@ -1684,6 +1664,9 @@
       "EntityPigZombie",
       "EntityShulker",
       "EntitySmallFireball"
+    ],
+    "ITEMS:ironman:enableflamethrower": [
+      "CUSTOM:Mk1IronArmor.body"
     ]
   },
   "tab_element_order": {
