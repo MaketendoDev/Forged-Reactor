@@ -1449,9 +1449,26 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Armor/Mk. 2"
     },
     {
       "name": "OpenCloseHelmet",
@@ -1505,6 +1522,20 @@
         ]
       },
       "path": "~/Functions/Armor Dequiper"
+    },
+    {
+      "name": "Repulsor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RepulsorProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Armor/Mk. 3/Functionality/Moves"
     }
   ],
   "variable_elements": [
@@ -1551,7 +1582,15 @@
       "CUSTOM:Mk9IronArmor.helmet"
     ],
     "ITEMS:ironman:enableflighttestexoskeletonchestplate": [
-      "CUSTOM:FlightTestArmor.body"
+      "CUSTOM:FlightTestArmor.body",
+      "CUSTOM:Mk2IronArmor.body",
+      "CUSTOM:Mk3IronArmor.body",
+      "CUSTOM:Mk4IronArmor.body",
+      "CUSTOM:Mk5IronArmor.body",
+      "CUSTOM:Mk6IronArmor.body",
+      "CUSTOM:Mk7IronArmor.body",
+      "CUSTOM:Mk8IronArmor.body",
+      "CUSTOM:Mk9IronArmor.body"
     ],
     "ITEMS:ironman:enablejarvis": [
       "CUSTOM:Mk2IronArmor.helmet",
@@ -1585,7 +1624,15 @@
       "CUSTOM:Mk9IronArmor.boots"
     ],
     "ITEMS:ironman:enableflighttestexoskeletonboots": [
-      "CUSTOM:FlightTestArmor.boots"
+      "CUSTOM:FlightTestArmor.boots",
+      "CUSTOM:Mk2IronArmor.boots",
+      "CUSTOM:Mk3IronArmor.boots",
+      "CUSTOM:Mk4IronArmor.boots",
+      "CUSTOM:Mk5IronArmor.boots",
+      "CUSTOM:Mk6IronArmor.boots",
+      "CUSTOM:Mk7IronArmor.boots",
+      "CUSTOM:Mk8IronArmor.boots",
+      "CUSTOM:Mk9IronArmor.boots"
     ],
     "ITEMS:ironman:enablemk1flightboost": [
       "CUSTOM:Mk1IronArmor.boots"
@@ -1772,7 +1819,17 @@
           },
           {
             "name": "Mk. 3",
-            "children": []
+            "children": [
+              {
+                "name": "Functionality",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "Mk. 4",
