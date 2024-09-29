@@ -19,5 +19,6 @@ public class ForgedReactorModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(ForgedReactorModEntities.FIREBLAST.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ForgedReactorModEntities.MK_7_SUIT_POD.get(), Mk7SuitPodRenderer::new);
+		event.registerEntityRenderer(ForgedReactorModEntities.REPULSOR_BEAM.get(), ThrownItemRenderer::new);
 	}
 }
