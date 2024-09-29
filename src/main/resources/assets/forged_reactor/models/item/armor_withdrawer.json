@@ -1,5 +1,5 @@
 {
-  "parent": "forged_reactor:block/armor_intake_block",
+  "parent": "forged_reactor:block/armor_withdrawer",
   "display": {
     "thirdperson": {
       "rotation": [

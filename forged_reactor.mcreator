@@ -949,41 +949,6 @@
       "path": "~/Armor/Mk. 1"
     },
     {
-      "name": "OpenCloseHelmet",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_close_helmet",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/procedures/OpenCloseHelmetProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Armor/Mk. 1/Functionality/Moves"
-    },
-    {
       "name": "Mk4IronArmor",
       "type": "armor",
       "compiles": true,
@@ -1452,24 +1417,6 @@
       "path": "~/Functions/Armor Dequiper"
     },
     {
-      "name": "ArmorIntakeBlock",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "armor_intake_block",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/block/ArmorIntakeBlockBlock.java",
-          "src/main/resources/data/forged_reactor/loot_tables/blocks/armor_intake_block.json",
-          "src/main/resources/assets/forged_reactor/models/item/armor_intake_block.json",
-          "src/main/resources/assets/forged_reactor/models/block/armor_intake_block.json",
-          "src/main/resources/assets/forged_reactor/blockstates/armor_intake_block.json",
-          "src/main/java/net/maketendo/forgedreactor/block/entity/ArmorIntakeBlockBlockEntity.java"
-        ]
-      },
-      "path": "~/Functions/Armor Dequiper"
-    },
-    {
       "name": "ArmorIntakeGUI",
       "type": "gui",
       "compiles": true,
@@ -1537,6 +1484,59 @@
           }
         ]
       }
+    },
+    {
+      "name": "OpenCloseHelmet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_close_helmet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/OpenCloseHelmetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 1/Functionality/Moves"
+    },
+    {
+      "name": "ArmorWithdrawer",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_withdrawer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/loot_tables/blocks/armor_withdrawer.json",
+          "src/main/java/net/maketendo/forgedreactor/block/entity/ArmorWithdrawerBlockEntity.java",
+          "src/main/resources/assets/forged_reactor/models/item/armor_withdrawer.json",
+          "src/main/resources/assets/forged_reactor/blockstates/armor_withdrawer.json",
+          "src/main/resources/assets/forged_reactor/models/block/armor_withdrawer.json",
+          "src/main/java/net/maketendo/forgedreactor/block/ArmorWithdrawerBlock.java"
+        ]
+      },
+      "path": "~/Functions/Armor Dequiper"
     }
   ],
   "variable_elements": [
@@ -1581,6 +1581,9 @@
       "CUSTOM:Mk7IronArmor.helmet",
       "CUSTOM:Mk8IronArmor.helmet",
       "CUSTOM:Mk9IronArmor.helmet"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:ArmorWithdrawer"
     ],
     "ITEMS:ironman:enablemk1hud": [
       "CUSTOM:Mk1IronArmor.helmet"
@@ -1686,7 +1689,6 @@
   "tab_element_order": {
     "CUSTOM:IronArmorTab": [
       "UpgradeTemplate",
-      "ArmorIntakeBlock",
       "Mk1IronArmor",
       "FlightTestArmor",
       "Mk2IronArmor",
@@ -1696,7 +1698,8 @@
       "Mk6IronArmor",
       "Mk7IronArmor",
       "Mk8IronArmor",
-      "Mk9IronArmor"
+      "Mk9IronArmor",
+      "ArmorWithdrawer"
     ]
   },
   "language_map": {
@@ -1715,23 +1718,23 @@
       "subtitles.flighttest_armor_spark": "Sparks",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_8_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
+      "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "key.categories.ironarmor": "Iron Armor",
-      "key.forged_reactor.attack_3": "Attack 3",
       "item.forged_reactor.mk_7_iron_armor_boots": "Iron Armor Boots",
+      "key.forged_reactor.attack_3": "Attack 3",
       "key.forged_reactor.attack_2": "Attack 2",
       "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
       "key.forged_reactor.attack_4": "Attack 4",
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
+      "block.forged_reactor.armor_withdrawer": "Armor Withdrawer",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
       "item.forged_reactor.upgrade_template": "Upgrade Template",
-      "block.forged_reactor.armor_intake_block": "Armor Intake",
       "item.forged_reactor.mk_7_suit_pod_spawn_egg": "Mk. 7 Suit Pod Spawn Egg",
       "item.forged_reactor.mk_4_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_6_iron_armor_leggings": "Iron Armor Leggings",
@@ -1744,7 +1747,7 @@
       "item.forged_reactor.mk_7_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Accurate Flight Iron Armor Leggings",
       "item.forged_reactor.mk_5_iron_armor_chestplate": "Iron Armor Chestplate",
-      "gui.forged_reactor.armor_intake_gui.label_armor_intake": "Armor Intake",
+      "gui.forged_reactor.armor_intake_gui.label_armor_intake": "Armor Withdrawer",
       "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_3_iron_armor_helmet": "Iron Armor Helmet",
       "gui.forged_reactor.mk_2_armor_hud.label_entity_data": "Entity Data:",

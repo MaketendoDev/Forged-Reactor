@@ -15,7 +15,7 @@
         "data": {
           "name": "label_armor_intake",
           "text": {
-            "fixedValue": "Armor Intake"
+            "fixedValue": "Armor Withdrawer"
           },
           "color": {
             "value": -12829636,
@@ -39,7 +39,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 186,
+          "x": 169,
           "y": 56
         }
       },
@@ -57,7 +57,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 205,
+          "x": 187,
           "y": 56
         }
       },
@@ -75,7 +75,7 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 224,
+          "x": 205,
           "y": 56
         }
       },
@@ -93,98 +93,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 186,
-          "y": 75
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
-          "id": 4,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 205,
-          "y": 75
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
-          "id": 5,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 224,
-          "y": 75
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
-          "id": 6,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 186,
-          "y": 94
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
-          "id": 7,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 205,
-          "y": 94
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "disablePlacement": {
-            "fixedValue": false
-          },
-          "id": 8,
-          "disablePickup": {
-            "fixedValue": false
-          },
-          "dropItemsWhenNotBound": true,
-          "x": 224,
-          "y": 94
+          "x": 223,
+          "y": 56
         }
       }
     ],

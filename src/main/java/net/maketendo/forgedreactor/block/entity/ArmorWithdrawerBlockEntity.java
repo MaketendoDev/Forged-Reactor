@@ -30,12 +30,12 @@ import java.util.stream.IntStream;
 
 import io.netty.buffer.Unpooled;
 
-public class ArmorIntakeBlockBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public class ArmorWithdrawerBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public ArmorIntakeBlockBlockEntity(BlockPos position, BlockState state) {
-		super(ForgedReactorModBlockEntities.ARMOR_INTAKE_BLOCK.get(), position, state);
+	public ArmorWithdrawerBlockEntity(BlockPos position, BlockState state) {
+		super(ForgedReactorModBlockEntities.ARMOR_WITHDRAWER.get(), position, state);
 	}
 
 	@Override
@@ -79,7 +79,7 @@ public class ArmorIntakeBlockBlockEntity extends RandomizableContainerBlockEntit
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("armor_intake_block");
+		return Component.literal("armor_withdrawer");
 	}
 
 	@Override
@@ -94,7 +94,7 @@ public class ArmorIntakeBlockBlockEntity extends RandomizableContainerBlockEntit
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Armor Intake");
+		return Component.literal("Armor Withdrawer");
 	}
 
 	@Override

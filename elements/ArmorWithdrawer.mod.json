@@ -2,10 +2,10 @@
   "_fv": 66,
   "_type": "block",
   "definition": {
-    "texture": "minecraft:dispenser_front_vertical",
-    "textureTop": "minecraft:observer_top",
+    "texture": "minecraft:furnace_top",
+    "textureTop": "minecraft:furnace_top",
     "textureLeft": "minecraft:furnace_top",
-    "textureFront": "minecraft:dispenser_front",
+    "textureFront": "minecraft:dispenser_front_vertical",
     "textureRight": "minecraft:furnace_top",
     "textureBack": "minecraft:furnace_top",
     "renderType": 10,
@@ -15,7 +15,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "",
+    "particleTexture": "minecraft:furnace_top",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -33,20 +33,23 @@
         "subtract": false
       }
     ],
-    "name": "Armor Intake",
+    "name": "Armor Withdrawer",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 1.0,
+    "hardness": 1.8,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTabs": [
       {
         "value": "CUSTOM:IronArmorTab"
+      },
+      {
+        "value": "REDSTONE"
       }
     ],
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -79,11 +82,11 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "reactionToPushing": "NORMAL",
+    "reactionToPushing": "BLOCK",
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "STONE"
     },
     "breakSound": {
       "value": ""

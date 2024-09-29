@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "forged_reactor:blocks/armor_intake_block",
+  "random_sequence": "forged_reactor:blocks/armor_withdrawer",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "forged_reactor:armor_intake_block"
+          "name": "forged_reactor:armor_withdrawer"
         }
       ]
     }

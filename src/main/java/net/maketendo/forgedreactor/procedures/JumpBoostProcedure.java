@@ -3,9 +3,9 @@ package net.maketendo.forgedreactor.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -25,11 +25,12 @@ public class JumpBoostProcedure {
 				}
 			}
 			entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 10), (entity.getLookAngle().y * 10), (entity.getLookAngle().z * 10)));
+			jumpboostcooldown = true;
 			while (jumpboostcooldown == true) {
 				if (!((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.AIR)) {
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.FLAME, x, (y + 1), z, 30, 3, 3, 3, 2);
 					jumpboostcooldown = false;
+					if (world instanceof Level _level && !_level.isClientSide())
+						_level.explode(null, x, y, z, 4, Level.ExplosionInteraction.MOB);
 					break;
 				}
 			}

@@ -5,6 +5,7 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -36,15 +37,15 @@ import net.minecraft.core.BlockPos;
 
 import net.maketendo.forgedreactor.world.inventory.ArmorIntakeGUIMenu;
 import net.maketendo.forgedreactor.procedures.ArmorIntakeBlockRedstoneOnProcedure;
-import net.maketendo.forgedreactor.block.entity.ArmorIntakeBlockBlockEntity;
+import net.maketendo.forgedreactor.block.entity.ArmorWithdrawerBlockEntity;
 
 import io.netty.buffer.Unpooled;
 
-public class ArmorIntakeBlockBlock extends Block implements EntityBlock {
+public class ArmorWithdrawerBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
-	public ArmorIntakeBlockBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.GRAVEL).strength(1f, 10f));
+	public ArmorWithdrawerBlock() {
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1.8f, 10f).pushReaction(PushReaction.BLOCK));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -96,7 +97,7 @@ public class ArmorIntakeBlockBlock extends Block implements EntityBlock {
 			NetworkHooks.openScreen(player, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Armor Intake");
+					return Component.literal("Armor Withdrawer");
 				}
 
 				@Override
@@ -116,7 +117,7 @@ public class ArmorIntakeBlockBlock extends Block implements EntityBlock {
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return new ArmorIntakeBlockBlockEntity(pos, state);
+		return new ArmorWithdrawerBlockEntity(pos, state);
 	}
 
 	@Override
@@ -130,7 +131,7 @@ public class ArmorIntakeBlockBlock extends Block implements EntityBlock {
 	public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean isMoving) {
 		if (state.getBlock() != newState.getBlock()) {
 			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof ArmorIntakeBlockBlockEntity be) {
+			if (blockEntity instanceof ArmorWithdrawerBlockEntity be) {
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
@@ -146,7 +147,7 @@ public class ArmorIntakeBlockBlock extends Block implements EntityBlock {
 	@Override
 	public int getAnalogOutputSignal(BlockState blockState, Level world, BlockPos pos) {
 		BlockEntity tileentity = world.getBlockEntity(pos);
-		if (tileentity instanceof ArmorIntakeBlockBlockEntity be)
+		if (tileentity instanceof ArmorWithdrawerBlockEntity be)
 			return AbstractContainerMenu.getRedstoneSignalFromContainer(be);
 		else
 			return 0;

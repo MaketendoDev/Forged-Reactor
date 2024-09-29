@@ -42,7 +42,7 @@ public class ArmorIntakeGUIMenu extends AbstractContainerMenu implements Supplie
 		super(ForgedReactorModMenus.ARMOR_INTAKE_GUI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
-		this.internal = new ItemStackHandler(9);
+		this.internal = new ItemStackHandler(4);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -77,32 +77,17 @@ public class ArmorIntakeGUIMenu extends AbstractContainerMenu implements Supplie
 					});
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 61, 20) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 44, 20) {
 			private final int slot = 0;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 80, 20) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 62, 20) {
 			private final int slot = 1;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 99, 20) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 20) {
 			private final int slot = 2;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 39) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 98, 20) {
 			private final int slot = 3;
-		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 80, 39) {
-			private final int slot = 4;
-		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 99, 39) {
-			private final int slot = 5;
-		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 61, 58) {
-			private final int slot = 6;
-		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 80, 58) {
-			private final int slot = 7;
-		}));
-		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 99, 58) {
-			private final int slot = 8;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
@@ -131,16 +116,16 @@ public class ArmorIntakeGUIMenu extends AbstractContainerMenu implements Supplie
 		if (slot != null && slot.hasItem()) {
 			ItemStack itemstack1 = slot.getItem();
 			itemstack = itemstack1.copy();
-			if (index < 9) {
-				if (!this.moveItemStackTo(itemstack1, 9, this.slots.size(), true))
+			if (index < 4) {
+				if (!this.moveItemStackTo(itemstack1, 4, this.slots.size(), true))
 					return ItemStack.EMPTY;
 				slot.onQuickCraft(itemstack1, itemstack);
-			} else if (!this.moveItemStackTo(itemstack1, 0, 9, false)) {
-				if (index < 9 + 27) {
-					if (!this.moveItemStackTo(itemstack1, 9 + 27, this.slots.size(), true))
+			} else if (!this.moveItemStackTo(itemstack1, 0, 4, false)) {
+				if (index < 4 + 27) {
+					if (!this.moveItemStackTo(itemstack1, 4 + 27, this.slots.size(), true))
 						return ItemStack.EMPTY;
 				} else {
-					if (!this.moveItemStackTo(itemstack1, 9, 9 + 27, false))
+					if (!this.moveItemStackTo(itemstack1, 4, 4 + 27, false))
 						return ItemStack.EMPTY;
 				}
 				return ItemStack.EMPTY;
