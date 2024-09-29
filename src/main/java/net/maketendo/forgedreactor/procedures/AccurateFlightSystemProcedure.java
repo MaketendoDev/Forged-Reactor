@@ -74,8 +74,8 @@ public class AccurateFlightSystemProcedure {
 					_player.onUpdateAbilities();
 				}
 				if (entity instanceof Player player && player.getAbilities().flying) {
-					if (Screen.hasShiftDown()) {
-						entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 3), (entity.getLookAngle().y * 3), (entity.getLookAngle().z * 3)));
+					if (Screen.hasControlDown()) {
+						entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 3), (entity.getLookAngle().y * 3), (entity.getLookAngle().z * 2.5)));
 						{
 							ItemStack _ist = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY);
 							if (_ist.hurt((int) 0.6, RandomSource.create(), null)) {
@@ -83,6 +83,7 @@ public class AccurateFlightSystemProcedure {
 								_ist.setDamageValue(0);
 							}
 						}
+						entity.fallDistance = 0;
 					} else {
 						entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 1.4), (entity.getLookAngle().y * 1.4), (entity.getLookAngle().z * 1.4)));
 						{
@@ -92,8 +93,8 @@ public class AccurateFlightSystemProcedure {
 								_ist.setDamageValue(0);
 							}
 						}
+						entity.fallDistance = 0;
 					}
-					entity.fallDistance = 0;
 				}
 			}
 		} else if (new Object() {
