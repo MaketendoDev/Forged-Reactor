@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
@@ -74,9 +75,23 @@ public class AccurateFlightSystemProcedure {
 				}
 				if (entity instanceof Player player && player.getAbilities().flying) {
 					if (Screen.hasShiftDown()) {
-						entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 2), (entity.getLookAngle().y * 2), (entity.getLookAngle().z * 2)));
+						entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 3), (entity.getLookAngle().y * 3), (entity.getLookAngle().z * 3)));
+						{
+							ItemStack _ist = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY);
+							if (_ist.hurt((int) 0.6, RandomSource.create(), null)) {
+								_ist.shrink(1);
+								_ist.setDamageValue(0);
+							}
+						}
 					} else {
 						entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 1.4), (entity.getLookAngle().y * 1.4), (entity.getLookAngle().z * 1.4)));
+						{
+							ItemStack _ist = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY);
+							if (_ist.hurt((int) 0.2, RandomSource.create(), null)) {
+								_ist.shrink(1);
+								_ist.setDamageValue(0);
+							}
+						}
 					}
 					entity.fallDistance = 0;
 				}
