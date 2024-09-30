@@ -1613,6 +1613,25 @@
         ]
       },
       "path": "~/Projectiles/Repulsor Beam"
+    },
+    {
+      "name": "RenderRepulsorAttackedModels",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_repulsor_attacked_models",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RenderRepulsorAttackedModelsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Animation"
     }
   ],
   "variable_elements": [
