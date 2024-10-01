@@ -8,7 +8,7 @@ public class ArmorStoredEnergyTickProcedure {
 	public static void execute(ItemStack itemstack) {
 		String power = "";
 		String maxPower = "";
-		itemstack.getOrCreateTag().putDouble("maxPower", 1600);
+		itemstack.getOrCreateTag().putDouble("maxPower", 3600);
 		if (itemstack.is(ItemTags.create(new ResourceLocation("ironman:enableenergy")))) {
 			if (itemstack.getOrCreateTag().getDouble("power") > 0) {
 				itemstack.getOrCreateTag().putDouble("power", (itemstack.getOrCreateTag().getDouble("power") - 1));
