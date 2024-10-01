@@ -1859,7 +1859,8 @@
     ],
     "ITEMS:ironman:enableflamethrower": [
       "CUSTOM:Mk1IronArmor.body"
-    ]
+    ],
+    "ITEMS:ironman:disableicingproblem": []
   },
   "tab_element_order": {
     "CUSTOM:IronArmorTab": [
