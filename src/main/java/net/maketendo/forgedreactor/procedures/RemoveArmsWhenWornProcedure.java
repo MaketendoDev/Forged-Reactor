@@ -38,7 +38,7 @@ public class RemoveArmsWhenWornProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:removearmsifchestplateisworn")))) {
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:removearmsifchestplateisworn")))) {
 			RenderLivingEvent _evt = (RenderLivingEvent) event;
 			Minecraft mc = Minecraft.getInstance();
 			EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();

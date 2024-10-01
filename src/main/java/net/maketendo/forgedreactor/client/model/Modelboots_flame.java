@@ -15,7 +15,7 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.11.0
+// Made with Blockbench 4.11.1
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class Modelboots_flame<T extends Entity> extends EntityModel<T> {
@@ -42,19 +42,19 @@ public class Modelboots_flame<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition RightLeg = partdefinition.addOrReplaceChild("RightLeg",
-				CubeListBuilder.create().texOffs(12, 3).addBox(-1.0F, 13.0F, -1.0F, 0.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(12, 3).addBox(1.0F, 13.0F, -1.0F, 0.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
+				CubeListBuilder.create().texOffs(12, 8).addBox(-1.0F, 14.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(12, 8).addBox(1.0F, 14.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(-2.0F, 12.0F, 0.0F));
-		PartDefinition cube_r1 = RightLeg.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(12, 3).mirror().addBox(-1.0F, -1.0F, -1.0F, 0.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false),
-				PartPose.offsetAndRotation(0.0F, 14.0F, -2.0F, 0.0F, 1.5272F, 0.0F));
-		PartDefinition cube_r2 = RightLeg.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(12, 3).addBox(-1.0F, -1.0F, -1.0F, 0.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 14.0F, 0.0F, 0.0F, 1.5272F, 0.0F));
+		PartDefinition cube_r1 = RightLeg.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(12, 8).mirror().addBox(-1.0F, 1.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)).mirror(false),
+				PartPose.offsetAndRotation(0.0F, 13.0F, -2.0F, 0.0F, 1.5272F, 0.0F));
+		PartDefinition cube_r2 = RightLeg.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(12, 8).addBox(-1.0F, 1.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 13.0F, 0.0F, 0.0F, 1.5272F, 0.0F));
 		PartDefinition LeftLeg = partdefinition.addOrReplaceChild("LeftLeg",
-				CubeListBuilder.create().texOffs(12, 4).addBox(1.0F, 13.0F, -1.0F, 0.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(12, 3).addBox(-1.0F, 13.0F, -1.0F, 0.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
+				CubeListBuilder.create().texOffs(12, 8).addBox(1.0F, 14.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(12, 8).addBox(-1.0F, 14.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(2.0F, 12.0F, 0.0F));
-		PartDefinition cube_r3 = LeftLeg.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(12, 3).addBox(-1.0F, -1.0F, -1.0F, 0.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 14.0F, 0.0F, 0.0F, 1.5272F, 0.0F));
-		PartDefinition cube_r4 = LeftLeg.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(12, 3).addBox(-1.0F, -1.0F, -1.0F, 0.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 14.0F, -2.0F, 0.0F, 1.5272F, 0.0F));
+		PartDefinition cube_r3 = LeftLeg.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(12, 8).addBox(-1.0F, 1.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 13.0F, 0.0F, 0.0F, 1.5272F, 0.0F));
+		PartDefinition cube_r4 = LeftLeg.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(12, 8).addBox(-1.0F, 1.0F, -1.0F, 0.0F, 5.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 13.0F, -2.0F, 0.0F, 1.5272F, 0.0F));
 		PartDefinition Body = partdefinition.addOrReplaceChild("Body", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 		PartDefinition RightArm = partdefinition.addOrReplaceChild("RightArm", CubeListBuilder.create(), PartPose.offset(-5.0F, 2.0F, 0.0F));

@@ -1632,6 +1632,25 @@
         ]
       },
       "path": "~/Animation"
+    },
+    {
+      "name": "FlightModelsTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flight_models_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/FlightModelsTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Animation"
     }
   ],
   "variable_elements": [
@@ -1667,6 +1686,36 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:ironman:disableicingissue": [
+      "CUSTOM:Mk3IronArmor.helmet",
+      "CUSTOM:Mk3IronArmor.body",
+      "CUSTOM:Mk3IronArmor.legs",
+      "CUSTOM:Mk3IronArmor.boots",
+      "CUSTOM:Mk4IronArmor.helmet",
+      "CUSTOM:Mk4IronArmor.body",
+      "CUSTOM:Mk4IronArmor.legs",
+      "CUSTOM:Mk4IronArmor.boots",
+      "CUSTOM:Mk5IronArmor.helmet",
+      "CUSTOM:Mk5IronArmor.body",
+      "CUSTOM:Mk5IronArmor.legs",
+      "CUSTOM:Mk5IronArmor.boots",
+      "CUSTOM:Mk6IronArmor.helmet",
+      "CUSTOM:Mk6IronArmor.body",
+      "CUSTOM:Mk6IronArmor.legs",
+      "CUSTOM:Mk6IronArmor.boots",
+      "CUSTOM:Mk7IronArmor.helmet",
+      "CUSTOM:Mk7IronArmor.body",
+      "CUSTOM:Mk7IronArmor.legs",
+      "CUSTOM:Mk7IronArmor.boots",
+      "CUSTOM:Mk8IronArmor.helmet",
+      "CUSTOM:Mk8IronArmor.body",
+      "CUSTOM:Mk8IronArmor.legs",
+      "CUSTOM:Mk8IronArmor.boots",
+      "CUSTOM:Mk9IronArmor.helmet",
+      "CUSTOM:Mk9IronArmor.body",
+      "CUSTOM:Mk9IronArmor.legs",
+      "CUSTOM:Mk9IronArmor.boots"
+    ],
     "ITEMS:ironman:enablemk2ironhud": [
       "CUSTOM:Mk2IronArmor.helmet",
       "CUSTOM:Mk3IronArmor.helmet",
@@ -1839,14 +1888,14 @@
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
-      "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
       "item.forged_reactor.mk_4_iron_armor_helmet": "Iron Armor Helmet",
+      "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
       "death.attack.repulsor_damage.item": "%1$s was killed by %2$s from a Repulsor Beam",
       "subtitles.flighttest_armor_spark": "Sparks",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_8_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
+      "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
       "key.categories.ironarmor": "Iron Armor",
       "item.forged_reactor.mk_7_iron_armor_boots": "Iron Armor Boots",
       "key.forged_reactor.attack_3": "Attack 3",
