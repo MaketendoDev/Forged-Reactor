@@ -10,6 +10,18 @@
     "textureLeggings": "mk2_leggings",
     "enableBoots": true,
     "textureBoots": "mk2_boots",
+    "onHelmetTick": {
+      "name": "ArmorStoredEnergyTick"
+    },
+    "onBodyTick": {
+      "name": "ArmorStoredEnergyTick"
+    },
+    "onLeggingsTick": {
+      "name": "ArmorStoredEnergyTick"
+    },
+    "onBootsTick": {
+      "name": "ArmorStoredEnergyTick"
+    },
     "creativeTabs": [
       {
         "value": "CUSTOM:IronArmorTab"

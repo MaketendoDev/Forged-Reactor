@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
@@ -24,12 +25,15 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
+import net.maketendo.forgedreactor.procedures.ArmorStoredEnergyTickProcedure;
 import net.maketendo.forgedreactor.client.model.Modelmk8_armor;
 
 import java.util.function.Consumer;
 import java.util.Map;
 import java.util.List;
 import java.util.Collections;
+
+import com.google.common.collect.Iterables;
 
 public abstract class Mk8IronArmorItem extends ArmorItem {
 	public Mk8IronArmorItem(ArmorItem.Type type, Item.Properties properties) {
@@ -114,6 +118,14 @@ public abstract class Mk8IronArmorItem extends ArmorItem {
 		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
 			return true;
 		}
+
+		@Override
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				ArmorStoredEnergyTickProcedure.execute(itemstack);
+			}
+		}
 	}
 
 	public static class Chestplate extends Mk8IronArmorItem {
@@ -153,6 +165,14 @@ public abstract class Mk8IronArmorItem extends ArmorItem {
 		@Override
 		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
 			return true;
+		}
+
+		@Override
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				ArmorStoredEnergyTickProcedure.execute(itemstack);
+			}
 		}
 	}
 
@@ -195,6 +215,14 @@ public abstract class Mk8IronArmorItem extends ArmorItem {
 		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
 			return true;
 		}
+
+		@Override
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				ArmorStoredEnergyTickProcedure.execute(itemstack);
+			}
+		}
 	}
 
 	public static class Boots extends Mk8IronArmorItem {
@@ -235,6 +263,14 @@ public abstract class Mk8IronArmorItem extends ArmorItem {
 		@Override
 		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
 			return true;
+		}
+
+		@Override
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				ArmorStoredEnergyTickProcedure.execute(itemstack);
+			}
 		}
 	}
 }

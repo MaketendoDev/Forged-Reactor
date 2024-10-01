@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "forged_reactor:mk_2_iron_armor_helmet",
+    "forged_reactor:mk_2_iron_armor_chestplate",
+    "forged_reactor:mk_2_iron_armor_leggings",
+    "forged_reactor:mk_2_iron_armor_boots",
     "forged_reactor:mk_3_iron_armor_helmet",
     "forged_reactor:mk_3_iron_armor_chestplate",
     "forged_reactor:mk_3_iron_armor_leggings",

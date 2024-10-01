@@ -10,6 +10,12 @@
     "textureLeggings": "",
     "enableBoots": true,
     "textureBoots": "flight_test_prototype_boots",
+    "onBodyTick": {
+      "name": "ArmorStoredEnergyTick"
+    },
+    "onBootsTick": {
+      "name": "ArmorStoredEnergyTick"
+    },
     "creativeTabs": [
       {
         "value": "CUSTOM:IronArmorTab"
