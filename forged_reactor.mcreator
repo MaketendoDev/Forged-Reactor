@@ -547,7 +547,7 @@
       "name": "Mk2ArmorHUD",
       "type": "overlay",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "mk_2_armor_hud",
       "metadata": {
         "files": [
@@ -1712,6 +1712,93 @@
         ]
       },
       "path": "~/Stored Energy"
+    },
+    {
+      "name": "Mk5toSuitcase",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_5to_suitcase",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Mk5toSuitcaseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Mk. 5"
+    },
+    {
+      "name": "Mk1HelmetUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_helmet_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_1_helmet_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1"
+    },
+    {
+      "name": "Mk1ChestplateUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_chestplate_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_1_chestplate_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1"
+    },
+    {
+      "name": "Mk1LeggingsUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_leggings_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_1_leggings_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1"
+    },
+    {
+      "name": "Mk1BootsUpgradeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_1_boots_upgrade_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/mk_1_boots_upgrade_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1"
     }
   ],
   "variable_elements": [
@@ -1983,14 +2070,14 @@
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
-      "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
       "item.forged_reactor.mk_4_iron_armor_helmet": "Iron Armor Helmet",
+      "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
       "death.attack.repulsor_damage.item": "%1$s was killed by %2$s from a Repulsor Beam",
       "subtitles.flighttest_armor_spark": "Sparks",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
       "item.forged_reactor.mk_8_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
+      "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
       "key.categories.ironarmor": "Iron Armor",
       "item.forged_reactor.mk_7_iron_armor_boots": "Iron Armor Boots",
       "key.forged_reactor.attack_3": "Attack 3",

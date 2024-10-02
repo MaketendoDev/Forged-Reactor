@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    "dae"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:redstone"
+    },
+    "c": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "d": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "e": {
+      "item": "minecraft:firework_rocket"
+    }
+  },
+  "result": {
+    "item": "forged_reactor:mk_1_iron_armor_chestplate",
+    "count": 1
+  }
+}

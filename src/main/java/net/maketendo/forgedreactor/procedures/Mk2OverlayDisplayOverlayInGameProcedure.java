@@ -13,9 +13,21 @@ public class Mk2OverlayDisplayOverlayInGameProcedure {
 		if (entity == null)
 			return false;
 		double e = 0;
-		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enablemk2ironhud")))) {
-			if (Minecraft.getInstance().options.getCameraType().isFirstPerson()) {
-				return true;
+		String power = "";
+		String maxPower = "";
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enableenergy")))) {
+			if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") == 0)) {
+				if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enablemk2ironhud")))) {
+					if (Minecraft.getInstance().options.getCameraType().isFirstPerson()) {
+						return true;
+					}
+				}
+			}
+		} else {
+			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enablemk2ironhud")))) {
+				if (Minecraft.getInstance().options.getCameraType().isFirstPerson()) {
+					return true;
+				}
 			}
 		}
 		return false;

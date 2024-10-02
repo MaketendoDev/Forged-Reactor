@@ -48,7 +48,7 @@ public class Mk2ArmorHUDOverlay {
 			z = entity.getZ();
 		}
 		RenderSystem.disableDepthTest();
-		RenderSystem.depthMask(false);
+		RenderSystem.depthMask(true);
 		RenderSystem.enableBlend();
 		RenderSystem.setShader(GameRenderer::getPositionTexShader);
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);

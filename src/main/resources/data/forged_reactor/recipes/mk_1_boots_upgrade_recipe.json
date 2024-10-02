@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "c c"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:iron_boots"
+    },
+    "c": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "forged_reactor:mk_1_iron_armor_boots",
+    "count": 1
+  }
+}

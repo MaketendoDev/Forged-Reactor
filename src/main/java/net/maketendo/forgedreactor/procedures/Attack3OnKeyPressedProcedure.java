@@ -8,5 +8,6 @@ public class Attack3OnKeyPressedProcedure {
 		if (entity == null)
 			return;
 		OpenCloseHelmetProcedure.execute(world, x, y, z, entity);
+		Mk5toSuitcaseProcedure.execute(world, x, y, z, entity);
 	}
 }
