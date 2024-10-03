@@ -1431,12 +1431,7 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/RenderFlightModelsProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Animation"
     },
@@ -1794,6 +1789,19 @@
         ]
       },
       "path": "~/Functions/Armor Crafting/Mk. 1"
+    },
+    {
+      "name": "TemplatesCrafting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "templates_crafting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/templates_crafting.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting"
     }
   ],
   "variable_elements": [
