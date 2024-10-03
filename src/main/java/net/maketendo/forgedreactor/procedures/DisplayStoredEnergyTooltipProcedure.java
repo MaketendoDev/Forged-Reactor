@@ -34,6 +34,7 @@ public class DisplayStoredEnergyTooltipProcedure {
 		String power = "";
 		String maxPower = "";
 		if (itemstack.is(ItemTags.create(new ResourceLocation("ironman:enableenergy")))) {
+			itemstack.getOrCreateTag().putDouble("maxPower", 6300);
 			power = "" + itemstack.getOrCreateTag().getDouble("power");
 			maxPower = "" + itemstack.getOrCreateTag().getDouble("maxPower");
 			power = power.replace(".0", "");
