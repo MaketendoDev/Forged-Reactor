@@ -1802,6 +1802,20 @@
         ]
       },
       "path": "~/Functions/Armor Crafting"
+    },
+    {
+      "name": "Battery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battery",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/item/BatteryItem.java",
+          "src/main/resources/assets/forged_reactor/models/item/battery.json"
+        ]
+      },
+      "path": "~/Stored Energy"
     }
   ],
   "variable_elements": [
@@ -2059,7 +2073,8 @@
       "Mk7IronArmor",
       "Mk8IronArmor",
       "Mk9IronArmor",
-      "ArmorWithdrawer"
+      "ArmorWithdrawer",
+      "Battery"
     ]
   },
   "language_map": {
@@ -2101,6 +2116,7 @@
       "item.forged_reactor.mk_6_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
       "subtitles.ironman.flighttestarmor.spark_1": "Sparks",
+      "item.forged_reactor.battery": "Battery",
       "item.forged_reactor.mk_8_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_1_iron_armor_helmet": "Prototype Iron Armor Helmet",
       "item.forged_reactor.flight_test_armor_chestplate": "Flight Test Prototype Chestplate",

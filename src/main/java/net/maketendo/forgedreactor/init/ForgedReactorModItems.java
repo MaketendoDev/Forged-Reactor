@@ -26,6 +26,7 @@ import net.maketendo.forgedreactor.item.Mk2IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk1IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk1IronArmorHelmetOpenItem;
 import net.maketendo.forgedreactor.item.FlightTestArmorItem;
+import net.maketendo.forgedreactor.item.BatteryItem;
 import net.maketendo.forgedreactor.ForgedReactorMod;
 
 public class ForgedReactorModItems {
@@ -74,6 +75,7 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MK_9_IRON_ARMOR_BOOTS = REGISTRY.register("mk_9_iron_armor_boots", () -> new Mk9IronArmorItem.Boots());
 	public static final RegistryObject<Item> MK_7_SUIT_POD_SPAWN_EGG = REGISTRY.register("mk_7_suit_pod_spawn_egg", () -> new ForgeSpawnEggItem(ForgedReactorModEntities.MK_7_SUIT_POD, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> ARMOR_WITHDRAWER = block(ForgedReactorModBlocks.ARMOR_WITHDRAWER);
+	public static final RegistryObject<Item> BATTERY = REGISTRY.register("battery", () -> new BatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
