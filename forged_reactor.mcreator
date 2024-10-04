@@ -1604,7 +1604,8 @@
       "registry_name": "repulsor_beam",
       "metadata": {
         "files": [
-          "src/main/java/net/maketendo/forgedreactor/entity/RepulsorBeamEntity.java"
+          "src/main/java/net/maketendo/forgedreactor/entity/RepulsorBeamEntity.java",
+          "src/main/java/net/maketendo/forgedreactor/client/renderer/RepulsorBeamRenderer.java"
         ]
       },
       "path": "~/Projectiles/Repulsor Beam"
@@ -2088,8 +2089,8 @@
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
-      "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
       "item.forged_reactor.mk_4_iron_armor_helmet": "Iron Armor Helmet",
+      "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
       "death.attack.repulsor_damage.item": "%1$s was killed by %2$s from a Repulsor Beam",
       "subtitles.flighttest_armor_spark": "Sparks",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",

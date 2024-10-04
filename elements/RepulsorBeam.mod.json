@@ -13,8 +13,8 @@
     "power": 1.0,
     "damage": 5.0,
     "knockback": 5,
-    "entityModel": "Default",
-    "customModelTexture": "",
+    "entityModel": "Modelmk3_armor",
+    "customModelTexture": "mk4_armor.png",
     "onHitsPlayer": {
       "name": "RepulsorBeamProjectileHitsPlayer"
     },

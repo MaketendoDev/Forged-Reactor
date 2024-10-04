@@ -62,7 +62,7 @@ public class ForgedReactorModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping ATTACK_4 = new KeyMapping("key.forged_reactor.attack_4", GLFW.GLFW_KEY_KP_DECIMAL, "key.categories.ironarmor") {
+	public static final KeyMapping ATTACK_4 = new KeyMapping("key.forged_reactor.attack_4", GLFW.GLFW_KEY_UNKNOWN, "key.categories.ironarmor") {
 		private boolean isDownOld = false;
 
 		@Override

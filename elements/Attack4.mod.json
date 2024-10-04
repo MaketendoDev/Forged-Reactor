@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "NUMPADCOMMA",
+    "triggerKey": "NONE",
     "keyBindingName": "Attack 4",
     "keyBindingCategoryKey": "ironarmor",
     "onKeyPressed": {
