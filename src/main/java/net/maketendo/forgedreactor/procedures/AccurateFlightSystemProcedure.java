@@ -49,7 +49,7 @@ public class AccurateFlightSystemProcedure {
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enableenergy")))) {
 			if (!(entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(MobEffects.WEAKNESS))) {
 				if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enableflight")))) {
-					if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") > 10) {
+					if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") == 0)) {
 						if (new Object() {
 							public boolean checkGamemode(Entity _ent) {
 								if (_ent instanceof ServerPlayer _serverPlayer) {
@@ -156,6 +156,11 @@ public class AccurateFlightSystemProcedure {
 								}
 							}
 						}
+					} else {
+						if (entity instanceof Player _player) {
+							_player.getAbilities().flying = false;
+							_player.onUpdateAbilities();
+						}
 					}
 				} else if (new Object() {
 					public boolean checkGamemode(Entity _ent) {
@@ -205,7 +210,7 @@ public class AccurateFlightSystemProcedure {
 				}
 			}
 		} else {
-			if (!(entity instanceof LivingEntity _livEnt52 && _livEnt52.hasEffect(MobEffects.WEAKNESS))) {
+			if (!(entity instanceof LivingEntity _livEnt53 && _livEnt53.hasEffect(MobEffects.WEAKNESS))) {
 				if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enableflight")))) {
 					if (new Object() {
 						public boolean checkGamemode(Entity _ent) {

@@ -19,6 +19,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.maketendo.forgedreactor.init.ForgedReactorModTabs;
 import net.maketendo.forgedreactor.init.ForgedReactorModSounds;
+import net.maketendo.forgedreactor.init.ForgedReactorModPotions;
 import net.maketendo.forgedreactor.init.ForgedReactorModParticleTypes;
 import net.maketendo.forgedreactor.init.ForgedReactorModMobEffects;
 import net.maketendo.forgedreactor.init.ForgedReactorModMenus;
@@ -55,6 +56,7 @@ public class ForgedReactorMod {
 		ForgedReactorModTabs.REGISTRY.register(bus);
 
 		ForgedReactorModMobEffects.REGISTRY.register(bus);
+		ForgedReactorModPotions.REGISTRY.register(bus);
 
 		ForgedReactorModParticleTypes.REGISTRY.register(bus);
 

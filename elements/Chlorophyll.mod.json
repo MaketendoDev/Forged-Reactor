@@ -1,0 +1,11 @@
+{
+  "_fv": 66,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Chlorophyll",
+    "splashName": "Splash Potion of Chlorophyll",
+    "lingeringName": "Lingering Potion of Chlorophyll",
+    "arrowName": "Arrow of Chlorophyll",
+    "effects": []
+  }
+}

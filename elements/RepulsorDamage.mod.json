@@ -5,8 +5,8 @@
     "exhaustion": 0.16,
     "scaling": "never",
     "effects": "freezing",
-    "normalDeathMessage": "%1$s died from a Repulsor Beam",
-    "itemDeathMessage": "%1$s was killed by %2$s from a Repulsor Beam",
-    "playerDeathMessage": "%1$s died from a Repulsor Beam whilst trying to escape %2$s"
+    "normalDeathMessage": "%1$s electrocuted from a Repulsor Beam",
+    "itemDeathMessage": "%1$s was electrocuted by %2$s from a Repulsor Beam",
+    "playerDeathMessage": "%1$s was electrocuted from a Repulsor Beam whilst trying to escape %2$s"
   }
 }

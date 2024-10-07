@@ -9,19 +9,19 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.maketendo.forgedreactor.entity.RepulsorBeamEntity;
-import net.maketendo.forgedreactor.client.model.Modelmk3_armor;
+import net.maketendo.forgedreactor.client.model.Modellaser;
 
 import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class RepulsorBeamRenderer extends EntityRenderer<RepulsorBeamEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("forged_reactor:textures/entities/mk4_armor.png");
-	private final Modelmk3_armor model;
+	private static final ResourceLocation texture = new ResourceLocation("forged_reactor:textures/entities/laser.png");
+	private final Modellaser model;
 
 	public RepulsorBeamRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new Modelmk3_armor(context.bakeLayer(Modelmk3_armor.LAYER_LOCATION));
+		model = new Modellaser(context.bakeLayer(Modellaser.LAYER_LOCATION));
 	}
 
 	@Override

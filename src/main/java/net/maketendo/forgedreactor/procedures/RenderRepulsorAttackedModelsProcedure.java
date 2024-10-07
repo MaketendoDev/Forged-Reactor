@@ -7,6 +7,7 @@ import net.minecraftforge.client.event.RenderLivingEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
@@ -14,6 +15,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.Minecraft;
+
+import net.maketendo.forgedreactor.ForgedReactorMod;
 
 import javax.annotation.Nullable;
 
@@ -24,14 +27,14 @@ public class RenderRepulsorAttackedModelsProcedure {
 	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
 	public static void onEventTriggered(RenderLivingEvent event) {
-		execute(event, event.getEntity());
+		execute(event, event.getEntity().level(), event.getEntity());
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (entity.getPersistentData().getBoolean("repulsed") == true) {
@@ -50,14 +53,28 @@ public class RenderRepulsorAttackedModelsProcedure {
 				emptyRenderer.clearLayers();
 				emptyRenderer.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 			}
-			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-				if (ResourceLocation.tryParse("forged_reactor:textures/entities/electrocuted.png") != null) {
-					_texture = new ResourceLocation("forged_reactor:textures/entities/electrocuted.png");
+			if (_evtEntity instanceof AbstractClientPlayer ? ((AbstractClientPlayer) _evtEntity).getModelName().equals("slim") : false) {
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse("forged_reactor:textures/entities/alex.png") != null) {
+						_texture = new ResourceLocation("forged_reactor:textures/entities/alex.png");
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, true, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
-				new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-						_evt.getMultiBufferSource(), _evt.getPackedLight());
+			} else {
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse("forged_reactor:textures/entities/steve.png") != null) {
+						_texture = new ResourceLocation("forged_reactor:textures/entities/steve.png");
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
 			}
+			ForgedReactorMod.queueServerWork(20, () -> {
+				entity.getPersistentData().putBoolean("repulsed", false);
+			});
 		}
 	}
 }
