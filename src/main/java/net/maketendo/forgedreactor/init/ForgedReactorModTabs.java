@@ -69,6 +69,12 @@ public class ForgedReactorModTabs {
 			tabData.accept(ForgedReactorModBlocks.ARMOR_WITHDRAWER.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(ForgedReactorModItems.MK_7_SUIT_POD_SPAWN_EGG.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+			tabData.accept(ForgedReactorModItems.MOLTEN_IRON.get());
+			tabData.accept(ForgedReactorModItems.MOLTEN_IRON_1.get());
+			tabData.accept(ForgedReactorModItems.MOLTEN_IRON_2.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+			tabData.accept(ForgedReactorModItems.HAMMER.get());
 		}
 	}
 }

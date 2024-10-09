@@ -1,0 +1,22 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "Blocks.HOPPER"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:MoltenIron"
+    },
+    "name": "hopper_to_molten_iron",
+    "namespace": "mod"
+  }
+}

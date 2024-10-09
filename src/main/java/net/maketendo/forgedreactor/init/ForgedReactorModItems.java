@@ -14,6 +14,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.maketendo.forgedreactor.item.UpgradeTemplateItem;
+import net.maketendo.forgedreactor.item.MoltenIronItem;
+import net.maketendo.forgedreactor.item.MoltenIron2Item;
+import net.maketendo.forgedreactor.item.MoltenIron1Item;
 import net.maketendo.forgedreactor.item.Mk9IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk8IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk7IronArmorItem;
@@ -25,6 +28,7 @@ import net.maketendo.forgedreactor.item.Mk3IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk2IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk1IronArmorItem;
 import net.maketendo.forgedreactor.item.Mk1IronArmorHelmetOpenItem;
+import net.maketendo.forgedreactor.item.HammerItem;
 import net.maketendo.forgedreactor.item.FlightTestArmorItem;
 import net.maketendo.forgedreactor.item.BatteryItem;
 import net.maketendo.forgedreactor.ForgedReactorMod;
@@ -76,6 +80,10 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MK_7_SUIT_POD_SPAWN_EGG = REGISTRY.register("mk_7_suit_pod_spawn_egg", () -> new ForgeSpawnEggItem(ForgedReactorModEntities.MK_7_SUIT_POD, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> ARMOR_WITHDRAWER = block(ForgedReactorModBlocks.ARMOR_WITHDRAWER);
 	public static final RegistryObject<Item> BATTERY = REGISTRY.register("battery", () -> new BatteryItem());
+	public static final RegistryObject<Item> MOLTEN_IRON = REGISTRY.register("molten_iron", () -> new MoltenIronItem());
+	public static final RegistryObject<Item> MOLTEN_IRON_1 = REGISTRY.register("molten_iron_1", () -> new MoltenIron1Item());
+	public static final RegistryObject<Item> MOLTEN_IRON_2 = REGISTRY.register("molten_iron_2", () -> new MoltenIron2Item());
+	public static final RegistryObject<Item> HAMMER = REGISTRY.register("hammer", () -> new HammerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
