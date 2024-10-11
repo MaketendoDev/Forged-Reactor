@@ -6,6 +6,25 @@
     "splashName": "Splash Potion of Chlorophyll",
     "lingeringName": "Lingering Potion of Chlorophyll",
     "arrowName": "Arrow of Chlorophyll",
-    "effects": []
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:ChlorophyllEffect"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      },
+      {
+        "effect": {
+          "value": "CUSTOM:ChlorophyllEffect"
+        },
+        "duration": 5623,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
   }
 }

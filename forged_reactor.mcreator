@@ -1929,6 +1929,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       },
@@ -1944,25 +1948,6 @@
         "files": [
           "src/main/resources/assets/forged_reactor/models/item/arc_reactor.json",
           "src/main/java/net/maketendo/forgedreactor/item/ArcReactorItem.java"
-        ]
-      },
-      "path": "~/Arc Reactor"
-    },
-    {
-      "name": "ArcReactorDisplay",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "arc_reactor_display",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/procedures/ArcReactorDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/Arc Reactor"
@@ -1996,12 +1981,7 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/PalladiumPoisoningEffectExpiresProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Effects/Palladium Poisoning"
     },
@@ -2023,6 +2003,10 @@
           {
             "name": "amplifier",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2040,6 +2024,25 @@
         ]
       },
       "path": "~/Effects/Palladium Poisoning"
+    },
+    {
+      "name": "ArcReactorDisplayCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arc_reactor_display_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ArcReactorDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arc Reactor"
     }
   ],
   "variable_elements": [

@@ -104,7 +104,7 @@ public class AccurateFlightSystemProcedure {
 									}
 								}
 							} else {
-								if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") == 0) {
+								if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") > 0) {
 									if (entity instanceof Player _player) {
 										_player.getAbilities().mayfly = false;
 										_player.onUpdateAbilities();

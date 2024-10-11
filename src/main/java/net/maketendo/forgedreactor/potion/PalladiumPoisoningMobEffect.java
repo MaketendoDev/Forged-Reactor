@@ -21,13 +21,13 @@ public class PalladiumPoisoningMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		PalladiumPoisoningOnEffectActiveTickProcedure.execute(entity, amplifier);
+		PalladiumPoisoningOnEffectActiveTickProcedure.execute(entity.level(), entity, amplifier);
 	}
 
 	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		PalladiumPoisoningEffectExpiresProcedure.execute(entity);
+		PalladiumPoisoningEffectExpiresProcedure.execute();
 	}
 
 	@Override
