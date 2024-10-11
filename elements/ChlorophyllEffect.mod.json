@@ -10,7 +10,7 @@
     },
     "isInstant": false,
     "mobEffectCategory": "BENEFICIAL",
-    "renderStatusInInventory": false,
+    "renderStatusInInventory": true,
     "renderStatusInHUD": true
   }
 }
