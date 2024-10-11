@@ -18,6 +18,6 @@ public class BatteryItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A78 A simple duracell battery (refills half of the Iron Armor SE)"));
+		list.add(Component.literal("\u00A78A simple Duracell battery (refills half of the Iron Armor SE)"));
 	}
 }

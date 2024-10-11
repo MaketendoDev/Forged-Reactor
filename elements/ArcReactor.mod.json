@@ -9,7 +9,11 @@
     "states": [],
     "name": "Arc Reactor",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:IronArmorTab"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,

@@ -61,6 +61,7 @@ public class ForgedReactorModTabs {
 				tabData.accept(ForgedReactorModItems.MK_9_IRON_ARMOR_BOOTS.get());
 				tabData.accept(ForgedReactorModBlocks.ARMOR_WITHDRAWER.get().asItem());
 				tabData.accept(ForgedReactorModItems.BATTERY.get());
+				tabData.accept(ForgedReactorModItems.ARC_REACTOR.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent

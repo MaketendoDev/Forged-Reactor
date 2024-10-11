@@ -79,6 +79,8 @@ public class ForgedReactorModVariables {
 			clone.JarvisAIName = original.JarvisAIName;
 			clone.LinkedTARDISID = original.LinkedTARDISID;
 			clone.shootingflames = original.shootingflames;
+			clone.Palladium_Poisoning = original.Palladium_Poisoning;
+			clone.Arc_Reactor = original.Arc_Reactor;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -123,6 +125,8 @@ public class ForgedReactorModVariables {
 		public String JarvisAIName = "jarvis";
 		public String LinkedTARDISID = "\"\"";
 		public boolean shootingflames = false;
+		public double Palladium_Poisoning = 0;
+		public boolean Arc_Reactor = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -134,6 +138,8 @@ public class ForgedReactorModVariables {
 			nbt.putString("JarvisAIName", JarvisAIName);
 			nbt.putString("LinkedTARDISID", LinkedTARDISID);
 			nbt.putBoolean("shootingflames", shootingflames);
+			nbt.putDouble("Palladium_Poisoning", Palladium_Poisoning);
+			nbt.putBoolean("Arc_Reactor", Arc_Reactor);
 			return nbt;
 		}
 
@@ -142,6 +148,8 @@ public class ForgedReactorModVariables {
 			JarvisAIName = nbt.getString("JarvisAIName");
 			LinkedTARDISID = nbt.getString("LinkedTARDISID");
 			shootingflames = nbt.getBoolean("shootingflames");
+			Palladium_Poisoning = nbt.getDouble("Palladium_Poisoning");
+			Arc_Reactor = nbt.getBoolean("Arc_Reactor");
 		}
 	}
 
@@ -178,6 +186,8 @@ public class ForgedReactorModVariables {
 					variables.JarvisAIName = message.data.JarvisAIName;
 					variables.LinkedTARDISID = message.data.LinkedTARDISID;
 					variables.shootingflames = message.data.shootingflames;
+					variables.Palladium_Poisoning = message.data.Palladium_Poisoning;
+					variables.Arc_Reactor = message.data.Arc_Reactor;
 				}
 			});
 			context.setPacketHandled(true);

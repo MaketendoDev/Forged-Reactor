@@ -1985,6 +1985,61 @@
         ]
       },
       "path": "~/Arc Reactor"
+    },
+    {
+      "name": "PalladiumPoisoningEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palladium_poisoning_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/PalladiumPoisoningEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/Palladium Poisoning"
+    },
+    {
+      "name": "PalladiumPoisoningOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palladium_poisoning_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/PalladiumPoisoningOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Effects/Palladium Poisoning"
+    },
+    {
+      "name": "PalladiumPoisoning",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palladium_poisoning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/potion/PalladiumPoisoningMobEffect.java"
+        ]
+      },
+      "path": "~/Effects/Palladium Poisoning"
     }
   ],
   "variable_elements": [
@@ -2002,6 +2057,18 @@
     },
     {
       "name": "shootingflames",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Palladium_Poisoning",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Arc_Reactor",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -2243,7 +2310,8 @@
       "Mk8IronArmor",
       "Mk9IronArmor",
       "ArmorWithdrawer",
-      "Battery"
+      "Battery",
+      "ArcReactor"
     ]
   },
   "language_map": {
@@ -2253,8 +2321,8 @@
       "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
-      "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
       "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
+      "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
@@ -2278,6 +2346,7 @@
       "key.forged_reactor.attack_4": "Attack 4",
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_withdrawer": "Armor Withdrawer",
+      "effect.forged_reactor.palladium_poisoning": "Palladium Poisoning",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
@@ -2410,7 +2479,7 @@
             "children": []
           },
           {
-            "name": "Iron Poisoning",
+            "name": "Palladium Poisoning",
             "children": []
           }
         ]

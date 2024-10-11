@@ -1,0 +1,22 @@
+{
+  "_fv": 66,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Palladium Poisoning",
+    "icon": "chlorophyll_effect",
+    "color": {
+      "value": -13421773,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onActiveTick": {
+      "name": "PalladiumPoisoningOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "PalladiumPoisoningEffectExpires"
+    }
+  }
+}
