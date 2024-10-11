@@ -22,6 +22,7 @@ import net.maketendo.forgedreactor.client.model.Modelmk1_armor;
 import net.maketendo.forgedreactor.client.model.Modellaser;
 import net.maketendo.forgedreactor.client.model.Modelflight_test_armor_thin;
 import net.maketendo.forgedreactor.client.model.Modelboots_flame;
+import net.maketendo.forgedreactor.client.model.Modelarc_reactor;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class ForgedReactorModModels {
@@ -40,5 +41,6 @@ public class ForgedReactorModModels {
 		event.registerLayerDefinition(Modelmk8_armor.LAYER_LOCATION, Modelmk8_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk4_armor.LAYER_LOCATION, Modelmk4_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelmk9_armor.LAYER_LOCATION, Modelmk9_armor::createBodyLayer);
+		event.registerLayerDefinition(Modelarc_reactor.LAYER_LOCATION, Modelarc_reactor::createBodyLayer);
 	}
 }

@@ -31,6 +31,7 @@ import net.maketendo.forgedreactor.item.Mk1IronArmorHelmetOpenItem;
 import net.maketendo.forgedreactor.item.HammerItem;
 import net.maketendo.forgedreactor.item.FlightTestArmorItem;
 import net.maketendo.forgedreactor.item.BatteryItem;
+import net.maketendo.forgedreactor.item.ArcReactorItem;
 import net.maketendo.forgedreactor.ForgedReactorMod;
 
 public class ForgedReactorModItems {
@@ -84,6 +85,7 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MOLTEN_IRON_1 = REGISTRY.register("molten_iron_1", () -> new MoltenIron1Item());
 	public static final RegistryObject<Item> MOLTEN_IRON_2 = REGISTRY.register("molten_iron_2", () -> new MoltenIron2Item());
 	public static final RegistryObject<Item> HAMMER = REGISTRY.register("hammer", () -> new HammerItem());
+	public static final RegistryObject<Item> ARC_REACTOR = REGISTRY.register("arc_reactor", () -> new ArcReactorItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
