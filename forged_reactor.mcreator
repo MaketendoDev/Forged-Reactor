@@ -2043,6 +2043,32 @@
         ]
       },
       "path": "~/Arc Reactor"
+    },
+    {
+      "name": "CleanArmorProt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clean_armor_prot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/CleanArmorProtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [

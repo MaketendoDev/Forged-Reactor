@@ -1,24 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "pattern": [
-    "aba",
-    "cdc"
-  ],
-  "key": {
-    "a": {
+  "ingredients": [
+    {
       "item": "minecraft:iron_ingot"
     },
-    "b": {
+    {
       "item": "minecraft:iron_boots"
     },
-    "c": {
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
       "item": "minecraft:iron_block"
     },
-    "d": {
+    {
       "item": "forged_reactor:hammer"
+    },
+    {
+      "item": "minecraft:iron_block"
     }
-  },
+  ],
   "result": {
     "item": "forged_reactor:mk_1_iron_armor_boots",
     "count": 1

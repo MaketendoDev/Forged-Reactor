@@ -18,7 +18,7 @@ public class PalladiumPoisoningOnEffectActiveTickProcedure {
 			if (entity.getPersistentData().getDouble("PalladiumPoisoning") == 0) {
 				entity.getPersistentData().putDouble("PalladiumPoisoning", 2000);
 			} else {
-				entity.getPersistentData().putDouble("PalladiumPoisoning", (entity.getPersistentData().getDouble("FlightFireModel") - (1 + amplifier)));
+				entity.getPersistentData().putDouble("PalladiumPoisoning", (entity.getPersistentData().getDouble("PalladiumPoisoning") - (1 + amplifier)));
 			}
 			if (entity.getPersistentData().getDouble("PalladiumPoisoning") == 0) {
 				entity.getPersistentData().putDouble("Level", (entity.getPersistentData().getDouble("Level") + 1));
@@ -60,12 +60,12 @@ public class PalladiumPoisoningOnEffectActiveTickProcedure {
 				}
 			}
 			if (entity.getPersistentData().getDouble("Level") >= 6) {
-				if (entity.getPersistentData().getDouble("PalladiumPoisoning") == 0) {
-					entity.getPersistentData().putDouble("Damage", 300);
+				if (entity.getPersistentData().getDouble("Damage") == 0) {
+					entity.getPersistentData().putDouble("Damage", 200);
 				} else {
 					entity.getPersistentData().putDouble("Damage", (entity.getPersistentData().getDouble("Damage") - 1));
 				}
-				if (entity.getPersistentData().getDouble("PalladiumPoisoning") == 0) {
+				if (entity.getPersistentData().getDouble("Damage") == 0) {
 					entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 3);
 				}
 			}
