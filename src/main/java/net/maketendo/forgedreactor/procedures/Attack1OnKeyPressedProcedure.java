@@ -8,5 +8,6 @@ public class Attack1OnKeyPressedProcedure {
 			return;
 		double raytrace_distance = 0;
 		JumpBoostProcedure.execute(entity);
+		ActivateFlightProcedure.execute(entity);
 	}
 }
