@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 3,
+  "cookingtime": 204,
+  "ingredient": {
+    "item": "forged_reactor:raw_palladium"
+  },
+  "result": "forged_reactor:palladium_ingot"
+}

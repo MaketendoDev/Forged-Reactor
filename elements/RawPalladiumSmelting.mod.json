@@ -1,0 +1,22 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 3.0,
+    "cookingTime": 204,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:RawPalladium"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:PalladiumIngot"
+    },
+    "name": "raw_palladium_smelting",
+    "namespace": "mod"
+  }
+}

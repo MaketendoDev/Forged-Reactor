@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "forged_reactor:deepslate_palladium_ore",
-    "forged_reactor:palladium_ore",
-    "forged_reactor:armor_withdrawer"
+    "forged_reactor:palladium_ore"
   ]
 }

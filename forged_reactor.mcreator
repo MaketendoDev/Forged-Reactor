@@ -2303,6 +2303,87 @@
         ]
       },
       "path": "~/Functions/Armor Crafting/Mk. 1/Items/Reforming Iron Recipes"
+    },
+    {
+      "name": "RawPalladium",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_palladium",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/raw_palladium.json",
+          "src/main/java/net/maketendo/forgedreactor/item/RawPalladiumItem.java"
+        ]
+      },
+      "path": "~/Natural Generation/Ores/Palladium/Items"
+    },
+    {
+      "name": "PalladiumIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palladium_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/palladium_ingot.json",
+          "src/main/java/net/maketendo/forgedreactor/item/PalladiumIngotItem.java"
+        ]
+      },
+      "path": "~/Natural Generation/Ores/Palladium/Items"
+    },
+    {
+      "name": "PalladiumOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palladium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/forge/biome_modifier/palladium_ore_biome_modifier.json",
+          "src/main/resources/data/forged_reactor/worldgen/configured_feature/palladium_ore.json",
+          "src/main/resources/assets/forged_reactor/blockstates/palladium_ore.json",
+          "src/main/resources/assets/forged_reactor/models/item/palladium_ore.json",
+          "src/main/java/net/maketendo/forgedreactor/block/PalladiumOreBlock.java",
+          "src/main/resources/assets/forged_reactor/models/block/palladium_ore.json",
+          "src/main/resources/data/forged_reactor/worldgen/placed_feature/palladium_ore.json",
+          "src/main/resources/data/forged_reactor/loot_tables/blocks/palladium_ore.json"
+        ]
+      },
+      "path": "~/Natural Generation/Ores/Palladium/Blocks"
+    },
+    {
+      "name": "DeepslatePalladiumOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_palladium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/worldgen/configured_feature/deepslate_palladium_ore.json",
+          "src/main/resources/data/forged_reactor/worldgen/placed_feature/deepslate_palladium_ore.json",
+          "src/main/java/net/maketendo/forgedreactor/block/DeepslatePalladiumOreBlock.java",
+          "src/main/resources/data/forged_reactor/forge/biome_modifier/deepslate_palladium_ore_biome_modifier.json",
+          "src/main/resources/data/forged_reactor/loot_tables/blocks/deepslate_palladium_ore.json",
+          "src/main/resources/assets/forged_reactor/models/block/deepslate_palladium_ore.json",
+          "src/main/resources/assets/forged_reactor/models/item/deepslate_palladium_ore.json",
+          "src/main/resources/assets/forged_reactor/blockstates/deepslate_palladium_ore.json"
+        ]
+      },
+      "path": "~/Natural Generation/Ores/Palladium/Blocks"
+    },
+    {
+      "name": "RawPalladiumSmelting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_palladium_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/raw_palladium_smelting.json"
+        ]
+      },
+      "path": "~/Natural Generation/Ores/Palladium/Recipes"
     }
   ],
   "variable_elements": [
@@ -2362,6 +2443,10 @@
     }
   ],
   "tag_elements": {
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:DeepslatePalladiumOre",
+      "~CUSTOM:PalladiumOre"
+    ],
     "ITEMS:ironman:enablemk2ironhud": [
       "CUSTOM:Mk2IronArmor.helmet",
       "CUSTOM:Mk3IronArmor.helmet",
@@ -2432,6 +2517,8 @@
       "CUSTOM:FlightTestArmor.boots"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:DeepslatePalladiumOre",
+      "~CUSTOM:PalladiumOre",
       "~CUSTOM:ArmorWithdrawer"
     ],
     "ITEMS:ironman:enablemk1hud": [
@@ -2625,6 +2712,7 @@
       "entity.forged_reactor.wind_boost": "Wind Boost",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
+      "block.forged_reactor.palladium_ore": "Palladium Ore",
       "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
       "item.forged_reactor.wind_boost_spawn_egg": "Wind Boost Spawn Egg",
@@ -2632,6 +2720,7 @@
       "item.forged_reactor.upgrade_template": "Upgrade Template",
       "item.forged_reactor.molten_iron_2": "Molten Iron",
       "item.forged_reactor.molten_iron_3": "Molten Iron",
+      "item.forged_reactor.palladium_ingot": "Palladium Ingot",
       "item.forged_reactor.molten_iron_1": "Molten Iron",
       "item.forged_reactor.mk_7_suit_pod_spawn_egg": "Mk. 7 Suit Pod Spawn Egg",
       "item.minecraft.splash_potion.effect.chlorophyll": "Splash Potion of Chlorophyll",
@@ -2646,11 +2735,13 @@
       "item.forged_reactor.mk_7_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_7_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Accurate Flight Iron Armor Leggings",
+      "item.forged_reactor.raw_palladium": "Raw Palladium",
       "death.attack.repulsor_damage.player": "%1$s was electrocuted from a Repulsor Beam whilst trying to escape %2$s",
       "item.forged_reactor.mk_5_iron_armor_chestplate": "Iron Armor Chestplate",
       "gui.forged_reactor.armor_intake_gui.label_armor_intake": "Armor Withdrawer",
       "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
       "item.minecraft.potion.effect.chlorophyll": "Potion of Chlorophyll",
+      "block.forged_reactor.deepslate_palladium_ore": "Deepslate Palladium Ore",
       "item.forged_reactor.mk_3_iron_armor_helmet": "Iron Armor Helmet",
       "gui.forged_reactor.mk_2_armor_hud.label_entity_data": "Entity Data:",
       "item.forged_reactor.mk_6_iron_armor_chestplate": "Iron Armor Chestplate",
@@ -2895,6 +2986,33 @@
       {
         "name": "Arc Reactor",
         "children": []
+      },
+      {
+        "name": "Natural Generation",
+        "children": [
+          {
+            "name": "Ores",
+            "children": [
+              {
+                "name": "Palladium",
+                "children": [
+                  {
+                    "name": "Items",
+                    "children": []
+                  },
+                  {
+                    "name": "Blocks",
+                    "children": []
+                  },
+                  {
+                    "name": "Recipes",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },

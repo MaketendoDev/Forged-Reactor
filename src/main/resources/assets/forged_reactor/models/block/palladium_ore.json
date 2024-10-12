@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "forged_reactor:block/palladainium_ore",
+    "up": "forged_reactor:block/palladainium_ore",
+    "north": "forged_reactor:block/palladainium_ore",
+    "east": "forged_reactor:block/palladainium_ore",
+    "south": "forged_reactor:block/palladainium_ore",
+    "west": "forged_reactor:block/palladainium_ore",
+    "particle": "forged_reactor:block/palladainium_ore"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 8,
+    "discard_chance_on_air_exposure": 0,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "tag_match",
+          "tag": "stone_ore_replaceables"
+        },
+        "state": {
+          "Name": "forged_reactor:deepslate_palladium_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:deepslate",
+            "Properties": {
+              "axis": "y"
+            }
+          }
+        },
+        "state": {
+          "Name": "forged_reactor:deepslate_palladium_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:cobbled_deepslate"
+          }
+        },
+        "state": {
+          "Name": "forged_reactor:deepslate_palladium_ore"
+        }
+      }
+    ]
+  }
+}

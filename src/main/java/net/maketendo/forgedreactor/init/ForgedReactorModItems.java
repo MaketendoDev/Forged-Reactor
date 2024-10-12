@@ -14,6 +14,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.maketendo.forgedreactor.item.UpgradeTemplateItem;
+import net.maketendo.forgedreactor.item.RawPalladiumItem;
+import net.maketendo.forgedreactor.item.PalladiumIngotItem;
 import net.maketendo.forgedreactor.item.MoltenIronItem;
 import net.maketendo.forgedreactor.item.MoltenIron3Item;
 import net.maketendo.forgedreactor.item.MoltenIron2Item;
@@ -93,6 +95,10 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> HEATED_MOLTEN_IRON_2 = REGISTRY.register("heated_molten_iron_2", () -> new HeatedMoltenIron2Item());
 	public static final RegistryObject<Item> MOLTEN_IRON_3 = REGISTRY.register("molten_iron_3", () -> new MoltenIron3Item());
 	public static final RegistryObject<Item> HEATED_MOLTEN_IRON_3 = REGISTRY.register("heated_molten_iron_3", () -> new HeatedMoltenIron3Item());
+	public static final RegistryObject<Item> RAW_PALLADIUM = REGISTRY.register("raw_palladium", () -> new RawPalladiumItem());
+	public static final RegistryObject<Item> PALLADIUM_INGOT = REGISTRY.register("palladium_ingot", () -> new PalladiumIngotItem());
+	public static final RegistryObject<Item> PALLADIUM_ORE = block(ForgedReactorModBlocks.PALLADIUM_ORE);
+	public static final RegistryObject<Item> DEEPSLATE_PALLADIUM_ORE = block(ForgedReactorModBlocks.DEEPSLATE_PALLADIUM_ORE);
 
 	// Start of user code block custom items
 	// End of user code block custom items
