@@ -2068,7 +2068,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Functions"
     },
     {
       "name": "ActivateFlight",
@@ -2161,6 +2162,40 @@
         ]
       },
       "path": "~/Functions/Wind Boost Particle"
+    },
+    {
+      "name": "CoolingMoltenIron",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooling_molten_iron",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/CoolingMoltenIronProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2454,8 +2489,8 @@
       "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
-      "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
       "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
+      "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
