@@ -75,6 +75,9 @@ public class ForgedReactorModTabs {
 			tabData.accept(ForgedReactorModItems.MOLTEN_IRON.get());
 			tabData.accept(ForgedReactorModItems.MOLTEN_IRON_1.get());
 			tabData.accept(ForgedReactorModItems.MOLTEN_IRON_2.get());
+			tabData.accept(ForgedReactorModItems.HEATED_MOLTEN_IRON_2.get());
+			tabData.accept(ForgedReactorModItems.MOLTEN_IRON_3.get());
+			tabData.accept(ForgedReactorModItems.HEATED_MOLTEN_IRON_3.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(ForgedReactorModItems.HAMMER.get());
 		}

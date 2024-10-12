@@ -1913,7 +1913,7 @@
           "src/main/java/net/maketendo/forgedreactor/item/HammerItem.java"
         ]
       },
-      "path": "~/Functions/Armor Crafting/Mk. 1/Items"
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items/Hammer "
     },
     {
       "name": "ArcReactorRightclicked",
@@ -2196,6 +2196,113 @@
           }
         ]
       }
+    },
+    {
+      "name": "HeatedMoltenIron2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heated_molten_iron_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/item/HeatedMoltenIron2Item.java",
+          "src/main/resources/assets/forged_reactor/models/item/heated_molten_iron_2.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items"
+    },
+    {
+      "name": "MoltenIron3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molten_iron_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/molten_iron_3.json",
+          "src/main/java/net/maketendo/forgedreactor/item/MoltenIron3Item.java"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items"
+    },
+    {
+      "name": "HeatedMoltenIron3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heated_molten_iron_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/forged_reactor/models/item/heated_molten_iron_3.json",
+          "src/main/java/net/maketendo/forgedreactor/item/HeatedMoltenIron3Item.java"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items"
+    },
+    {
+      "name": "HammerCraftingRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammer_crafting_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/hammer_crafting_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items/Hammer "
+    },
+    {
+      "name": "ReformingIron1To2Recipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reforming_iron_1_to_2_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/reforming_iron_1_to_2_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items/Reforming Iron Recipes"
+    },
+    {
+      "name": "ReformingIron2To3Recipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reforming_iron_2_to_3_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/reforming_iron_2_to_3_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items/Reforming Iron Recipes"
+    },
+    {
+      "name": "ReformingIron3To4Recipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reforming_iron_3_to_4_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/reforming_iron_3_to_4_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items/Reforming Iron Recipes"
+    },
+    {
+      "name": "ReformingIron3To4CooledRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reforming_iron_3_to_4_cooled_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/reforming_iron_3_to_4_cooled_recipe.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items/Reforming Iron Recipes"
     }
   ],
   "variable_elements": [
@@ -2489,8 +2596,8 @@
       "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
-      "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
       "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
+      "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
@@ -2524,6 +2631,7 @@
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
       "item.forged_reactor.upgrade_template": "Upgrade Template",
       "item.forged_reactor.molten_iron_2": "Molten Iron",
+      "item.forged_reactor.molten_iron_3": "Molten Iron",
       "item.forged_reactor.molten_iron_1": "Molten Iron",
       "item.forged_reactor.mk_7_suit_pod_spawn_egg": "Mk. 7 Suit Pod Spawn Egg",
       "item.minecraft.splash_potion.effect.chlorophyll": "Splash Potion of Chlorophyll",
@@ -2557,7 +2665,9 @@
       "item.forged_reactor.mk_7_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots",
       "item.forged_reactor.mk_9_iron_armor_helmet": "Iron Armor Helmet",
-      "item.forged_reactor.mk_1_iron_armor_helmet_open_helmet": "Prototype Iron Armor Helmet"
+      "item.forged_reactor.heated_molten_iron_3": "Molten Iron",
+      "item.forged_reactor.mk_1_iron_armor_helmet_open_helmet": "Prototype Iron Armor Helmet",
+      "item.forged_reactor.heated_molten_iron_2": "Molten Iron"
     }
   },
   "foldersRoot": {
@@ -2735,7 +2845,16 @@
                 "children": [
                   {
                     "name": "Items",
-                    "children": []
+                    "children": [
+                      {
+                        "name": "Hammer ",
+                        "children": []
+                      },
+                      {
+                        "name": "Reforming Iron Recipes",
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               }

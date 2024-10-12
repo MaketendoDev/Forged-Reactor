@@ -21,28 +21,28 @@
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
-      },
-      {
-        "value": "Items.IRON_BOOTS"
-      },
-      {
-        "value": "Items.IRON_INGOT"
-      },
-      {
-        "value": "CUSTOM:MoltenIron2"
-      },
-      {
         "value": "CUSTOM:Hammer"
       },
       {
-        "value": "CUSTOM:MoltenIron2"
+        "value": "CUSTOM:HeatedMoltenIron2"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Mk1IronArmor.boots"
+      "value": "CUSTOM:HeatedMoltenIron3"
     },
-    "name": "mk_1_boots_upgrade_recipe",
+    "name": "reforming_iron_3_to_4_recipe",
     "namespace": "mod"
   }
 }

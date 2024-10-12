@@ -12,13 +12,13 @@
       "item": "minecraft:iron_ingot"
     },
     {
-      "item": "minecraft:iron_block"
+      "item": "forged_reactor:molten_iron_2"
     },
     {
       "item": "forged_reactor:hammer"
     },
     {
-      "item": "minecraft:iron_block"
+      "item": "forged_reactor:molten_iron_2"
     }
   ],
   "result": {

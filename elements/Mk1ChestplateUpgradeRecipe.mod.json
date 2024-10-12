@@ -12,13 +12,13 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       },
       {
         "value": "Items.REDSTONE"
@@ -33,7 +33,7 @@
         "value": "Items.FLINT_AND_STEEL"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       },
       {
         "value": "Items.FIREWORKS"

@@ -3,34 +3,34 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "hammer",
+    "texture": "molten_iron_3",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Hammer",
+    "name": "Molten Iron",
     "rarity": "COMMON",
     "creativeTabs": [
       {
-        "value": "TOOLS"
+        "value": "MATERIALS"
       }
     ],
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 10,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
     "destroyAnyBlock": false,
     "immuneToFire": false,
-    "stayInGridWhenCrafting": true,
-    "damageOnCrafting": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§8Bonk!"
+        "§8Reformed Level: 4"
       ]
     },
     "glowCondition": {

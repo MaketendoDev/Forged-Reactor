@@ -12,7 +12,7 @@ import java.util.List;
 
 public class HammerItem extends Item {
 	public HammerItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(10).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -22,12 +22,22 @@ public class HammerItem extends Item {
 
 	@Override
 	public ItemStack getCraftingRemainingItem(ItemStack itemstack) {
-		return new ItemStack(this);
+		ItemStack retval = new ItemStack(this);
+		retval.setDamageValue(itemstack.getDamageValue() + 1);
+		if (retval.getDamageValue() >= retval.getMaxDamage()) {
+			return ItemStack.EMPTY;
+		}
+		return retval;
+	}
+
+	@Override
+	public boolean isRepairable(ItemStack itemstack) {
+		return false;
 	}
 
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("\u00A78"));
+		list.add(Component.literal("\u00A78Bonk!"));
 	}
 }

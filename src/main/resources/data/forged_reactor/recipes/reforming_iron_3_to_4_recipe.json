@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "forged_reactor:hammer"
+    },
+    {
+      "item": "forged_reactor:heated_molten_iron_2"
+    }
+  ],
+  "result": {
+    "item": "forged_reactor:heated_molten_iron_3",
+    "count": 1
+  }
+}

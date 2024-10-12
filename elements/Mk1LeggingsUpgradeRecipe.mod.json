@@ -12,13 +12,13 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       },
       {
         "value": "Items.REDSTONE"
@@ -30,13 +30,13 @@
         "value": "Items.REDSTONE"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "CUSTOM:MoltenIron2"
       }
     ],
     "recipeReturnStack": {

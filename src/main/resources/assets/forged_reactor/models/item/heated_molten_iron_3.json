@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "forged_reactor:item/molden_iron_3_hot"
+  }
+}

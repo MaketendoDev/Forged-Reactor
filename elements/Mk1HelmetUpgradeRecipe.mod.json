@@ -21,22 +21,22 @@
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": "Blocks.IRON_BLOCK"
+        "value": "CUSTOM:MoltenIron2"
+      },
+      {
+        "value": "CUSTOM:MoltenIron3"
+      },
+      {
+        "value": "CUSTOM:MoltenIron2"
+      },
+      {
+        "value": "CUSTOM:MoltenIron2"
       },
       {
         "value": "Items.IRON_HELMET"
       },
       {
-        "value": "Blocks.IRON_BLOCK"
-      },
-      {
-        "value": "Blocks.IRON_BLOCK"
-      },
-      {
-        "value": "Blocks.IRON_BLOCK"
-      },
-      {
-        "value": "Blocks.IRON_BLOCK"
+        "value": "CUSTOM:MoltenIron2"
       }
     ],
     "recipeReturnStack": {
