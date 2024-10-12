@@ -40,11 +40,6 @@ public class CleanArmorProtProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (event != null && event.isCancelable()) {
-			event.setCanceled(true);
-		} else if (event != null && event.hasResult()) {
-			event.setResult(Event.Result.DENY);
-		}
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.HONEYCOMB && entity instanceof ArmorStand) {
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == ForgedReactorModItems.MK_2_IRON_ARMOR_BOOTS.get()) {
 				if (world instanceof Level _level) {
