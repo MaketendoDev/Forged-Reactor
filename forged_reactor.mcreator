@@ -2088,6 +2088,79 @@
         ]
       },
       "path": "~/Armor/Mk. 2"
+    },
+    {
+      "name": "WindBoostOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_boost_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/WindBoostOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Wind Boost Particle"
+    },
+    {
+      "name": "WindBoost",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wind_boost",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/entity/WindBoostEntity.java",
+          "src/main/resources/assets/forged_reactor/models/item/wind_boost_spawn_egg.json",
+          "src/main/java/net/maketendo/forgedreactor/client/renderer/WindBoostRenderer.java"
+        ]
+      },
+      "path": "~/Functions/Wind Boost Particle"
+    },
+    {
+      "name": "SpawnWindBoostParticle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_wind_boost_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/SpawnWindBoostParticleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Wind Boost Particle"
     }
   ],
   "variable_elements": [
@@ -2123,6 +2196,12 @@
     },
     {
       "name": "Flight",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "BoostParticleDelay",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -2401,10 +2480,12 @@
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_withdrawer": "Armor Withdrawer",
       "effect.forged_reactor.palladium_poisoning": "Palladium Poisoning",
+      "entity.forged_reactor.wind_boost": "Wind Boost",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
+      "item.forged_reactor.wind_boost_spawn_egg": "Wind Boost Spawn Egg",
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
       "item.forged_reactor.upgrade_template": "Upgrade Template",
       "item.forged_reactor.molten_iron_2": "Molten Iron",
@@ -2641,6 +2722,10 @@
           },
           {
             "name": "Armor Dequiper",
+            "children": []
+          },
+          {
+            "name": "Wind Boost Particle",
             "children": []
           }
         ]

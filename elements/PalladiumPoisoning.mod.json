@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Palladium Poisoning",
-    "icon": "chlorophyll_effect",
+    "icon": "palladium_poisoning",
     "color": {
       "value": -13421773,
       "falpha": 0.0

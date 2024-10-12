@@ -82,6 +82,7 @@ public class ForgedReactorModVariables {
 			clone.Palladium_Poisoning = original.Palladium_Poisoning;
 			clone.Arc_Reactor = original.Arc_Reactor;
 			clone.Flight = original.Flight;
+			clone.BoostParticleDelay = original.BoostParticleDelay;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -129,6 +130,7 @@ public class ForgedReactorModVariables {
 		public double Palladium_Poisoning = 0;
 		public boolean Arc_Reactor = false;
 		public boolean Flight = false;
+		public boolean BoostParticleDelay = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -143,6 +145,7 @@ public class ForgedReactorModVariables {
 			nbt.putDouble("Palladium_Poisoning", Palladium_Poisoning);
 			nbt.putBoolean("Arc_Reactor", Arc_Reactor);
 			nbt.putBoolean("Flight", Flight);
+			nbt.putBoolean("BoostParticleDelay", BoostParticleDelay);
 			return nbt;
 		}
 
@@ -154,6 +157,7 @@ public class ForgedReactorModVariables {
 			Palladium_Poisoning = nbt.getDouble("Palladium_Poisoning");
 			Arc_Reactor = nbt.getBoolean("Arc_Reactor");
 			Flight = nbt.getBoolean("Flight");
+			BoostParticleDelay = nbt.getBoolean("BoostParticleDelay");
 		}
 	}
 
@@ -193,6 +197,7 @@ public class ForgedReactorModVariables {
 					variables.Palladium_Poisoning = message.data.Palladium_Poisoning;
 					variables.Arc_Reactor = message.data.Arc_Reactor;
 					variables.Flight = message.data.Flight;
+					variables.BoostParticleDelay = message.data.BoostParticleDelay;
 				}
 			});
 			context.setPacketHandled(true);

@@ -86,6 +86,7 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MOLTEN_IRON_2 = REGISTRY.register("molten_iron_2", () -> new MoltenIron2Item());
 	public static final RegistryObject<Item> HAMMER = REGISTRY.register("hammer", () -> new HammerItem());
 	public static final RegistryObject<Item> ARC_REACTOR = REGISTRY.register("arc_reactor", () -> new ArcReactorItem());
+	public static final RegistryObject<Item> WIND_BOOST_SPAWN_EGG = REGISTRY.register("wind_boost_spawn_egg", () -> new ForgeSpawnEggItem(ForgedReactorModEntities.WIND_BOOST, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

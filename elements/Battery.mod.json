@@ -30,7 +30,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§8A simple Duracell battery (refills half of the Iron Armor SE)"
+        "§8A simple Duracell battery (refills half of the Iron Armor (that is equiped) SE)"
       ]
     },
     "glowCondition": {

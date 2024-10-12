@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Chlorophyllin",
-    "icon": "test_effect_icon",
+    "icon": "chlorophyll_effect",
     "color": {
       "value": -15263977,
       "falpha": 0.0

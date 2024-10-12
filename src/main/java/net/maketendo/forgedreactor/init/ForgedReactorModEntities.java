@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.maketendo.forgedreactor.entity.WindBoostEntity;
 import net.maketendo.forgedreactor.entity.RepulsorBeamEntity;
 import net.maketendo.forgedreactor.entity.Mk7SuitPodEntity;
 import net.maketendo.forgedreactor.entity.FireblastEntity;
@@ -30,6 +31,8 @@ public class ForgedReactorModEntities {
 			EntityType.Builder.<Mk7SuitPodEntity>of(Mk7SuitPodEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(Mk7SuitPodEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<RepulsorBeamEntity>> REPULSOR_BEAM = register("repulsor_beam",
 			EntityType.Builder.<RepulsorBeamEntity>of(RepulsorBeamEntity::new, MobCategory.MISC).setCustomClientFactory(RepulsorBeamEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<WindBoostEntity>> WIND_BOOST = register("wind_boost", EntityType.Builder.<WindBoostEntity>of(WindBoostEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(WindBoostEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -39,11 +42,13 @@ public class ForgedReactorModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			Mk7SuitPodEntity.init();
+			WindBoostEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(MK_7_SUIT_POD.get(), Mk7SuitPodEntity.createAttributes().build());
+		event.put(WIND_BOOST.get(), WindBoostEntity.createAttributes().build());
 	}
 }

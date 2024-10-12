@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class CleanArmorProtProcedure {
 	@SubscribeEvent
-	public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
+	public static void onRightClickEntity(PlayerInteractEvent.EntityInteractSpecific event) {
 		if (event.getHand() != event.getEntity().getUsedItemHand())
 			return;
 		execute(event, event.getLevel(), event.getTarget(), event.getEntity());
@@ -41,11 +41,6 @@ public class CleanArmorProtProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.HONEYCOMB && entity instanceof ArmorStand) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
-			}
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == ForgedReactorModItems.MK_2_IRON_ARMOR_BOOTS.get()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
