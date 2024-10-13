@@ -1399,20 +1399,6 @@
       }
     },
     {
-      "name": "RenderFlightModels",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_flight_models",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/procedures/RenderFlightModelsProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Animation"
-    },
-    {
       "name": "AccurateFlightSystem",
       "type": "procedure",
       "compiles": true,
@@ -1597,16 +1583,7 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/RenderRepulsorAttackedModelsProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Animation"
     },
@@ -1650,7 +1627,7 @@
           }
         ]
       },
-      "path": "~/Stored Energy"
+      "path": "~/Functions/Stored Energy"
     },
     {
       "name": "ArmorStoredEnergyTick",
@@ -1664,7 +1641,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Stored Energy"
+      "path": "~/Functions/Stored Energy"
     },
     {
       "name": "BackupStoredChargeOnRightClick",
@@ -1683,7 +1660,7 @@
           }
         ]
       },
-      "path": "~/Stored Energy"
+      "path": "~/Functions/Stored Energy"
     },
     {
       "name": "Mk5toSuitcase",
@@ -1797,7 +1774,7 @@
           "src/main/resources/assets/forged_reactor/models/item/battery.json"
         ]
       },
-      "path": "~/Stored Energy"
+      "path": "~/Functions/Stored Energy"
     },
     {
       "name": "Chlorophyll",
@@ -2088,7 +2065,7 @@
           }
         ]
       },
-      "path": "~/Functions/Wind Boost Particle"
+      "path": "~/Particles/Wind Boost Particle"
     },
     {
       "name": "WindBoost",
@@ -2103,7 +2080,7 @@
           "src/main/java/net/maketendo/forgedreactor/client/renderer/WindBoostRenderer.java"
         ]
       },
-      "path": "~/Functions/Wind Boost Particle"
+      "path": "~/Particles/Wind Boost Particle"
     },
     {
       "name": "SpawnWindBoostParticle",
@@ -2138,7 +2115,7 @@
           }
         ]
       },
-      "path": "~/Functions/Wind Boost Particle"
+      "path": "~/Particles/Wind Boost Particle"
     },
     {
       "name": "CoolingMoltenIron",
@@ -2361,6 +2338,38 @@
         ]
       },
       "path": "~/Natural Generation/Ores/Palladium/Recipes"
+    },
+    {
+      "name": "ArcReactorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arc_reactor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/arc_reactor_recipe.json"
+        ]
+      },
+      "path": "~/Arc Reactor"
+    },
+    {
+      "name": "DeactivateArcReactor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deactivate_arc_reactor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/DeactivateArcReactorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Arc Reactor"
     }
   ],
   "variable_elements": [
@@ -2402,6 +2411,12 @@
     },
     {
       "name": "BoostParticleDelay",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Arc_Reactor_Active",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -2492,6 +2507,36 @@
     ],
     "ITEMS:ironman:enableflighttestflight": [
       "CUSTOM:FlightTestArmor.boots"
+    ],
+    "ITEMS:ironman:repulsorrepelent": [
+      "CUSTOM:Mk6IronArmor.helmet",
+      "CUSTOM:Mk6IronArmor.body",
+      "CUSTOM:Mk6IronArmor.legs",
+      "CUSTOM:Mk6IronArmor.boots",
+      "CUSTOM:Mk7IronArmor.helmet",
+      "CUSTOM:Mk7IronArmor.body",
+      "CUSTOM:Mk7IronArmor.legs",
+      "CUSTOM:Mk7IronArmor.boots",
+      "CUSTOM:Mk8IronArmor.helmet",
+      "CUSTOM:Mk8IronArmor.body",
+      "CUSTOM:Mk8IronArmor.legs",
+      "CUSTOM:Mk8IronArmor.boots",
+      "CUSTOM:Mk9IronArmor.helmet",
+      "CUSTOM:Mk9IronArmor.body",
+      "CUSTOM:Mk9IronArmor.legs",
+      "CUSTOM:Mk9IronArmor.boots",
+      "CUSTOM:Mk3IronArmor.helmet",
+      "CUSTOM:Mk3IronArmor.body",
+      "CUSTOM:Mk3IronArmor.legs",
+      "CUSTOM:Mk3IronArmor.boots",
+      "CUSTOM:Mk4IronArmor.helmet",
+      "CUSTOM:Mk4IronArmor.body",
+      "CUSTOM:Mk4IronArmor.legs",
+      "CUSTOM:Mk4IronArmor.boots",
+      "CUSTOM:Mk5IronArmor.helmet",
+      "CUSTOM:Mk5IronArmor.body",
+      "CUSTOM:Mk5IronArmor.legs",
+      "CUSTOM:Mk5IronArmor.boots"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:DeepslatePalladiumOre",
@@ -2834,7 +2879,12 @@
       },
       {
         "name": "Particles",
-        "children": []
+        "children": [
+          {
+            "name": "Wind Boost Particle",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Projectiles",
@@ -2947,17 +2997,13 @@
             "children": []
           },
           {
-            "name": "Wind Boost Particle",
+            "name": "Stored Energy",
             "children": []
           }
         ]
       },
       {
         "name": "Animation",
-        "children": []
-      },
-      {
-        "name": "Stored Energy",
         "children": []
       },
       {

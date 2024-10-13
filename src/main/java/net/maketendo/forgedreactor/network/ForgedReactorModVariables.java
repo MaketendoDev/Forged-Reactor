@@ -83,6 +83,7 @@ public class ForgedReactorModVariables {
 			clone.Arc_Reactor = original.Arc_Reactor;
 			clone.Flight = original.Flight;
 			clone.BoostParticleDelay = original.BoostParticleDelay;
+			clone.Arc_Reactor_Active = original.Arc_Reactor_Active;
 			if (!event.isWasDeath()) {
 			}
 			if (!event.getEntity().level().isClientSide()) {
@@ -131,6 +132,7 @@ public class ForgedReactorModVariables {
 		public boolean Arc_Reactor = false;
 		public boolean Flight = false;
 		public boolean BoostParticleDelay = false;
+		public boolean Arc_Reactor_Active = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -146,6 +148,7 @@ public class ForgedReactorModVariables {
 			nbt.putBoolean("Arc_Reactor", Arc_Reactor);
 			nbt.putBoolean("Flight", Flight);
 			nbt.putBoolean("BoostParticleDelay", BoostParticleDelay);
+			nbt.putBoolean("Arc_Reactor_Active", Arc_Reactor_Active);
 			return nbt;
 		}
 
@@ -158,6 +161,7 @@ public class ForgedReactorModVariables {
 			Arc_Reactor = nbt.getBoolean("Arc_Reactor");
 			Flight = nbt.getBoolean("Flight");
 			BoostParticleDelay = nbt.getBoolean("BoostParticleDelay");
+			Arc_Reactor_Active = nbt.getBoolean("Arc_Reactor_Active");
 		}
 	}
 
@@ -198,6 +202,7 @@ public class ForgedReactorModVariables {
 					variables.Arc_Reactor = message.data.Arc_Reactor;
 					variables.Flight = message.data.Flight;
 					variables.BoostParticleDelay = message.data.BoostParticleDelay;
+					variables.Arc_Reactor_Active = message.data.Arc_Reactor_Active;
 				}
 			});
 			context.setPacketHandled(true);

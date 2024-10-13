@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Mk. 7 Suit Pod",
     "mobLabel": "",
-    "mobModelName": "Modelmk4_armor",
+    "mobModelName": "Modellaser",
     "mobModelTexture": "mk7_armor.png",
     "transparentModelCondition": {
       "fixedValue": false

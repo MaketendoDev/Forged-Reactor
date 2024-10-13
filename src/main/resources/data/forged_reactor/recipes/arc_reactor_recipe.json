@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "forged_reactor:molten_iron_2"
+    },
+    "b": {
+      "item": "minecraft:cyan_stained_glass_pane"
+    },
+    "c": {
+      "item": "forged_reactor:palladium_ingot"
+    },
+    "d": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "forged_reactor:arc_reactor",
+    "count": 1
+  }
+}

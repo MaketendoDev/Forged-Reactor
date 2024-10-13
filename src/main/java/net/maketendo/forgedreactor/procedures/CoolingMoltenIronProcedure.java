@@ -46,8 +46,6 @@ public class CoolingMoltenIronProcedure {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"summon item ~ ~ ~ {Item:{id:\"minecraft:grass_block\",Count:1b}}");
-					if (!entity.level().isClientSide())
-						entity.discard();
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")), SoundSource.NEUTRAL, 1, 1);
@@ -55,6 +53,8 @@ public class CoolingMoltenIronProcedure {
 							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.extinguish")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
+					if (!entity.level().isClientSide())
+						entity.discard();
 				}
 			}
 		}
