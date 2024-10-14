@@ -38,7 +38,7 @@ public class ArcReactorDisplayConditionProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).Arc_Reactor == true) {
-			if ((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).Arc_Reactor == true) {
+			if ((entity.getCapability(ForgedReactorModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new ForgedReactorModVariables.PlayerVariables())).Arc_Reactor_Active == true) {
 				RenderLivingEvent _evt = (RenderLivingEvent) event;
 				Minecraft mc = Minecraft.getInstance();
 				EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();
