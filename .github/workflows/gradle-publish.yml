@@ -1,0 +1,51 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will build a package using Gradle and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Publishing-using-gradle
+
+name: Automated Beta Builds
+
+on:
+  push:
+    branches: [ "main", "adaptive" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
+    - name: Run datagen
+      run: ./gradlew runDatagen
+
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
+    # the publishing section of your build.gradle
+    # thanku theo for your godly webhook thing
+    - name: Publish artifacts
+      uses: DrTheodor/discord-webhook-upload-action@v1.2
+      with:
+        url: https://discord.com/api/webhooks/1295478434713043096/WgaoNlf-f-LzdRb-8Sx5me87uIdjFD0d55RMoYEMWTh4i_8kgH7RMbx0arJvAdNW910d
+        file: 'build/libs/*'
+        username: webobkrang
+        avatar: 'https://cdn.discordapp.com/avatars/1038790567871651860/6ffc4925a3dcc45505beb5b79df03df7.webp?size=80'
+        commit: '> :skull: [%MESSAGE%](<%LINK%>) by [%AUTHOR%](<%AUTHOR_LINK%>)'
+        message: |
+          <:new1:1253371736510959636><:new2:1253371805734015006> ugh kill my life here :skull: `#${{ github.run_number }}`:
+          %COMMITS%
