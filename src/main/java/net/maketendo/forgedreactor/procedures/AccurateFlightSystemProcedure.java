@@ -282,6 +282,7 @@ public class AccurateFlightSystemProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
+							(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().putDouble("power", 0);
 						}
 					} else {
 						if (entity instanceof Player _plr && _plr.isFallFlying()) {
@@ -294,7 +295,7 @@ public class AccurateFlightSystemProcedure {
 					}
 				}
 			} else {
-				if (!(entity instanceof LivingEntity _livEnt79 && _livEnt79.hasEffect(MobEffects.WEAKNESS))) {
+				if (!(entity instanceof LivingEntity _livEnt81 && _livEnt81.hasEffect(MobEffects.WEAKNESS))) {
 					if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enableflight")))) {
 						if (new Object() {
 							public boolean checkGamemode(Entity _ent) {
