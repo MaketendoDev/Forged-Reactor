@@ -101,7 +101,7 @@ public class FireblastEntity extends AbstractArrow implements ItemSupplier {
 		FireblastEntity entityarrow = new FireblastEntity(ForgedReactorModEntities.FIREBLAST.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setCritArrow(true);
+		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		entityarrow.setSecondsOnFire(100);
@@ -119,7 +119,7 @@ public class FireblastEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(5);
 		entityarrow.setKnockback(5);
-		entityarrow.setCritArrow(true);
+		entityarrow.setCritArrow(false);
 		entityarrow.setSecondsOnFire(100);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.large_blast")), SoundSource.PLAYERS, 1,

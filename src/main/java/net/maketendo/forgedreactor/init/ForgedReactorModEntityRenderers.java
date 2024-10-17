@@ -12,7 +12,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.maketendo.forgedreactor.client.renderer.WindBoostRenderer;
-import net.maketendo.forgedreactor.client.renderer.RepulsorBeamRenderer;
 import net.maketendo.forgedreactor.client.renderer.Mk7SuitPodRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -21,7 +20,7 @@ public class ForgedReactorModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(ForgedReactorModEntities.FIREBLAST.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ForgedReactorModEntities.MK_7_SUIT_POD.get(), Mk7SuitPodRenderer::new);
-		event.registerEntityRenderer(ForgedReactorModEntities.REPULSOR_BEAM.get(), RepulsorBeamRenderer::new);
+		event.registerEntityRenderer(ForgedReactorModEntities.REPULSOR_BEAM.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(ForgedReactorModEntities.WIND_BOOST.get(), WindBoostRenderer::new);
 	}
 }

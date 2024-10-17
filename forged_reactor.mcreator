@@ -226,6 +226,10 @@
             "type": "entity"
           },
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -304,12 +308,7 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/Attack4OnKeyPressedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Keybinds"
     },
@@ -1496,7 +1495,16 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/RepulsorProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
       },
       "path": "~/Armor/Mk. 3/Functionality/Moves"
     },
@@ -1567,8 +1575,7 @@
       "registry_name": "repulsor_beam",
       "metadata": {
         "files": [
-          "src/main/java/net/maketendo/forgedreactor/entity/RepulsorBeamEntity.java",
-          "src/main/java/net/maketendo/forgedreactor/client/renderer/RepulsorBeamRenderer.java"
+          "src/main/java/net/maketendo/forgedreactor/entity/RepulsorBeamEntity.java"
         ]
       },
       "path": "~/Projectiles/Repulsor Beam"
@@ -2370,6 +2377,56 @@
         ]
       },
       "path": "~/Arc Reactor"
+    },
+    {
+      "name": "RepulsorBeamWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsor_beam_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RepulsorBeamWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Repulsor Beam"
+    },
+    {
+      "name": "RepulsorCooldownTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsor_cooldown_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/RepulsorCooldownTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Repulsor Beam"
     }
   ],
   "variable_elements": [
@@ -2435,6 +2492,15 @@
     }
   ],
   "tag_elements": {
+    "ITEMS:ironman:enabledrepulsor": [
+      "CUSTOM:Mk3IronArmor.body",
+      "CUSTOM:Mk4IronArmor.body",
+      "CUSTOM:Mk5IronArmor.body",
+      "CUSTOM:Mk6IronArmor.body",
+      "CUSTOM:Mk7IronArmor.body",
+      "CUSTOM:Mk8IronArmor.body",
+      "CUSTOM:Mk9IronArmor.body"
+    ],
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:DeepslatePalladiumOre",
       "~CUSTOM:PalladiumOre"

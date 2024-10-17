@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -21,14 +22,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
+import net.maketendo.forgedreactor.procedures.RepulsorBeamWhileProjectileFlyingTickProcedure;
 import net.maketendo.forgedreactor.procedures.RepulsorBeamProjectileHitsPlayerProcedure;
 import net.maketendo.forgedreactor.procedures.RepulsorBeamProjectileHitsLivingEntityProcedure;
-import net.maketendo.forgedreactor.init.ForgedReactorModItems;
 import net.maketendo.forgedreactor.init.ForgedReactorModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class RepulsorBeamEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(ForgedReactorModItems.UPGRADE_TEMPLATE.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.AIR);
 
 	public RepulsorBeamEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(ForgedReactorModEntities.REPULSOR_BEAM.get(), world);
@@ -83,23 +84,24 @@ public class RepulsorBeamEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void tick() {
 		super.tick();
+		RepulsorBeamWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 		if (this.inGround)
 			this.discard();
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 1.5f, 0, 5);
+		return shoot(world, entity, source, 1.7f, 0, 5);
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 1.5f, 0, 5);
+		return shoot(world, entity, source, pullingPower * 1.7f, 0, 5);
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		RepulsorBeamEntity entityarrow = new RepulsorBeamEntity(ForgedReactorModEntities.REPULSOR_BEAM.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setCritArrow(true);
+		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
@@ -112,11 +114,11 @@ public class RepulsorBeamEntity extends AbstractArrow implements ItemSupplier {
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1.5f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1.7f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(0);
 		entityarrow.setKnockback(5);
-		entityarrow.setCritArrow(true);
+		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;

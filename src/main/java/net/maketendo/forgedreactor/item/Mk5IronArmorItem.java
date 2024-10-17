@@ -71,7 +71,7 @@ public abstract class Mk5IronArmorItem extends ArmorItem {
 
 			@Override
 			public float getKnockbackResistance() {
-				return 0.1f;
+				return 0f;
 			}
 		}, type, properties);
 	}

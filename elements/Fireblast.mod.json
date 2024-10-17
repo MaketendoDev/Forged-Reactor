@@ -5,7 +5,7 @@
     "projectileItem": {
       "value": "Blocks.AIR"
     },
-    "showParticles": true,
+    "showParticles": false,
     "actionSound": {
       "value": "entity.firework.large_blast"
     },

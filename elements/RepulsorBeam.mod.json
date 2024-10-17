@@ -3,23 +3,26 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:UpgradeTemplate"
+      "value": "Blocks.AIR"
     },
-    "showParticles": true,
+    "showParticles": false,
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
     "igniteFire": false,
-    "power": 1.5,
+    "power": 1.7000000000000002,
     "damage": 0.0,
     "knockback": 5,
-    "entityModel": "Modellaser",
+    "entityModel": "Default",
     "customModelTexture": "laser.png",
     "onHitsPlayer": {
       "name": "RepulsorBeamProjectileHitsPlayer"
     },
     "onHitsEntity": {
       "name": "RepulsorBeamProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "RepulsorBeamWhileProjectileFlyingTick"
     }
   }
 }
