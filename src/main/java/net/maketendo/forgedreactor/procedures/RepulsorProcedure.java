@@ -14,7 +14,7 @@ import net.maketendo.forgedreactor.init.ForgedReactorModEntities;
 import net.maketendo.forgedreactor.entity.RepulsorBeamEntity;
 
 public class RepulsorProcedure {
-	public static void execute(Entity entity, ItemStack itemstack) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		String found_entity_name = "";
@@ -52,7 +52,8 @@ public class RepulsorProcedure {
 						}
 						entity.getPersistentData().putBoolean("repulsedcooldowned", true);
 						entity.getPersistentData().putDouble("repulsedcooldown", 200);
-						(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getOrCreateTag().putDouble("power", (itemstack.getOrCreateTag().getDouble("power") - 10));
+						(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getOrCreateTag().putDouble("power",
+								((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") - 10));
 					}
 				}
 			} else {

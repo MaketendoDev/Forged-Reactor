@@ -200,7 +200,7 @@
     {
       "name": "Attack2",
       "type": "keybind",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "attack_2",
       "metadata": {
@@ -224,10 +224,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
           },
           {
             "name": "world",
@@ -1499,10 +1495,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
           }
         ]
       },
@@ -2771,8 +2763,8 @@
       "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
-      "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
       "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
+      "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
