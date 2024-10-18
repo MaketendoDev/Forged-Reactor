@@ -200,7 +200,7 @@
     {
       "name": "Attack2",
       "type": "keybind",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_2",
       "metadata": {
@@ -2419,6 +2419,139 @@
         ]
       },
       "path": "~/Projectiles/Repulsor Beam"
+    },
+    {
+      "name": "Mk5ArmorHUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_5_armor_hud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/client/screens/Mk5ArmorHUDOverlay.java"
+        ]
+      },
+      "path": "~/Functions/Iron Armor HUD"
+    },
+    {
+      "name": "Mk5OverlayDisplayOverlayInGame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_5_overlay_display_overlay_in_game",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/Mk5OverlayDisplayOverlayInGameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Functions/Iron Armor HUD"
+    },
+    {
+      "name": "ReturnBootsDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_boots_damage",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ReturnBootsDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer/Armor Damage"
+    },
+    {
+      "name": "ReturnLeggingsDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_leggings_damage",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ReturnLeggingsDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer/Armor Damage"
+    },
+    {
+      "name": "ReturnChestplateDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_chestplate_damage",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ReturnChestplateDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer/Armor Damage"
+    },
+    {
+      "name": "ReturnHelmetDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_helmet_damage",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ReturnHelmetDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer/Armor Damage"
+    },
+    {
+      "name": "ReturnDisplayForRepulsorRecharge",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_display_for_repulsor_recharge",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ReturnDisplayForRepulsorRechargeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Functions/Iron Armor HUD/HUD Renderer"
     }
   ],
   "variable_elements": [
@@ -2501,7 +2634,6 @@
       "CUSTOM:Mk2IronArmor.helmet",
       "CUSTOM:Mk3IronArmor.helmet",
       "CUSTOM:Mk4IronArmor.helmet",
-      "CUSTOM:Mk5IronArmor.helmet",
       "CUSTOM:Mk6IronArmor.helmet",
       "CUSTOM:Mk7IronArmor.helmet",
       "CUSTOM:Mk8IronArmor.helmet",
@@ -2704,6 +2836,9 @@
       "EntityShulker",
       "EntitySmallFireball"
     ],
+    "ITEMS:ironman:enablemk5ironhud": [
+      "CUSTOM:Mk5IronArmor.helmet"
+    ],
     "ITEMS:ironman:enableflamethrower": [
       "CUSTOM:Mk1IronArmor.body"
     ],
@@ -2763,9 +2898,10 @@
       "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
-      "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
       "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
+      "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
+      "gui.forged_reactor.mk_5_armor_hud.label_0000": "00.00 --\u003e",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
       "item.forged_reactor.mk_4_iron_armor_helmet": "Iron Armor Helmet",
@@ -2830,6 +2966,7 @@
       "gui.forged_reactor.mk_2_armor_hud.label_proc_speed_return": "speed",
       "item.forged_reactor.mk_9_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.molten_iron": "Molten Iron",
+      "gui.forged_reactor.mk_5_armor_hud.label_entity_data": "Entity Data:",
       "item.minecraft.tipped_arrow.effect.chlorophyll": "Arrow of Chlorophyll",
       "item.forged_reactor.mk_6_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_8_iron_armor_chestplate": "Iron Armor Chestplate",
@@ -3044,6 +3181,10 @@
                 "children": [
                   {
                     "name": "EntityData",
+                    "children": []
+                  },
+                  {
+                    "name": "Armor Damage",
                     "children": []
                   }
                 ]

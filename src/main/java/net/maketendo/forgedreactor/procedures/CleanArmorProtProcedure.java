@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class CleanArmorProtProcedure {
 	@SubscribeEvent
-	public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
+	public static void onRightClickEntity(PlayerInteractEvent.EntityInteractSpecific event) {
 		if (event.getHand() != event.getEntity().getUsedItemHand())
 			return;
 		execute(event, event.getLevel(), event.getTarget(), event.getEntity());

@@ -27,7 +27,7 @@ public class RepulsorCooldownTickProcedure {
 			return;
 		if (entity.getPersistentData().getBoolean("repulsedcooldowned") == true) {
 			if (entity.getPersistentData().getDouble("repulsedcooldown") == 0) {
-				entity.getPersistentData().putDouble("repulsedcooldown", 200);
+				entity.getPersistentData().putDouble("repulsedcooldown", 100);
 				entity.getPersistentData().putBoolean("repulsedcooldowned", false);
 			} else {
 				entity.getPersistentData().putDouble("repulsedcooldown", (entity.getPersistentData().getDouble("repulsedcooldown") - 1));

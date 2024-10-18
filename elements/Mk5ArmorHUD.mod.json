@@ -5,16 +5,6 @@
     "priority": "HIGH",
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "ylevel_hud_display.png",
-          "use1Xscale": false,
-          "anchorPoint": "CENTER_LEFT",
-          "x": 2,
-          "y": -12
-        }
-      },
-      {
         "type": "entitymodel",
         "data": {
           "entityModel": {
@@ -24,8 +14,8 @@
           "rotationX": 0,
           "followMouseMovement": false,
           "anchorPoint": "CENTER_RIGHT",
-          "x": 370,
-          "y": 155
+          "x": 354,
+          "y": 171
         }
       },
       {
@@ -83,23 +73,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_proc_speed_return",
-          "text": {
-            "fixedValue": "speed",
-            "name": "SpeedReturn"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "anchorPoint": "CENTER_LEFT",
-          "x": 27,
-          "y": 127
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "top_hud_bar.png",
@@ -115,18 +88,8 @@
           "image": "repulsors_icon_hud.png",
           "use1Xscale": false,
           "anchorPoint": "BOTTOM_LEFT",
-          "x": 32,
-          "y": 191
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "missile_icon_hud.png",
-          "use1Xscale": false,
-          "anchorPoint": "BOTTOM_RIGHT",
-          "x": 367,
-          "y": 190
+          "x": 21,
+          "y": 182
         }
       },
       {
@@ -201,26 +164,9 @@
         "data": {
           "image": "bar.png",
           "use1Xscale": false,
-          "anchorPoint": "TOP_CENTER",
-          "x": 122,
+          "anchorPoint": "TOP_LEFT",
+          "x": 3,
           "y": 8
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_y_level_return",
-          "text": {
-            "fixedValue": "",
-            "name": "YLevelReturn"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "anchorPoint": "CENTER_LEFT",
-          "x": 27,
-          "y": 115
         }
       },
       {
@@ -240,53 +186,118 @@
         }
       },
       {
-        "type": "image",
+        "type": "label",
         "data": {
-          "image": "ylevel_hud_display.png",
-          "use1Xscale": false,
-          "anchorPoint": "CENTER_LEFT",
-          "x": 2,
-          "y": 236
+          "name": "label_0000",
+          "text": {
+            "fixedValue": "00.00 -->",
+            "name": "ReturnBootsDamage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER_RIGHT",
+          "x": 268,
+          "y": 183
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "ylevel_hud_display.png",
+          "image": "icon_hud_1.png",
           "use1Xscale": false,
-          "anchorPoint": "CENTER_LEFT",
-          "x": 2,
-          "y": -236
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 16,
+          "y": 177
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "missile_icon_hud_empty.png",
+          "image": "icon_hud_2.png",
           "use1Xscale": false,
-          "anchorPoint": "BOTTOM_RIGHT",
-          "x": 367,
-          "y": 190
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 15,
+          "y": 177
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "repulsors_icon_hud_recharging.png",
+          "image": "icon_hud_3.png",
           "use1Xscale": false,
-          "displayCondition": {
-            "name": "ReturnDisplayForRepulsorRecharge"
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 15,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_hud_4.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 16,
+          "y": 177
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_leggings_damage",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnLeggingsDamage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER_RIGHT",
+          "x": 268,
+          "y": 155
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_chestplate_damage",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnChestplateDamage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
           },
           "anchorPoint": "BOTTOM_LEFT",
-          "x": 32,
-          "y": 191
+          "x": 268,
+          "y": 126
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_helmet_damage",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHelmetDamage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER_RIGHT",
+          "x": 267,
+          "y": 102
         }
       }
     ],
     "baseTexture": "ironman_hud_vision.png",
     "overlayTarget": "Ingame",
     "displayCondition": {
-      "name": "Mk2OverlayDisplayOverlayInGame"
+      "name": "Mk5OverlayDisplayOverlayInGame"
     },
     "gridSettings": {
       "sx": 18,

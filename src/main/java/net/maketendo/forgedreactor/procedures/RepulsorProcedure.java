@@ -30,7 +30,7 @@ public class RepulsorProcedure {
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enabledrepulsor")))) {
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enableenergy")))) {
 				if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") > 10) {
-					if (entity.getPersistentData().getBoolean("repulsedcooldowned") == true) {
+					if (entity.getPersistentData().getBoolean("repulsedcooldowned") == false) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -50,14 +50,32 @@ public class RepulsorProcedure {
 								projectileLevel.addFreshEntity(_entityToSpawn);
 							}
 						}
+						{
+							Entity _shootFrom = entity;
+							Level projectileLevel = _shootFrom.level();
+							if (!projectileLevel.isClientSide()) {
+								Projectile _entityToSpawn = new Object() {
+									public Projectile getArrow(Level level, float damage, int knockback) {
+										AbstractArrow entityToSpawn = new RepulsorBeamEntity(ForgedReactorModEntities.REPULSOR_BEAM.get(), level);
+										entityToSpawn.setBaseDamage(damage);
+										entityToSpawn.setKnockback(knockback);
+										entityToSpawn.setSilent(true);
+										return entityToSpawn;
+									}
+								}.getArrow(projectileLevel, 5, 1);
+								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+								projectileLevel.addFreshEntity(_entityToSpawn);
+							}
+						}
 						entity.getPersistentData().putBoolean("repulsedcooldowned", true);
-						entity.getPersistentData().putDouble("repulsedcooldown", 200);
+						entity.getPersistentData().putDouble("repulsedcooldown", 100);
 						(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getOrCreateTag().putDouble("power",
 								((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") - 10));
 					}
 				}
 			} else {
-				if (entity.getPersistentData().getBoolean("repulsedcooldowned") == true) {
+				if (entity.getPersistentData().getBoolean("repulsedcooldowned") == false) {
 					{
 						Entity _shootFrom = entity;
 						Level projectileLevel = _shootFrom.level();
@@ -78,7 +96,7 @@ public class RepulsorProcedure {
 						}
 					}
 					entity.getPersistentData().putBoolean("repulsedcooldowned", true);
-					entity.getPersistentData().putDouble("repulsedcooldown", 200);
+					entity.getPersistentData().putDouble("repulsedcooldown", 100);
 				}
 			}
 		}
