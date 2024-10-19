@@ -11,17 +11,17 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUIMenu;
+import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUIArmorUpgradePageMenu;
 import net.maketendo.forgedreactor.procedures.ArmorStandGUIReturnProcedure;
-import net.maketendo.forgedreactor.network.ArmorConfiguratorGUIButtonMessage;
+import net.maketendo.forgedreactor.network.ArmorConfiguratorGUIArmorUpgradePageButtonMessage;
 import net.maketendo.forgedreactor.ForgedReactorMod;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorConfiguratorGUIMenu> {
-	private final static HashMap<String, Object> guistate = ArmorConfiguratorGUIMenu.guistate;
+public class ArmorConfiguratorGUIArmorUpgradePageScreen extends AbstractContainerScreen<ArmorConfiguratorGUIArmorUpgradePageMenu> {
+	private final static HashMap<String, Object> guistate = ArmorConfiguratorGUIArmorUpgradePageMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -29,7 +29,7 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 	Button button_configure;
 	Button button_empty;
 
-	public ArmorConfiguratorGUIScreen(ArmorConfiguratorGUIMenu container, Inventory inventory, Component text) {
+	public ArmorConfiguratorGUIArmorUpgradePageScreen(ArmorConfiguratorGUIArmorUpgradePageMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -40,7 +40,7 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("forged_reactor:textures/screens/armor_configurator_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("forged_reactor:textures/screens/armor_configurator_gui_armor_upgrade_page.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -59,7 +59,7 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("forged_reactor:textures/screens/armor_config_overlay.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("forged_reactor:textures/screens/armor_config_overlay_page_2.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -75,27 +75,26 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.forged_reactor.armor_configurator_gui.label_armor_configurator"), 5, 4, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.forged_reactor.armor_configurator_gui.label_stark_corp"), 19, 72, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.label_armor_configurator"), 5, 4, -12829636, false);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		button_configure = Button.builder(Component.translatable("gui.forged_reactor.armor_configurator_gui.button_configure"), e -> {
+		button_configure = Button.builder(Component.translatable("gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.button_configure"), e -> {
 			if (true) {
-				ForgedReactorMod.PACKET_HANDLER.sendToServer(new ArmorConfiguratorGUIButtonMessage(0, x, y, z, textstate));
-				ArmorConfiguratorGUIButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+				ForgedReactorMod.PACKET_HANDLER.sendToServer(new ArmorConfiguratorGUIArmorUpgradePageButtonMessage(0, x, y, z, textstate));
+				ArmorConfiguratorGUIArmorUpgradePageButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
 			}
-		}).bounds(this.leftPos + 6, this.topPos + 49, 72, 20).build();
+		}).bounds(this.leftPos + 6, this.topPos + 61, 72, 20).build();
 		guistate.put("button:button_configure", button_configure);
 		this.addRenderableWidget(button_configure);
-		button_empty = Button.builder(Component.translatable("gui.forged_reactor.armor_configurator_gui.button_empty"), e -> {
+		button_empty = Button.builder(Component.translatable("gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.button_empty"), e -> {
 			if (true) {
-				ForgedReactorMod.PACKET_HANDLER.sendToServer(new ArmorConfiguratorGUIButtonMessage(1, x, y, z, textstate));
-				ArmorConfiguratorGUIButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
+				ForgedReactorMod.PACKET_HANDLER.sendToServer(new ArmorConfiguratorGUIArmorUpgradePageButtonMessage(1, x, y, z, textstate));
+				ArmorConfiguratorGUIArmorUpgradePageButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
 			}
-		}).bounds(this.leftPos + 79, this.topPos + 49, 35, 20).build();
+		}).bounds(this.leftPos + 79, this.topPos + 61, 35, 20).build();
 		guistate.put("button:button_empty", button_empty);
 		this.addRenderableWidget(button_empty);
 	}

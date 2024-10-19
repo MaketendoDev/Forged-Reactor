@@ -1087,21 +1087,6 @@
       "path": "~/Armor/Mk. 9"
     },
     {
-      "name": "Mk7SuitPod",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mk_7_suit_pod",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/client/renderer/Mk7SuitPodRenderer.java",
-          "src/main/java/net/maketendo/forgedreactor/entity/Mk7SuitPodEntity.java",
-          "src/main/resources/assets/forged_reactor/models/item/mk_7_suit_pod_spawn_egg.json"
-        ]
-      },
-      "path": "~/Armor/Mk. 7/Summoning Mk. 7"
-    },
-    {
       "name": "TravelMk7toPlayer",
       "type": "procedure",
       "compiles": true,
@@ -2389,6 +2374,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2526,41 +2527,6 @@
         ]
       },
       "path": "~/Functions/Iron Armor HUD/HUD Renderer"
-    },
-    {
-      "name": "IfDamageSparks",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "if_damage_sparks",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/procedures/IfDamageSparksProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Armor/Flight Test"
     },
     {
       "name": "ArmorConfiguratorGUI",
@@ -2723,6 +2689,141 @@
         ]
       },
       "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "ArmorConfiguratorGUIArmorUpgradePage",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_configurator_gui_armor_upgrade_page",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/network/ArmorConfiguratorGUIArmorUpgradePageButtonMessage.java",
+          "src/main/java/net/maketendo/forgedreactor/client/gui/ArmorConfiguratorGUIArmorUpgradePageScreen.java",
+          "src/main/java/net/maketendo/forgedreactor/world/inventory/ArmorConfiguratorGUIArmorUpgradePageMenu.java"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "SwitchtoPage2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switchto_page_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/SwitchtoPage2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "SwitchToPage1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_to_page_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/SwitchToPage1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "ConfigurateArmorPage2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "configurate_armor_page_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ConfigurateArmorPage2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "Mk7SummoningPod",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mk_7_summoning_pod",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/entity/Mk7SummoningPodEntity.java",
+          "src/main/resources/assets/forged_reactor/models/item/mk_7_summoning_pod_spawn_egg.json",
+          "src/main/java/net/maketendo/forgedreactor/client/renderer/Mk7SummoningPodRenderer.java"
+        ]
+      },
+      "path": "~/Armor/Mk. 7/Summoning Mk. 7"
     }
   ],
   "variable_elements": [
@@ -3109,23 +3210,62 @@
       "gui.forged_reactor.armor_configurator_gui.tooltip_this_configurator_can_work_on_an": "This Configurator can work on any armor but the Iron Armor will be the only one that can be affected.",
       "item.minecraft.lingering_potion.effect.chlorophyll": "Lingering Potion of Chlorophyll",
       "item.forged_reactor.mk_9_iron_armor_leggings": "Iron Armor Leggings",
-      "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
       "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
-      "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
       "gui.forged_reactor.armor_configurator_gui.label_armor_configurator": "Armor Configurator",
+      "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
+      "subtitles.flighttest_armor_spark": "Sparks",
+      "effect.forged_reactor.chlorophyll_effect": "Chlorophyllin",
+      "item.forged_reactor.mk_8_iron_armor_boots": "Iron Armor Boots",
+      "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
+      "item.forged_reactor.hammer": "Hammer",
+      "block.forged_reactor.armor_withdrawer": "Armor Withdrawer",
+      "effect.forged_reactor.palladium_poisoning": "Palladium Poisoning",
+      "entity.forged_reactor.wind_boost": "Wind Boost",
+      "effect.forged_reactor.armor_weight": "Armor Weight",
+      "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
+      "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
+      "subtitles.repulsor_warmup": "Repulsor Warming Up...",
+      "item.forged_reactor.molten_iron_2": "Molten Iron",
+      "item.forged_reactor.molten_iron_3": "Molten Iron",
+      "item.forged_reactor.molten_iron_1": "Molten Iron",
+      "item.minecraft.splash_potion.effect.chlorophyll": "Splash Potion of Chlorophyll",
+      "item.forged_reactor.mk_4_iron_armor_chestplate": "Iron Armor Chestplate",
+      "item.forged_reactor.mk_6_iron_armor_leggings": "Iron Armor Leggings",
+      "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
+      "item.forged_reactor.battery": "Battery",
+      "item.forged_reactor.flight_test_armor_chestplate": "Flight Test Prototype Chestplate",
+      "item.forged_reactor.mk_7_iron_armor_leggings": "Iron Armor Leggings",
+      "item.forged_reactor.mk_7_iron_armor_helmet": "Iron Armor Helmet",
+      "gui.forged_reactor.armor_configurator_gui_no_armor_stand.label_only_work_if_a_armor_stand_is": "only work if a armor stand is",
+      "death.attack.repulsor_damage.player": "%1$s was electrocuted from a Repulsor Beam whilst trying to escape %2$s",
+      "gui.forged_reactor.armor_intake_gui.label_armor_intake": "Armor Withdrawer",
+      "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
+      "gui.forged_reactor.mk_2_armor_hud.label_entity_data": "Entity Data:",
+      "item.forged_reactor.mk_6_iron_armor_chestplate": "Iron Armor Chestplate",
+      "item.forged_reactor.mk_5_iron_armor_leggings": "Iron Armor Leggings",
+      "gui.forged_reactor.mk_2_armor_hud.label_proc_speed_return": "speed",
+      "gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.button_configure": "Configure",
+      "entity.forged_reactor.mk_7_summoning_pod": "Mk. 7 Suit Pod",
+      "item.forged_reactor.mk_9_iron_armor_boots": "Iron Armor Boots",
+      "item.forged_reactor.molten_iron": "Molten Iron",
+      "item.forged_reactor.mk_8_iron_armor_chestplate": "Iron Armor Chestplate",
+      "item.forged_reactor.mk_6_iron_armor_boots": "Iron Armor Boots",
+      "gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.button_empty": "Mods",
+      "item.forged_reactor.mk_9_iron_armor_helmet": "Iron Armor Helmet",
+      "item.forged_reactor.heated_molten_iron_3": "Molten Iron",
+      "item.forged_reactor.heated_molten_iron_2": "Molten Iron",
+      "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
+      "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
+      "gui.forged_reactor.armor_configurator_gui.button_empty": "Upgrades",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "gui.forged_reactor.mk_5_armor_hud.label_0000": "00.00 --\u003e",
-      "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_1_iron_armor_chestplate": "Prototype Iron Armor Chestplate",
       "item.forged_reactor.mk_4_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.flight_test_armor_boots": "Flight Test Prototype Boots",
       "death.attack.repulsor_damage.item": "%1$s was electrocuted by %2$s from a Repulsor Beam",
-      "subtitles.flighttest_armor_spark": "Sparks",
-      "effect.forged_reactor.chlorophyll_effect": "Chlorophyllin",
+      "gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.label_stark_corp": "Stark Workshop™",
       "item_group.forged_reactor.iron_armor_tab": "Iron Armor",
-      "item.forged_reactor.mk_8_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_6_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_2_iron_armor_chestplate": "Prototype Accurate Flight Iron Armor Chestplate",
       "key.categories.ironarmor": "Iron Armor",
@@ -3133,71 +3273,37 @@
       "item.forged_reactor.mk_7_iron_armor_boots": "Iron Armor Boots",
       "key.forged_reactor.attack_3": "Attack 3",
       "key.forged_reactor.attack_2": "Attack 2",
-      "item.forged_reactor.mk_2_iron_armor_boots": "Prototype Accurate Flight Iron Armor Boots",
       "key.forged_reactor.attack_1": "Attack 1",
-      "item.forged_reactor.hammer": "Hammer",
       "key.forged_reactor.attack_4": "Attack 4",
       "item.forged_reactor.mk_3_iron_armor_leggings": "Iron Armor Leggings",
-      "block.forged_reactor.armor_withdrawer": "Armor Withdrawer",
-      "effect.forged_reactor.palladium_poisoning": "Palladium Poisoning",
-      "entity.forged_reactor.wind_boost": "Wind Boost",
-      "effect.forged_reactor.armor_weight": "Armor Weight",
+      "item.forged_reactor.mk_7_summoning_pod_spawn_egg": "Mk. 7 Suit Pod Spawn Egg",
       "item.forged_reactor.mk_3_iron_armor_chestplate": "Iron Armor Chestplate",
       "block.forged_reactor.palladium_ore": "Palladium Ore",
-      "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
-      "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
       "item.forged_reactor.wind_boost_spawn_egg": "Wind Boost Spawn Egg",
-      "subtitles.repulsor_warmup": "Repulsor Warming Up...",
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
       "item.forged_reactor.upgrade_template": "Upgrade Template",
-      "item.forged_reactor.molten_iron_2": "Molten Iron",
-      "item.forged_reactor.molten_iron_3": "Molten Iron",
       "item.forged_reactor.palladium_ingot": "Palladium Ingot",
-      "item.forged_reactor.molten_iron_1": "Molten Iron",
-      "item.forged_reactor.mk_7_suit_pod_spawn_egg": "Mk. 7 Suit Pod Spawn Egg",
-      "item.minecraft.splash_potion.effect.chlorophyll": "Splash Potion of Chlorophyll",
-      "item.forged_reactor.mk_4_iron_armor_chestplate": "Iron Armor Chestplate",
-      "item.forged_reactor.mk_6_iron_armor_leggings": "Iron Armor Leggings",
-      "item.forged_reactor.mk_2_iron_armor_helmet": "Prototype Accurate Flight Iron Armor Helmet",
       "subtitles.ironman.flighttestarmor.spark_1": "Sparks",
-      "item.forged_reactor.battery": "Battery",
       "item.forged_reactor.mk_8_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.mk_1_iron_armor_helmet": "Prototype Iron Armor Helmet",
-      "item.forged_reactor.flight_test_armor_chestplate": "Flight Test Prototype Chestplate",
-      "item.forged_reactor.mk_7_iron_armor_leggings": "Iron Armor Leggings",
       "gui.forged_reactor.armor_configurator_gui.button_configure": "Configure",
       "gui.forged_reactor.armor_configurator_gui_no_armor_stand.label_armor_configurator1": "Armor Configurator",
-      "item.forged_reactor.mk_7_iron_armor_helmet": "Iron Armor Helmet",
-      "gui.forged_reactor.armor_configurator_gui_no_armor_stand.label_only_work_if_a_armor_stand_is": "only work if a armor stand is",
       "item.forged_reactor.mk_2_iron_armor_leggings": "Prototype Accurate Flight Iron Armor Leggings",
       "item.forged_reactor.raw_palladium": "Raw Palladium",
-      "death.attack.repulsor_damage.player": "%1$s was electrocuted from a Repulsor Beam whilst trying to escape %2$s",
       "gui.forged_reactor.armor_configurator_gui.label_stark_corp": "Stark Workshop™",
       "item.forged_reactor.mk_5_iron_armor_chestplate": "Iron Armor Chestplate",
-      "gui.forged_reactor.armor_intake_gui.label_armor_intake": "Armor Withdrawer",
-      "item.forged_reactor.mk_3_iron_armor_boots": "Iron Armor Boots",
       "item.minecraft.potion.effect.chlorophyll": "Potion of Chlorophyll",
       "block.forged_reactor.deepslate_palladium_ore": "Deepslate Palladium Ore",
       "gui.forged_reactor.armor_configurator_gui_no_armor_stand.label_on_top_of_the_block": "on top of the block.",
       "item.forged_reactor.mk_3_iron_armor_helmet": "Iron Armor Helmet",
-      "gui.forged_reactor.mk_2_armor_hud.label_entity_data": "Entity Data:",
-      "item.forged_reactor.mk_6_iron_armor_chestplate": "Iron Armor Chestplate",
       "death.attack.repulsor_damage": "%1$s electrocuted from a Repulsor Beam",
-      "item.forged_reactor.mk_5_iron_armor_leggings": "Iron Armor Leggings",
-      "gui.forged_reactor.mk_2_armor_hud.label_proc_speed_return": "speed",
-      "item.forged_reactor.mk_9_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.molten_iron": "Molten Iron",
       "gui.forged_reactor.mk_5_armor_hud.label_entity_data": "Entity Data:",
       "item.minecraft.tipped_arrow.effect.chlorophyll": "Arrow of Chlorophyll",
-      "item.forged_reactor.mk_6_iron_armor_boots": "Iron Armor Boots",
-      "item.forged_reactor.mk_8_iron_armor_chestplate": "Iron Armor Chestplate",
       "gui.forged_reactor.armor_configurator_gui_no_armor_stand.label_armor_configurator": "The Armor Configurator can",
       "item.forged_reactor.mk_7_iron_armor_chestplate": "Iron Armor Chestplate",
+      "gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.label_armor_configurator": "Armor Configurator",
       "item.forged_reactor.mk_1_iron_armor_boots": "Prototype Iron Armor Boots",
-      "item.forged_reactor.mk_9_iron_armor_helmet": "Iron Armor Helmet",
-      "item.forged_reactor.heated_molten_iron_3": "Molten Iron",
-      "item.forged_reactor.mk_1_iron_armor_helmet_open_helmet": "Prototype Iron Armor Helmet",
-      "item.forged_reactor.heated_molten_iron_2": "Molten Iron"
+      "item.forged_reactor.mk_1_iron_armor_helmet_open_helmet": "Prototype Iron Armor Helmet"
     }
   },
   "foldersRoot": {

@@ -83,7 +83,6 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> MK_9_IRON_ARMOR_CHESTPLATE = REGISTRY.register("mk_9_iron_armor_chestplate", () -> new Mk9IronArmorItem.Chestplate());
 	public static final RegistryObject<Item> MK_9_IRON_ARMOR_LEGGINGS = REGISTRY.register("mk_9_iron_armor_leggings", () -> new Mk9IronArmorItem.Leggings());
 	public static final RegistryObject<Item> MK_9_IRON_ARMOR_BOOTS = REGISTRY.register("mk_9_iron_armor_boots", () -> new Mk9IronArmorItem.Boots());
-	public static final RegistryObject<Item> MK_7_SUIT_POD_SPAWN_EGG = REGISTRY.register("mk_7_suit_pod_spawn_egg", () -> new ForgeSpawnEggItem(ForgedReactorModEntities.MK_7_SUIT_POD, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> ARMOR_WITHDRAWER = block(ForgedReactorModBlocks.ARMOR_WITHDRAWER);
 	public static final RegistryObject<Item> BATTERY = REGISTRY.register("battery", () -> new BatteryItem());
 	public static final RegistryObject<Item> MOLTEN_IRON = REGISTRY.register("molten_iron", () -> new MoltenIronItem());
@@ -99,6 +98,7 @@ public class ForgedReactorModItems {
 	public static final RegistryObject<Item> PALLADIUM_INGOT = REGISTRY.register("palladium_ingot", () -> new PalladiumIngotItem());
 	public static final RegistryObject<Item> PALLADIUM_ORE = block(ForgedReactorModBlocks.PALLADIUM_ORE);
 	public static final RegistryObject<Item> DEEPSLATE_PALLADIUM_ORE = block(ForgedReactorModBlocks.DEEPSLATE_PALLADIUM_ORE);
+	public static final RegistryObject<Item> MK_7_SUMMONING_POD_SPAWN_EGG = REGISTRY.register("mk_7_summoning_pod_spawn_egg", () -> new ForgeSpawnEggItem(ForgedReactorModEntities.MK_7_SUMMONING_POD, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

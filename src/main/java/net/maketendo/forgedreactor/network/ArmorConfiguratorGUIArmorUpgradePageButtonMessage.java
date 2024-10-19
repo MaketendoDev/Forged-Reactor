@@ -12,9 +12,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUIMenu;
-import net.maketendo.forgedreactor.procedures.SwitchtoPage2Procedure;
-import net.maketendo.forgedreactor.procedures.ConfigurateArmorProcedure;
+import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUIArmorUpgradePageMenu;
+import net.maketendo.forgedreactor.procedures.SwitchToPage1Procedure;
+import net.maketendo.forgedreactor.procedures.ConfigurateArmorPage2Procedure;
 import net.maketendo.forgedreactor.ForgedReactorMod;
 
 import java.util.function.Supplier;
@@ -22,11 +22,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ArmorConfiguratorGUIButtonMessage {
+public class ArmorConfiguratorGUIArmorUpgradePageButtonMessage {
 	private final int buttonID, x, y, z;
 	private HashMap<String, String> textstate;
 
-	public ArmorConfiguratorGUIButtonMessage(FriendlyByteBuf buffer) {
+	public ArmorConfiguratorGUIArmorUpgradePageButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
@@ -34,7 +34,7 @@ public class ArmorConfiguratorGUIButtonMessage {
 		this.textstate = readTextState(buffer);
 	}
 
-	public ArmorConfiguratorGUIButtonMessage(int buttonID, int x, int y, int z, HashMap<String, String> textstate) {
+	public ArmorConfiguratorGUIArmorUpgradePageButtonMessage(int buttonID, int x, int y, int z, HashMap<String, String> textstate) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
@@ -43,7 +43,7 @@ public class ArmorConfiguratorGUIButtonMessage {
 
 	}
 
-	public static void buffer(ArmorConfiguratorGUIButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(ArmorConfiguratorGUIArmorUpgradePageButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
@@ -51,7 +51,7 @@ public class ArmorConfiguratorGUIButtonMessage {
 		writeTextState(message.textstate, buffer);
 	}
 
-	public static void handler(ArmorConfiguratorGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(ArmorConfiguratorGUIArmorUpgradePageButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -67,7 +67,7 @@ public class ArmorConfiguratorGUIButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z, HashMap<String, String> textstate) {
 		Level world = entity.level();
-		HashMap guistate = ArmorConfiguratorGUIMenu.guistate;
+		HashMap guistate = ArmorConfiguratorGUIArmorUpgradePageMenu.guistate;
 		for (Map.Entry<String, String> entry : textstate.entrySet()) {
 			String key = entry.getKey();
 			String value = entry.getValue();
@@ -78,17 +78,18 @@ public class ArmorConfiguratorGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			ConfigurateArmorProcedure.execute(world, x, y, z, entity);
+			ConfigurateArmorPage2Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			SwitchtoPage2Procedure.execute(world, x, y, z, entity);
+			SwitchToPage1Procedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		ForgedReactorMod.addNetworkMessage(ArmorConfiguratorGUIButtonMessage.class, ArmorConfiguratorGUIButtonMessage::buffer, ArmorConfiguratorGUIButtonMessage::new, ArmorConfiguratorGUIButtonMessage::handler);
+		ForgedReactorMod.addNetworkMessage(ArmorConfiguratorGUIArmorUpgradePageButtonMessage.class, ArmorConfiguratorGUIArmorUpgradePageButtonMessage::buffer, ArmorConfiguratorGUIArmorUpgradePageButtonMessage::new,
+				ArmorConfiguratorGUIArmorUpgradePageButtonMessage::handler);
 	}
 
 	public static void writeTextState(HashMap<String, String> map, FriendlyByteBuf buffer) {

@@ -39,17 +39,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 133,
-          "y": 56
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "armor_config_overlay.png",
-          "use1Xscale": false,
-          "x": 126,
-          "y": 37
+          "x": 136,
+          "y": 65
         }
       },
       {
@@ -66,48 +57,96 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_stark_corp",
-          "text": {
-            "fixedValue": "Stark Workshop™"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 145,
-          "y": 109
-        }
-      },
-      {
         "type": "button",
         "data": {
           "name": "button_configure",
           "text": "Configure",
           "isUndecorated": false,
           "onClick": {
-            "name": "ConfigurateArmor"
+            "name": "ConfigurateArmorPage2"
           },
           "width": 72,
           "height": 20,
           "x": 132,
-          "y": 86
+          "y": 98
         }
       },
       {
         "type": "button",
         "data": {
           "name": "button_empty",
-          "text": "Upgrades",
+          "text": "Mods",
           "isUndecorated": false,
           "onClick": {
-            "name": "SwitchtoPage2"
+            "name": "SwitchToPage1"
           },
           "width": 35,
           "height": 20,
           "x": 205,
-          "y": 86
+          "y": 98
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 157,
+          "y": 65
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 178,
+          "y": 65
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 199,
+          "y": 65
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "armor_config_overlay_page_2.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 37
         }
       }
     ],

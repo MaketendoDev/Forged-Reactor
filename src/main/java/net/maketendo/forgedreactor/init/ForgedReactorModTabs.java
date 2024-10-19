@@ -70,8 +70,8 @@ public class ForgedReactorModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
 			tabData.accept(ForgedReactorModBlocks.ARMOR_WITHDRAWER.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
-			tabData.accept(ForgedReactorModItems.MK_7_SUIT_POD_SPAWN_EGG.get());
 			tabData.accept(ForgedReactorModItems.WIND_BOOST_SPAWN_EGG.get());
+			tabData.accept(ForgedReactorModItems.MK_7_SUMMONING_POD_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 			tabData.accept(ForgedReactorModItems.MOLTEN_IRON.get());
 			tabData.accept(ForgedReactorModItems.MOLTEN_IRON_1.get());

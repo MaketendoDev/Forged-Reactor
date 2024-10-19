@@ -127,6 +127,9 @@
     "onTickUpdate": {
       "name": "ArmorConfiguratorOnTickUpdate"
     },
+    "onEntityWalksOn": {
+      "name": "ArmorConfiguratorOnTickUpdate"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

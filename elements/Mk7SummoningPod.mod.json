@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Mk. 7 Suit Pod",
     "mobLabel": "",
-    "mobModelName": "Modellaser",
+    "mobModelName": "Witch",
     "mobModelTexture": "mk7_armor.png",
     "transparentModelCondition": {
       "fixedValue": false
@@ -23,7 +23,7 @@
     },
     "modelLayers": [],
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelHeight": 1.95,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -84,7 +84,7 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "disableCollisions": true,
+    "disableCollisions": false,
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
@@ -137,7 +137,7 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "spawnThisMob": false,
-    "doesDespawnWhenIdle": true,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
     "mobSpawningType": "misc",
     "minNumberOfMobsPerGroup": 4,
