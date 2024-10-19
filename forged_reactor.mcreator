@@ -830,6 +830,7 @@
       "registry_name": "armor_configurator",
       "metadata": {
         "files": [
+          "src/main/java/net/maketendo/forgedreactor/block/entity/ArmorConfiguratorBlockEntity.java",
           "src/main/resources/assets/forged_reactor/models/item/armor_configurator.json",
           "src/main/java/net/maketendo/forgedreactor/block/ArmorConfiguratorBlock.java",
           "src/main/resources/data/forged_reactor/loot_tables/blocks/armor_configurator.json",
@@ -837,7 +838,7 @@
           "src/main/resources/assets/forged_reactor/models/block/armor_configurator.json"
         ]
       },
-      "path": "~/Functions/Armor Crafting"
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
     },
     {
       "name": "MainAITFunctionality",
@@ -2022,7 +2023,7 @@
           }
         ]
       },
-      "path": "~/Functions"
+      "path": "~/Functions/Armor Crafting"
     },
     {
       "name": "ActivateFlight",
@@ -2552,6 +2553,121 @@
         ]
       },
       "path": "~/Functions/Iron Armor HUD/HUD Renderer"
+    },
+    {
+      "name": "IfDamageSparks",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_damage_sparks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/IfDamageSparksProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Armor/Flight Test"
+    },
+    {
+      "name": "ArmorConfiguratorGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_configurator_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/world/inventory/ArmorConfiguratorGUIMenu.java",
+          "src/main/java/net/maketendo/forgedreactor/client/gui/ArmorConfiguratorGUIScreen.java"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "ArmorConfiguratorOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_configurator_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ArmorConfiguratorOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "ArmorConfiguratorOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_configurator_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ArmorConfiguratorOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
     }
   ],
   "variable_elements": [
@@ -2614,6 +2730,14 @@
       ],
       "category": "neutral",
       "subtitle": "Sparks"
+    },
+    {
+      "name": "repulsor_warmup",
+      "files": [
+        "repulsor_warmup"
+      ],
+      "category": "neutral",
+      "subtitle": "Repulsor Warming Up..."
     }
   ],
   "tag_elements": {
@@ -2625,6 +2749,40 @@
       "CUSTOM:Mk7IronArmor.body",
       "CUSTOM:Mk8IronArmor.body",
       "CUSTOM:Mk9IronArmor.body"
+    ],
+    "ITEMS:ironman:ironarmor": [
+      "CUSTOM:Mk2IronArmor.helmet",
+      "CUSTOM:Mk2IronArmor.body",
+      "CUSTOM:Mk2IronArmor.legs",
+      "CUSTOM:Mk2IronArmor.boots",
+      "CUSTOM:Mk3IronArmor.helmet",
+      "CUSTOM:Mk3IronArmor.body",
+      "CUSTOM:Mk3IronArmor.legs",
+      "CUSTOM:Mk3IronArmor.boots",
+      "CUSTOM:Mk4IronArmor.helmet",
+      "CUSTOM:Mk4IronArmor.body",
+      "CUSTOM:Mk4IronArmor.legs",
+      "CUSTOM:Mk4IronArmor.boots",
+      "CUSTOM:Mk5IronArmor.helmet",
+      "CUSTOM:Mk5IronArmor.body",
+      "CUSTOM:Mk5IronArmor.legs",
+      "CUSTOM:Mk5IronArmor.boots",
+      "CUSTOM:Mk6IronArmor.helmet",
+      "CUSTOM:Mk6IronArmor.body",
+      "CUSTOM:Mk6IronArmor.legs",
+      "CUSTOM:Mk6IronArmor.boots",
+      "CUSTOM:Mk7IronArmor.helmet",
+      "CUSTOM:Mk7IronArmor.body",
+      "CUSTOM:Mk7IronArmor.legs",
+      "CUSTOM:Mk7IronArmor.boots",
+      "CUSTOM:Mk8IronArmor.helmet",
+      "CUSTOM:Mk8IronArmor.body",
+      "CUSTOM:Mk8IronArmor.legs",
+      "CUSTOM:Mk8IronArmor.boots",
+      "CUSTOM:Mk9IronArmor.helmet",
+      "CUSTOM:Mk9IronArmor.body",
+      "CUSTOM:Mk9IronArmor.legs",
+      "CUSTOM:Mk9IronArmor.boots"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:DeepslatePalladiumOre",
@@ -2675,7 +2833,6 @@
       "CUSTOM:Mk2IronArmor.boots",
       "CUSTOM:Mk3IronArmor.boots",
       "CUSTOM:Mk4IronArmor.boots",
-      "CUSTOM:Mk5IronArmor.boots",
       "CUSTOM:Mk6IronArmor.boots",
       "CUSTOM:Mk7IronArmor.boots",
       "CUSTOM:Mk8IronArmor.boots",
@@ -2888,7 +3045,8 @@
       "Mk9IronArmor",
       "ArmorWithdrawer",
       "Battery",
-      "ArcReactor"
+      "ArcReactor",
+      "ArmorConfigurator"
     ]
   },
   "language_map": {
@@ -2900,6 +3058,7 @@
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
       "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
       "entity.forged_reactor.mk_7_suit_pod": "Mk. 7 Suit Pod",
+      "gui.forged_reactor.armor_configurator_gui.label_armor_configurator": "Armor Configurator",
       "item.forged_reactor.mk_5_iron_armor_helmet": "Iron Armor Helmet",
       "gui.forged_reactor.mk_5_armor_hud.label_0000": "00.00 --\u003e",
       "item.forged_reactor.mk_4_iron_armor_boots": "Iron Armor Boots",
@@ -2932,6 +3091,7 @@
       "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
       "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
       "item.forged_reactor.wind_boost_spawn_egg": "Wind Boost Spawn Egg",
+      "subtitles.repulsor_warmup": "Repulsor Warming Up...",
       "item.forged_reactor.mk_1_iron_armor_leggings": "Prototype Iron Armor Leggings",
       "item.forged_reactor.upgrade_template": "Upgrade Template",
       "item.forged_reactor.molten_iron_2": "Molten Iron",
@@ -3170,6 +3330,10 @@
                     ]
                   }
                 ]
+              },
+              {
+                "name": "Armor Configurator",
+                "children": []
               }
             ]
           },

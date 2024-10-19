@@ -62,6 +62,7 @@ public class ForgedReactorModTabs {
 				tabData.accept(ForgedReactorModBlocks.ARMOR_WITHDRAWER.get().asItem());
 				tabData.accept(ForgedReactorModItems.BATTERY.get());
 				tabData.accept(ForgedReactorModItems.ARC_REACTOR.get());
+				tabData.accept(ForgedReactorModBlocks.ARMOR_CONFIGURATOR.get().asItem());
 			}).withSearchBar().build());
 
 	@SubscribeEvent

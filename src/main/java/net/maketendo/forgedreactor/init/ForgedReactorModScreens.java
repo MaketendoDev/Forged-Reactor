@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.maketendo.forgedreactor.client.gui.ArmorIntakeGUIScreen;
+import net.maketendo.forgedreactor.client.gui.ArmorConfiguratorGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ForgedReactorModScreens {
@@ -19,6 +20,7 @@ public class ForgedReactorModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(ForgedReactorModMenus.ARMOR_INTAKE_GUI.get(), ArmorIntakeGUIScreen::new);
+			MenuScreens.register(ForgedReactorModMenus.ARMOR_CONFIGURATOR_GUI.get(), ArmorConfiguratorGUIScreen::new);
 		});
 	}
 }

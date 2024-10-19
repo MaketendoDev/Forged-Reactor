@@ -15,5 +15,14 @@
         "stream": false
       }
     ]
+  },
+  "repulsor_warmup": {
+    "subtitle": "subtitles.repulsor_warmup",
+    "sounds": [
+      {
+        "name": "forged_reactor:repulsor_warmup",
+        "stream": false
+      }
+    ]
   }
 }

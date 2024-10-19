@@ -4,7 +4,7 @@
   "definition": {
     "type": 1,
     "width": 176,
-    "height": 166,
+    "height": 185,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -22,7 +22,7 @@
             "falpha": 0.0
           },
           "x": 131,
-          "y": 41
+          "y": 32
         }
       },
       {
@@ -39,8 +39,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 169,
-          "y": 56
+          "x": 133,
+          "y": 45
         }
       },
       {
@@ -57,8 +57,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 187,
-          "y": 56
+          "x": 133,
+          "y": 63
         }
       },
       {
@@ -75,8 +75,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 205,
-          "y": 56
+          "x": 133,
+          "y": 81
         }
       },
       {
@@ -93,8 +93,30 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 223,
-          "y": 56
+          "x": 133,
+          "y": 99
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "armor_intake_gui_overlay.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 28
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "PlayerHUDRenderer"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 167,
+          "y": 94
         }
       }
     ],

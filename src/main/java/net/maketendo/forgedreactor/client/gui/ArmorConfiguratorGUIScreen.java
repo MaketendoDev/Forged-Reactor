@@ -3,28 +3,25 @@ package net.maketendo.forgedreactor.client.gui;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
-import net.maketendo.forgedreactor.world.inventory.ArmorIntakeGUIMenu;
-import net.maketendo.forgedreactor.procedures.PlayerHUDRendererProcedure;
+import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUIMenu;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ArmorIntakeGUIScreen extends AbstractContainerScreen<ArmorIntakeGUIMenu> {
-	private final static HashMap<String, Object> guistate = ArmorIntakeGUIMenu.guistate;
+public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorConfiguratorGUIMenu> {
+	private final static HashMap<String, Object> guistate = ArmorConfiguratorGUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 	private final static HashMap<String, String> textstate = new HashMap<>();
 
-	public ArmorIntakeGUIScreen(ArmorIntakeGUIMenu container, Inventory inventory, Component text) {
+	public ArmorConfiguratorGUIScreen(ArmorConfiguratorGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -32,18 +29,15 @@ public class ArmorIntakeGUIScreen extends AbstractContainerScreen<ArmorIntakeGUI
 		this.z = container.z;
 		this.entity = container.entity;
 		this.imageWidth = 176;
-		this.imageHeight = 185;
+		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("forged_reactor:textures/screens/armor_intake_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("forged_reactor:textures/screens/armor_configurator_gui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		if (PlayerHUDRendererProcedure.execute(entity) instanceof LivingEntity livingEntity) {
-			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + 51, this.topPos + 86, 30, 0f + (float) Math.atan((this.leftPos + 51 - mouseX) / 40.0), (float) Math.atan((this.topPos + 37 - mouseY) / 40.0), livingEntity);
-		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -53,9 +47,6 @@ public class ArmorIntakeGUIScreen extends AbstractContainerScreen<ArmorIntakeGUI
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		guiGraphics.blit(new ResourceLocation("forged_reactor:textures/screens/armor_intake_gui_overlay.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 185, 176, 185);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -70,7 +61,7 @@ public class ArmorIntakeGUIScreen extends AbstractContainerScreen<ArmorIntakeGUI
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.forged_reactor.armor_intake_gui.label_armor_intake"), 5, 4, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.forged_reactor.armor_configurator_gui.label_armor_configurator"), 5, 4, -12829636, false);
 	}
 
 	@Override

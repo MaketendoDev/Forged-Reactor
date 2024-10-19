@@ -41,7 +41,7 @@ public class CoolingMoltenIronProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof ItemEntity) {
-			if ((entity instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getItem() == ForgedReactorModItems.MOLTEN_IRON_2.get()) {
+			if ((entity instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getItem() == ForgedReactorModItems.HEATED_MOLTEN_IRON_2.get()) {
 				if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.WATER_CAULDRON) {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
