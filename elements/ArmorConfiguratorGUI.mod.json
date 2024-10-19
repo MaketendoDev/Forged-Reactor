@@ -79,6 +79,18 @@
           "x": 145,
           "y": 108
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_configure",
+          "text": "Configure",
+          "isUndecorated": false,
+          "width": 72,
+          "height": 20,
+          "x": 132,
+          "y": 86
+        }
       }
     ],
     "gridSettings": {

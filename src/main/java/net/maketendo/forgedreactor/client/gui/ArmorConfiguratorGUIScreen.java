@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUIMenu;
@@ -23,6 +24,7 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 	private final int x, y, z;
 	private final Player entity;
 	private final static HashMap<String, String> textstate = new HashMap<>();
+	Button button_configure;
 
 	public ArmorConfiguratorGUIScreen(ArmorConfiguratorGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -77,5 +79,9 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 	@Override
 	public void init() {
 		super.init();
+		button_configure = Button.builder(Component.translatable("gui.forged_reactor.armor_configurator_gui.button_configure"), e -> {
+		}).bounds(this.leftPos + 6, this.topPos + 49, 72, 20).build();
+		guistate.put("button:button_configure", button_configure);
+		this.addRenderableWidget(button_configure);
 	}
 }
