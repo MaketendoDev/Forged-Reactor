@@ -1,0 +1,92 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_armor_configurator",
+          "text": {
+            "fixedValue": "The Armor Configurator can"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 144,
+          "y": 81
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_armor_configurator_gui_overlay",
+          "image": "armor_configurator_gui_overlay.png",
+          "hoveredImage": "",
+          "x": 126,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_only_work_if_a_armor_stand_is",
+          "text": {
+            "fixedValue": "only work if a armor stand is"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 138,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_on_top_of_the_block",
+          "text": {
+            "fixedValue": "on top of the block."
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 163,
+          "y": 102
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_armor_configurator1",
+          "text": {
+            "fixedValue": "Armor Configurator"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 131,
+          "y": 42
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

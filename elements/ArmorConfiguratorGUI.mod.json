@@ -24,6 +24,61 @@
           "x": 131,
           "y": 41
         }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 133,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "armor_configurator_gui.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 37
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ArmorStandGUIReturn"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": false,
+          "x": 260,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_stark_corp",
+          "text": {
+            "fixedValue": "Stark Workshop™"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 145,
+          "y": 108
+        }
       }
     ],
     "gridSettings": {

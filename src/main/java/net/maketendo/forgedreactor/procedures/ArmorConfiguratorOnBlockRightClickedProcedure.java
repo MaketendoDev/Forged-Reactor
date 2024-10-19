@@ -15,6 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUINoArmorStandMenu;
 import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUIMenu;
 
 import io.netty.buffer.Unpooled;
@@ -47,8 +48,20 @@ public class ArmorConfiguratorOnBlockRightClickedProcedure {
 					}, _bpos);
 				}
 			} else {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("No Armorstand"), true);
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("ArmorConfiguratorGUINoArmorStand");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new ArmorConfiguratorGUINoArmorStandMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
 			}
 		}
 	}
