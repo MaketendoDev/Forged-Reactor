@@ -13,6 +13,8 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.maketendo.forgedreactor.world.inventory.ArmorConfiguratorGUIMenu;
 import net.maketendo.forgedreactor.procedures.ArmorStandGUIReturnProcedure;
+import net.maketendo.forgedreactor.network.ArmorConfiguratorGUIButtonMessage;
+import net.maketendo.forgedreactor.ForgedReactorMod;
 
 import java.util.HashMap;
 
@@ -43,7 +45,7 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		if (ArmorStandGUIReturnProcedure.execute(world, x, y, z, entity) instanceof LivingEntity livingEntity) {
+		if (ArmorStandGUIReturnProcedure.execute(world, x, y, z) instanceof LivingEntity livingEntity) {
 			InventoryScreen.renderEntityInInventoryFollowsAngle(guiGraphics, this.leftPos + 144, this.topPos + 76, 30, 0f, 0, livingEntity);
 		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
@@ -56,7 +58,7 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("forged_reactor:textures/screens/armor_configurator_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("forged_reactor:textures/screens/armor_config_overlay.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		RenderSystem.disableBlend();
 	}
@@ -80,6 +82,10 @@ public class ArmorConfiguratorGUIScreen extends AbstractContainerScreen<ArmorCon
 	public void init() {
 		super.init();
 		button_configure = Button.builder(Component.translatable("gui.forged_reactor.armor_configurator_gui.button_configure"), e -> {
+			if (true) {
+				ForgedReactorMod.PACKET_HANDLER.sendToServer(new ArmorConfiguratorGUIButtonMessage(0, x, y, z, textstate));
+				ArmorConfiguratorGUIButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+			}
 		}).bounds(this.leftPos + 6, this.topPos + 49, 72, 20).build();
 		guistate.put("button:button_configure", button_configure);
 		this.addRenderableWidget(button_configure);

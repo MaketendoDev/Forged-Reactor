@@ -46,7 +46,7 @@
       {
         "type": "image",
         "data": {
-          "image": "armor_configurator_gui.png",
+          "image": "armor_config_overlay.png",
           "use1Xscale": false,
           "x": 126,
           "y": 37
@@ -86,6 +86,9 @@
           "name": "button_configure",
           "text": "Configure",
           "isUndecorated": false,
+          "onClick": {
+            "name": "ConfigurateArmor"
+          },
           "width": 72,
           "height": 20,
           "x": 132,

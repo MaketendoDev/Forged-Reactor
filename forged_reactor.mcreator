@@ -1999,33 +1999,6 @@
       "path": "~/Arc Reactor"
     },
     {
-      "name": "CleanArmorProt",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clean_armor_prot",
-      "metadata": {
-        "files": [
-          "src/main/java/net/maketendo/forgedreactor/procedures/CleanArmorProtProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Functions/Armor Crafting"
-    },
-    {
       "name": "ActivateFlight",
       "type": "procedure",
       "compiles": true,
@@ -2598,7 +2571,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/maketendo/forgedreactor/world/inventory/ArmorConfiguratorGUIMenu.java",
-          "src/main/java/net/maketendo/forgedreactor/client/gui/ArmorConfiguratorGUIScreen.java"
+          "src/main/java/net/maketendo/forgedreactor/client/gui/ArmorConfiguratorGUIScreen.java",
+          "src/main/java/net/maketendo/forgedreactor/network/ArmorConfiguratorGUIButtonMessage.java"
         ]
       },
       "path": "~/Functions/Armor Crafting/Armor Configurator"
@@ -2693,6 +2667,37 @@
         "return_type": "entity",
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/ArmorStandGUIReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "ConfigurateArmor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "configurate_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/ConfigurateArmorProcedure.java"
         ],
         "dependencies": [
           {
@@ -3103,8 +3108,8 @@
     "en_us": {
       "gui.forged_reactor.armor_configurator_gui.tooltip_this_configurator_can_work_on_an": "This Configurator can work on any armor but the Iron Armor will be the only one that can be affected.",
       "item.minecraft.lingering_potion.effect.chlorophyll": "Lingering Potion of Chlorophyll",
-      "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_9_iron_armor_leggings": "Iron Armor Leggings",
+      "item.forged_reactor.mk_5_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_4_iron_armor_leggings": "Iron Armor Leggings",
       "block.forged_reactor.armor_configurator": "Armor Modification Configurator",
       "item.forged_reactor.mk_9_iron_armor_chestplate": "Iron Armor Chestplate",
