@@ -226,6 +226,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1481,6 +1493,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2859,6 +2887,69 @@
         ]
       },
       "path": "~/Functions/Armor Crafting/Armor Configurator/Recipes"
+    },
+    {
+      "name": "FinishRepairing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "finish_repairing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/FinishRepairingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
+    },
+    {
+      "name": "GetArmorStandReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_armor_stand_return",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/maketendo/forgedreactor/procedures/GetArmorStandReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Armor Configurator"
     }
   ],
   "variable_elements": [
