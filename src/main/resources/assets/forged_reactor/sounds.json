@@ -24,5 +24,14 @@
         "stream": false
       }
     ]
+  },
+  "repulsor_shoot": {
+    "subtitle": "subtitles.repulsor_shoot",
+    "sounds": [
+      {
+        "name": "forged_reactor:repulsor_shoot",
+        "stream": false
+      }
+    ]
   }
 }

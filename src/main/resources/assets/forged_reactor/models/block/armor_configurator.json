@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "minecraft:block/crying_obsidian",
-    "up": "forged_reactor:block/respawn_anchor_top_off",
-    "north": "forged_reactor:block/respawn_anchor_side4",
-    "east": "forged_reactor:block/respawn_anchor_side4",
-    "south": "forged_reactor:block/respawn_anchor_side4",
-    "west": "forged_reactor:block/respawn_anchor_side4",
-    "particle": "minecraft:block/crying_obsidian"
+    "down": "forged_reactor:block/suit_configurator_side_base",
+    "up": "forged_reactor:block/suit_configurator_top",
+    "north": "forged_reactor:block/suit_configurator_north_side",
+    "east": "forged_reactor:block/suit_configurator_side_2",
+    "south": "forged_reactor:block/suit_configurator_side_3",
+    "west": "forged_reactor:block/suit_configurator_side",
+    "particle": "forged_reactor:block/suit_configurator_side_base"
   },
   "render_type": "solid"
 }

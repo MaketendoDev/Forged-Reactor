@@ -60,7 +60,7 @@
         "type": "button",
         "data": {
           "name": "button_configure",
-          "text": "Configure",
+          "text": "Upgrade",
           "isUndecorated": false,
           "onClick": {
             "name": "ConfigurateArmorPage2"
