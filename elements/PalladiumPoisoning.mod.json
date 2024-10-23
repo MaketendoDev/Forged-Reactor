@@ -10,7 +10,7 @@
     },
     "isInstant": false,
     "mobEffectCategory": "HARMFUL",
-    "renderStatusInInventory": false,
+    "renderStatusInInventory": true,
     "renderStatusInHUD": false,
     "onActiveTick": {
       "name": "PalladiumPoisoningOnEffectActiveTick"

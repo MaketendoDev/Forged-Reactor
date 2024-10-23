@@ -16,7 +16,7 @@ public class PalladiumPoisoningOnEffectActiveTickProcedure {
 			return;
 		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(ForgedReactorModMobEffects.CHLOROPHYLL_EFFECT.get()))) {
 			if (entity.getPersistentData().getDouble("PalladiumPoisoning") == 0) {
-				entity.getPersistentData().putDouble("PalladiumPoisoning", 2000);
+				entity.getPersistentData().putDouble("PalladiumPoisoning", 1500);
 			} else {
 				entity.getPersistentData().putDouble("PalladiumPoisoning", (entity.getPersistentData().getDouble("PalladiumPoisoning") - (1 + amplifier)));
 			}

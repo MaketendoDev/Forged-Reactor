@@ -10,7 +10,7 @@
       "value": "entity.arrow.shoot"
     },
     "igniteFire": false,
-    "power": 6.0,
+    "power": 10.0,
     "damage": 0.0,
     "knockback": 5,
     "entityModel": "Default",

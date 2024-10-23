@@ -90,11 +90,11 @@ public class RepulsorBeamEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 6f, 0, 5);
+		return shoot(world, entity, source, 10f, 0, 5);
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 6f, 0, 5);
+		return shoot(world, entity, source, pullingPower * 10f, 0, 5);
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -114,7 +114,7 @@ public class RepulsorBeamEntity extends AbstractArrow implements ItemSupplier {
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 6f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 10f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(0);
 		entityarrow.setKnockback(5);
