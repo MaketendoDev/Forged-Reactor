@@ -1290,19 +1290,6 @@
       "path": "~/Functions/Armor Crafting/Mk. 4"
     },
     {
-      "name": "UpgradeTemplateRecipe",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "upgrade_template_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/forged_reactor/recipes/upgrade_template_recipe.json"
-        ]
-      },
-      "path": "~/Functions/Armor Crafting/Items"
-    },
-    {
       "name": "FlightTestBootsRecipe",
       "type": "recipe",
       "compiles": true,
@@ -1773,7 +1760,7 @@
           "src/main/resources/data/forged_reactor/recipes/templates_crafting.json"
         ]
       },
-      "path": "~/Functions/Armor Crafting"
+      "path": "~/Functions/Armor Crafting/Items"
     },
     {
       "name": "Battery",
@@ -3090,6 +3077,32 @@
         ]
       },
       "path": "~/Functions/Armor Crafting/Armor Configurator/Recipes"
+    },
+    {
+      "name": "CoolingMoltenIron3",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooling_molten_iron_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/cooling_molten_iron_3.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items/Cooling Reformed Iron"
+    },
+    {
+      "name": "CoolingMoltenIron2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooling_molten_iron_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forged_reactor/recipes/cooling_molten_iron_2.json"
+        ]
+      },
+      "path": "~/Functions/Armor Crafting/Mk. 1/Items/Cooling Reformed Iron"
     }
   ],
   "variable_elements": [
@@ -3504,8 +3517,8 @@
       "entity.forged_reactor.wind_boost": "Wind Boost",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
-      "subtitles.repulsor_warmup": "Repulsor Warming Up...",
       "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
+      "subtitles.repulsor_warmup": "Repulsor Warming Up...",
       "item.forged_reactor.molten_iron_2": "Molten Iron",
       "item.forged_reactor.molten_iron_3": "Molten Iron",
       "item.forged_reactor.molten_iron_1": "Molten Iron",
@@ -3529,8 +3542,8 @@
       "entity.forged_reactor.mk_7_summoning_pod": "Mk. 7 Suit Pod",
       "item.forged_reactor.mk_9_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.molten_iron": "Molten Iron",
-      "item.forged_reactor.mk_6_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.mk_8_iron_armor_chestplate": "Iron Armor Chestplate",
+      "item.forged_reactor.mk_6_iron_armor_boots": "Iron Armor Boots",
       "gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.button_empty": "Mods",
       "item.forged_reactor.mk_9_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.heated_molten_iron_3": "Molten Iron",
@@ -3774,6 +3787,10 @@
                       },
                       {
                         "name": "Reforming Iron Recipes",
+                        "children": []
+                      },
+                      {
+                        "name": "Cooling Reformed Iron",
                         "children": []
                       }
                     ]
