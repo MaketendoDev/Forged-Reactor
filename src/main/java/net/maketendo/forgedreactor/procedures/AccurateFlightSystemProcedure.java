@@ -50,7 +50,7 @@ public class AccurateFlightSystemProcedure {
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enableenergy")))) {
 				if (!(entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(MobEffects.WEAKNESS))) {
 					if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("ironman:enableflight")))) {
-						if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") <= 0)) {
+						if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") < 10)) {
 							if (new Object() {
 								public boolean checkGamemode(Entity _ent) {
 									if (_ent instanceof ServerPlayer _serverPlayer) {
@@ -87,7 +87,7 @@ public class AccurateFlightSystemProcedure {
 										_plr.stopFallFlying();
 									}
 								} else {
-									if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") > 0) {
+									if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") > 10) {
 										if (entity instanceof Player _plr && !(_plr.isFallFlying())) {
 											_plr.startFallFlying();
 										}
@@ -103,7 +103,7 @@ public class AccurateFlightSystemProcedure {
 											});
 										}
 									}
-									if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") > 0) {
+									if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") > 10) {
 										if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getBoolean("Waxed") == true) {
 											if (Screen.hasControlDown()) {
 												entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 4), (entity.getLookAngle().y * 4), (entity.getLookAngle().z * 4)));
@@ -115,7 +115,7 @@ public class AccurateFlightSystemProcedure {
 													}
 												}
 												(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().putDouble("power",
-														((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") - 40));
+														((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") - 10));
 												{
 													Entity _ent = entity;
 													if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -197,7 +197,7 @@ public class AccurateFlightSystemProcedure {
 													}
 												}
 												(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().putDouble("power",
-														((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") - 40));
+														((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getOrCreateTag().getDouble("power") - 10));
 												{
 													Entity _ent = entity;
 													if (!_ent.level().isClientSide() && _ent.getServer() != null) {
