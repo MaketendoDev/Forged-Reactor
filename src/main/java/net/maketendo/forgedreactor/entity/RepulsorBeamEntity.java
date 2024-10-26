@@ -90,11 +90,11 @@ public class RepulsorBeamEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 10f, 0, 5);
+		return shoot(world, entity, source, 10f, 0, 2);
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 10f, 0, 5);
+		return shoot(world, entity, source, pullingPower * 10f, 0, 2);
 	}
 
 	public static RepulsorBeamEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -117,7 +117,7 @@ public class RepulsorBeamEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 10f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(0);
-		entityarrow.setKnockback(5);
+		entityarrow.setKnockback(2);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
