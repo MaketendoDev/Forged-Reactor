@@ -40,7 +40,7 @@ public class ArmorConfiguratorBlock extends Block implements EntityBlock {
 	@Override
 	public void appendHoverText(ItemStack itemstack, BlockGetter level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
-		list.add(Component.literal("giv redstone signal to me so i can work loser ):<"));
+		list.add(Component.literal("\u00A78Requires a redstone signal to power the Armor Configurator"));
 	}
 
 	@Override

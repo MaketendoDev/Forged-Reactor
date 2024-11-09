@@ -36,7 +36,7 @@
     "name": "Armor Modification Configurator",
     "specialInformation": {
       "fixedValue": [
-        "giv redstone signal to me so i can work loser ):<"
+        "§8Requires a redstone signal to power the Armor Configurator"
       ]
     },
     "hardness": 1.0,
