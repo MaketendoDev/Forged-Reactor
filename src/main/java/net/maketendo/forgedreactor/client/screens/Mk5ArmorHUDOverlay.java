@@ -50,7 +50,7 @@ public class Mk5ArmorHUDOverlay {
 			z = entity.getZ();
 		}
 		RenderSystem.disableDepthTest();
-		RenderSystem.depthMask(false);
+		RenderSystem.depthMask(true);
 		RenderSystem.enableBlend();
 		RenderSystem.setShader(GameRenderer::getPositionTexShader);
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
@@ -103,7 +103,7 @@ public class Mk5ArmorHUDOverlay {
 					ReturnLeggingsDamageProcedure.execute(entity), w - 159, h / 2 + 35, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					ReturnChestplateDamageProcedure.execute(entity), 268, h - 114, -1, false);
+					ReturnChestplateDamageProcedure.execute(entity), w - 159, h / 2 + 6, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					ReturnHelmetDamageProcedure.execute(entity), w - 160, h / 2 + -18, -1, false);

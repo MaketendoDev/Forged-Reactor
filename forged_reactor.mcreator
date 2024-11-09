@@ -2414,7 +2414,7 @@
       "name": "Mk5ArmorHUD",
       "type": "overlay",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "mk_5_armor_hud",
       "metadata": {
         "files": [

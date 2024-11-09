@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "forged_reactor:item/mk5_boots"
+    "layer0": "forged_reactor:item/mk7_boots"
   }
 }

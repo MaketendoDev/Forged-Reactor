@@ -35,7 +35,9 @@
     ],
     "name": "Armor Modification Configurator",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "giv redstone signal to me so i can work loser ):<"
+      ]
     },
     "hardness": 1.0,
     "resistance": 10.0,

@@ -3,13 +3,13 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "mk5_helmet",
+    "textureHelmet": "mk7_helmet",
     "enableBody": true,
-    "textureBody": "mk5_chestplate",
+    "textureBody": "mk8_chestplate",
     "enableLeggings": true,
-    "textureLeggings": "mk5_leggings",
+    "textureLeggings": "mk6_leggings",
     "enableBoots": true,
-    "textureBoots": "mk5_boots",
+    "textureBoots": "mk7_boots",
     "onHelmetTick": {
       "name": "ArmorStoredEnergyTick"
     },
