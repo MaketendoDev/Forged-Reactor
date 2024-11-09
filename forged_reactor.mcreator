@@ -3053,28 +3053,7 @@
         "files": [
           "src/main/java/net/maketendo/forgedreactor/procedures/UpgradingToMk6RecipeProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Functions/Armor Crafting/Armor Configurator/Recipes"
     },
@@ -3517,8 +3496,8 @@
       "entity.forged_reactor.wind_boost": "Wind Boost",
       "effect.forged_reactor.armor_weight": "Armor Weight",
       "item.forged_reactor.mk_8_iron_armor_leggings": "Iron Armor Leggings",
-      "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
       "subtitles.repulsor_warmup": "Repulsor Warming Up...",
+      "item.forged_reactor.mk_5_suitcase": "Iron Armor Suitcase",
       "item.forged_reactor.molten_iron_2": "Molten Iron",
       "item.forged_reactor.molten_iron_3": "Molten Iron",
       "item.forged_reactor.molten_iron_1": "Molten Iron",
@@ -3542,8 +3521,8 @@
       "entity.forged_reactor.mk_7_summoning_pod": "Mk. 7 Suit Pod",
       "item.forged_reactor.mk_9_iron_armor_boots": "Iron Armor Boots",
       "item.forged_reactor.molten_iron": "Molten Iron",
-      "item.forged_reactor.mk_8_iron_armor_chestplate": "Iron Armor Chestplate",
       "item.forged_reactor.mk_6_iron_armor_boots": "Iron Armor Boots",
+      "item.forged_reactor.mk_8_iron_armor_chestplate": "Iron Armor Chestplate",
       "gui.forged_reactor.armor_configurator_gui_armor_upgrade_page.button_empty": "Mods",
       "item.forged_reactor.mk_9_iron_armor_helmet": "Iron Armor Helmet",
       "item.forged_reactor.heated_molten_iron_3": "Molten Iron",
