@@ -3,7 +3,7 @@ name: Automated beta builds
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
