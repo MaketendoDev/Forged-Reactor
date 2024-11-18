@@ -32,7 +32,7 @@ jobs:
         url: ${{ secrets.DEV_BUILDS }}
         file: 'build/libs/*'
         username: professor stan
-        avatar: 'https://i.imgur.com/uiFqrQh.png'
+        avatar: 'https://cdn.discordapp.com/avatars/1038790567871651860/6ffc4925a3dcc45505beb5b79df03df7.webp?size=128'
         commit: '> :sparkles: [%MESSAGE%](<%LINK%>) by [%AUTHOR%](<%AUTHOR_LINK%>) *winkle winkle*'
         message: |
           <:new1:1253371736510959636><:new2:1253371805734015006> New `Forged Reactor` dev build `#${{ github.run_number }}`:
