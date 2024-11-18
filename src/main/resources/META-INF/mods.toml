@@ -7,7 +7,7 @@ modId="forged_reactor"
 version="0.0.1"
 displayName="Forged Reactor Mod"
 displayURL="https://discord.gg/PG45nNWssF"
-credits="Nexus - (Suit Consultant), Duzo - (Code Assistant)"
+credits="NexusEnder - (Suit Consultant), Duzo - (Code Assistant) and the lovely beta testers (:"
 authors="Maketendo, Westankrang"
 description="Adds Iron Man in Minecraft!"
 
@@ -24,6 +24,12 @@ description="Adds Iron Man in Minecraft!"
 
 [[dependencies.forged_reactor]]
     modId="kleidersplayerrenderer"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.forged_reactor]]
+    modId="jei"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

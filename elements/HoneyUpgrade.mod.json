@@ -1,0 +1,16 @@
+{
+  "_fv": 66,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "upgrade_configurator_type",
+    "result": {
+      "value": "CUSTOM:Mk2IronArmor.helmet"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "Items.HONEYCOMB"
+      }
+    ]
+  }
+}
