@@ -1,4 +1,3 @@
-
 name: Automated beta builds
 
 on:
@@ -7,7 +6,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -18,18 +16,17 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
-    # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@417ae3ccd767c252f5661f1ace9f835f9654f2b5 # v3.1.0
+
+    - name: Grant Execute Permissions for Gradlew
+      run: chmod +x ./gradlew
 
     - name: Run datagen
       run: ./gradlew runDatagen
 
     - name: Build
       run: ./gradlew build
-      #env:
-      #  BETA: 1 # exclude assets if it's a beta dev build
 
     - name: Publish artifacts
       uses: DrTheodor/discord-webhook-upload-action@v1.2
