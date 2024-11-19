@@ -1,0 +1,23 @@
+{
+  "_fv": 66,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Mk3IronArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:Mk3IronArmor.body"
+      },
+      {
+        "value": "CUSTOM:Mk3IronArmor.legs"
+      },
+      {
+        "value": "CUSTOM:Mk3IronArmor.boots"
+      }
+    ],
+    "information": [
+      "With flight out of the way, now it's time to fit on some guns and weponary on this bad boy and some expansion to the HUD Interfaces"
+    ]
+  }
+}

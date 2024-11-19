@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "jeirecipetype",
+  "definition": {
+    "textureSelector": "jei_armor_config.png",
+    "width": 58,
+    "height": 27,
+    "icon": {
+      "value": "CUSTOM:Mk3IronArmor.helmet"
+    },
+    "craftingtable": {
+      "value": "CUSTOM:ArmorConfigurator"
+    },
+    "enableCraftingtable": true,
+    "title": "Armor Configurator",
+    "slotList": [
+      {
+        "type": "INPUT",
+        "x": 2,
+        "y": 0,
+        "slotid": 0
+      }
+    ]
+  }
+}

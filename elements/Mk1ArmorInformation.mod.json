@@ -1,0 +1,23 @@
+{
+  "_fv": 66,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Mk1IronArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:Mk1IronArmor.body"
+      },
+      {
+        "value": "CUSTOM:Mk1IronArmor.legs"
+      },
+      {
+        "value": "CUSTOM:Mk1IronArmor.boots"
+      }
+    ],
+    "information": [
+      "A first prototype of the Iron Armor. with limited features from a flamethrower to a semi-functional flight propulsion system that can take you to the skies and is the base point for the future versions of the Iron Armor to come."
+    ]
+  }
+}

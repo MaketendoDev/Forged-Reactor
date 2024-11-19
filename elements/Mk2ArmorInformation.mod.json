@@ -1,0 +1,23 @@
+{
+  "_fv": 66,
+  "_type": "jeiinformation",
+  "definition": {
+    "items": [
+      {
+        "value": "CUSTOM:Mk2IronArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:Mk2IronArmor.body"
+      },
+      {
+        "value": "CUSTOM:Mk2IronArmor.legs"
+      },
+      {
+        "value": "CUSTOM:Mk2IronArmor.boots"
+      }
+    ],
+    "information": [
+      "A reworked and a improved version of the Iron Armor, this expands on the flight systems with more complex systems and more fun flights and adventures. This also includes a HUD to look more closely to the mobs near you."
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "forged_reactor:armor_configurator_type",
+  "ingredients": [
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "output": {
+    "item": "forged_reactor:mk_2_iron_armor_helmet",
+    "count": 1
+  }
+}
